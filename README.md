@@ -15,6 +15,10 @@ Weight Tracking: Users can log their weight regularly, allowing them to monitor 
 
 This application acts as a personal health assistant, providing users with insights and feedback about their dietary habits, physical activity, and weight management, all in one consolidated platform.
 
+Screenshot of using a tool to try out the API
+<img width="950" alt="image" src="https://github.com/davidduan12/207Project/assets/113382215/db802bcc-0d1a-4c79-a971-4e534f4fd607">
 
+Eexample output of running your Java code
+![image](https://github.com/davidduan12/207Project/assets/113382215/98510e12-4b33-4328-9fa1-fc0d7a473d6d)
 
 
