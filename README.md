@@ -15,7 +15,8 @@ Weight Tracking: Users can log their weight regularly, allowing them to monitor 
 
 This application acts as a personal health assistant, providing users with insights and feedback about their dietary habits, physical activity, and weight management, all in one consolidated platform.
 
-Link to their very simple documentation: https://api-ninjas.com/api/nutrition
+Link to their very simple documentation: https://api-ninjas.com/api/nutrition 
+
 Screenshot of using a tool to try out the API
 <img width="950" alt="image" src="https://github.com/davidduan12/207Project/assets/113382215/db802bcc-0d1a-4c79-a971-4e534f4fd607">
 
