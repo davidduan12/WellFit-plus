@@ -4,9 +4,4 @@ public interface AddFoodInputBoundary{
 
         public void execute(InputData inputData);
 
-        public void prepareSuccessView(OutputData outputData);
-
-        public void prepareFailView(OutputData outputData);
-
-
 }

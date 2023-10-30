@@ -3,7 +3,7 @@ package src.entity;
 public interface Food {
 
     /** Returns the calorie for the food. */
-    int getCalories();
+    float getCalories();
 
     /** Returns the serving size of the food*/
     int getServing();
