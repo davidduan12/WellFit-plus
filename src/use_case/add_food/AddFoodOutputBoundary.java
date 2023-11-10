@@ -1,4 +1,4 @@
-package src.use_case.add_food;
+package use_case.add_food;
 
 public interface AddFoodOutputBoundary {
 
