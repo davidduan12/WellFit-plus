@@ -1,5 +1,6 @@
 package interface_adapter.AddFood;
-import src.use_case.add_food.AddFoodOutputBoundary;
+import use_case.add_food.AddFoodOutputBoundary;
+import use_case.add_food.AddFoodOutputData;
 
 public class AddFoodPresenter implements AddFoodOutputBoundary {
     private final AddFoodViewModel addFoodViewModel;
@@ -8,7 +9,7 @@ public class AddFoodPresenter implements AddFoodOutputBoundary {
         this.addFoodViewModel = addFoodViewModel;
     }
 
-    public void prepareSuccessView(OutputData food){
+    public void prepareSuccessView(AddFoodOutputData food){
         AddFoodState addFoodState = addFoodViewModel.getState();
         addFoodState.setFood(food.getname());
         this.addFoodViewModel.setAddState(addFoodState);
@@ -16,7 +17,7 @@ public class AddFoodPresenter implements AddFoodOutputBoundary {
     }
 
     @Override
-    public void prepareFailView(OutputData outputData) {
+    public void prepareFailView(AddFoodOutputData outputData) {
         // I think it should be String error in the parameter instead of Output Data.
         // Should check it in AddFood OutputBoundary.
     }

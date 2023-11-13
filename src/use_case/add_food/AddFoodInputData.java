@@ -8,7 +8,7 @@ public class AddFoodInputData {
         this.food = food;
     }
 
-    String getFood(){
+    String getName(){
         return food;
     }
 }

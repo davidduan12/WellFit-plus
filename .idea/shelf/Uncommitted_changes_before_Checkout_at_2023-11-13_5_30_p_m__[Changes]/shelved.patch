@@ -1,0 +1,17 @@
+Index: src/use_case/add_food/AddFoodInteractor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package use_case.add_food;\r\n\r\nimport data_access.FileUserDataAccessObject;\r\nimport interface_adapter.AddFood.AddFoodController;\r\nimport interface_adapter.AddFood.AddFoodPresenter;\r\nimport use_case.FoodAddDataAccessInterface;\r\nimport data_access.FoodDataAccessObject;\r\n\r\nimport java.util.ArrayList;\r\n\r\npublic class AddFoodInteractor implements AddFoodInputBoundary{\r\n\r\n    private final FoodAddDataAccessInterface foodAddDataAccessInterface;\r\n    private final FileUserDataAccessObject fileUserDataAccessObject;\r\n    private final FoodDataAccessObject foodDataAccessObject;\r\n\r\n    final AddFoodPresenter addFoodPresenter;\r\n\r\n    final AddFoodController addFoodController;\r\n\r\n    public AddFoodInteractor(FoodAddDataAccessInterface foodAddDataAccessInterface, FileUserDataAccessObject fileUserDataAccessObject, FoodDataAccessObject foodDataAccessObject, AddFoodOutputBoundary addFoodPresenter, AddFoodController addFoodController) {\r\n        this.foodAddDataAccessInterface = foodAddDataAccessInterface;\r\n        this.fileUserDataAccessObject = fileUserDataAccessObject;\r\n        this.foodDataAccessObject = foodDataAccessObject;\r\n        this.addFoodPresenter = (AddFoodPresenter) addFoodPresenter;\r\n        this.addFoodController = addFoodController;\r\n    }\r\n\r\n    @Override\r\n    public void execute(InputData inputData) {\r\n        //first get data from reading the csv\r\n        fileUserDataAccessObject.readToCSV(\"/data/sample_user.csv\");\r\n\r\n        String foodName = inputData.getFoodName();\r\n        String foodCalorie = inputData.getFoodCalories();\r\n\r\n        OutputData foodOutputData = new OutputData();\r\n        //use food access object to add food\r\n        //first check if they exist\r\n        if (foodDataAccessObject.existByName(foodName)){\r\n            addFoodPresenter.prepareFailView(\"Food Already Exist\");\r\n        }\r\n        else {\r\n            ArrayList<String> foodSpecifications = new ArrayList<>();\r\n            foodSpecifications.add(foodName);\r\n            foodSpecifications.add(foodCalorie);\r\n            //then write to csv\r\n            fileUserDataAccessObject.writeToCSV(\"/data/sample_user.csv\",foodSpecifications);\r\n\r\n//        f = new JFrame();\r\n//        JOptionPane.showMessageDialog(f, \"Success\");\r\n            addFoodPresenter.prepareSuccessView(foodOutputData);\r\n\r\n        }\r\n\r\n\r\n\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/use_case/add_food/AddFoodInteractor.java b/src/use_case/add_food/AddFoodInteractor.java
+--- a/src/use_case/add_food/AddFoodInteractor.java	
++++ b/src/use_case/add_food/AddFoodInteractor.java	
+@@ -52,8 +52,5 @@
+             addFoodPresenter.prepareSuccessView(foodOutputData);
+ 
+         }
+-
+-
+-
+     }
+ }
