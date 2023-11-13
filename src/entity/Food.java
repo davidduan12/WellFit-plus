@@ -3,9 +3,19 @@ package entity;
 public class Food {
 
     private String name;
-    private int calories;
+    private float calories;
+
+    public float getServing() {
+        return serving;
+    }
+
+    public void setServing(float serving) {
+        this.serving = serving;
+    }
+
+    private float serving;
     /** Returns the calorie for the food. */
-    public Food(String name, int calories) {
+    public Food(String name, float calories) {
         this.name = name;
         this.calories = calories;
     }
@@ -15,7 +25,7 @@ public class Food {
         return name;
     }
 
-    public int getCalories() {
+    public float getCalories() {
         return calories;
     }
 

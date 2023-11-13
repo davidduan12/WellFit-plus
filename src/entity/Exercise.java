@@ -3,9 +3,19 @@ package entity;
 public class Exercise {
 
     private String name;
-    private int caloriesBurnedPerHour;
 
-    public Exercise(String name, int caloriesBurnedPerHour) {
+    public float getDuration() {
+        return duration;
+    }
+
+    public void setDuration(float duration) {
+        this.duration = duration;
+    }
+
+    private float duration;
+    private float caloriesBurnedPerHour;
+
+    public Exercise(String name, float caloriesBurnedPerHour) {
         this.name = name;
         this.caloriesBurnedPerHour = caloriesBurnedPerHour;
     }
@@ -15,7 +25,7 @@ public class Exercise {
         return name;
     }
 
-    public int getCaloriesBurnedPerHour() {
+    public float getCaloriesBurnedPerHour() {
         return caloriesBurnedPerHour;
     }
 
