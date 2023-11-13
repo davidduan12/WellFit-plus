@@ -1,18 +1,32 @@
-package src.entity;
+package entity;
 
-public interface Food {
+public class Food {
 
+    private String name;
+    private float calories;
+
+    public float getServing() {
+        return serving;
+    }
+
+    public void setServing(float serving) {
+        this.serving = serving;
+    }
+
+    private float serving;
     /** Returns the calorie for the food. */
-    float getCalories();
+    public Food(String name, float calories) {
+        this.name = name;
+        this.calories = calories;
+    }
 
-    /** Returns the serving size of the food*/
-    int getServing();
+    // Getters and Setters
+    public String getName() {
+        return name;
+    }
 
-    /** Returns the name of the food*/
-    String getName();
-
-    /** Returns the description of the food*/
-    String getDescription();
-
+    public float getCalories() {
+        return calories;
+    }
 
 }

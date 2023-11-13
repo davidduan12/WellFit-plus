@@ -1,11 +1,32 @@
-package src.entity;
+package entity;
 
-public interface Exercise {
+public class Exercise {
 
-    /** Returns the exercise duration spent*/
-    float getDuation();
+    private String name;
 
-    /** Returns the calorie expenditure of the exercise*/
-    float getCalroies();
+    public float getDuration() {
+        return duration;
+    }
+
+    public void setDuration(float duration) {
+        this.duration = duration;
+    }
+
+    private float duration;
+    private float caloriesBurnedPerHour;
+
+    public Exercise(String name, float caloriesBurnedPerHour) {
+        this.name = name;
+        this.caloriesBurnedPerHour = caloriesBurnedPerHour;
+    }
+
+    // Getters and Setters
+    public String getName() {
+        return name;
+    }
+
+    public float getCaloriesBurnedPerHour() {
+        return caloriesBurnedPerHour;
+    }
 
 }
