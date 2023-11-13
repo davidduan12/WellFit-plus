@@ -27,33 +27,31 @@ public class AddFoodInteractor implements AddFoodInputBoundary{
     }
 
     @Override
-    public void execute(InputData inputData) {
+    public void execute(AddFoodInputData inputData) {
         //first get data from reading the csv
-        fileUserDataAccessObject.readToCSV("/data/sample_user.csv");
+        ArrayList<ArrayList<String>> records = fileUserDataAccessObject.readToCSV("/data/sample_food_data.csv");
 
-        String foodName = inputData.getFoodName();
-        String foodCalorie = inputData.getFoodCalories();
+        String food = inputData.getName();
 
-        OutputData foodOutputData = new OutputData();
-        //use food access object to add food
-        //first check if they exist
-        if (foodDataAccessObject.existByName(foodName)){
-            addFoodPresenter.prepareFailView("Food Already Exist");
-        }
-        else {
-            ArrayList<String> foodSpecifications = new ArrayList<>();
-            foodSpecifications.add(foodName);
-            foodSpecifications.add(foodCalorie);
-            //then write to csv
-            fileUserDataAccessObject.writeToCSV("/data/sample_user.csv",foodSpecifications);
+        AddFoodOutputData foodOutputData = new AddFoodOutputData("");
 
-//        f = new JFrame();
-//        JOptionPane.showMessageDialog(f, "Success");
-            addFoodPresenter.prepareSuccessView(foodOutputData);
-
-        }
-
-
+        fileUserDataAccessObject.writeToCSV("/data/sample_user.csv", records);
 
     }
 }
+
+
+// if (foodDataAccessObject.existByName(food)){
+//         addFoodPresenter.prepareFailView("Food Already Exist");
+//         }
+//         else {
+//         ArrayList<String> foodSpecifications = new ArrayList<>();
+//        foodSpecifications.add(food);
+//        //then write to csv
+//        fileUserDataAccessObject.writeToCSV("/data/sample_user.csv",foodSpecifications);
+//
+////        f = new JFrame();
+////        JOptionPane.showMessageDialog(f, "Success");
+//        addFoodPresenter.prepareSuccessView(foodOutputData);
+//
+//        }

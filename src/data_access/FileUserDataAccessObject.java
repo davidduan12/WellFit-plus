@@ -3,36 +3,39 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Collection;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.ArrayList;
 
 public class FileUserDataAccessObject {
 
-    public void writeToCSV(String filePath, Collection data){
+    public void writeToCSV(String filePath, ArrayList<ArrayList<String>> data){
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))){
-            for (Object d : data){
-                writer.write((String) d);
-                writer.newLine();
+            writer.newLine();
+            for (ArrayList<String> Arr : data){
+                for (String d : Arr){
+                    writer.write(d + ",");
+                }
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public void readToCSV(String filePath){
-        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+    public ArrayList<ArrayList<String>> readToCSV(String filePath){
+        ArrayList<ArrayList<String>> records = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
-            while ((line = reader.readLine()) != null) {
-                String[] values = line.split(",");
-                // Process the values as needed
-                for (String value : values) {
-                    System.out.print(value + " ");
-                }
-                System.out.println();
+            while ((line = br.readLine()) != null) {
+                ArrayList<String> values = new ArrayList<>(Arrays.asList(line.split(",")));
+                records.add(values);
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
+        return records;
     }
 }
+
