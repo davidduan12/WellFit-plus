@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38636146-e9df-43f6-9bff-9959960ec596" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-11-13_5_30_p_m__[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-11-13_5_30_p_m__[Changes]1/shelved.patch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/add_food/AddFoodOutputBoundary.java" afterDir="false" />
+    <list default="true" id="38636146-e9df-43f6-9bff-9959960ec596" name="Changes" comment="Change something detailed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodPresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodViewModel.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +62,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "interactor",
+    "git-widget-placeholder": "Interface-Adapter",
     "jdk.selected.JAVA_MODULE": "17",
     "last_opened_file_path": "/home/david/Documents/207/week8git",
     "node.js.detected.package.eslint": "true",
@@ -134,10 +130,43 @@
       <workItem from="1699911310752" duration="123000" />
       <workItem from="1699911439730" duration="1723000" />
     </task>
+    <task id="LOCAL-00001" summary="11">
+      <option name="closed" value="true" />
+      <created>1699997898071</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699997898071</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Change something detailed">
+      <option name="closed" value="true" />
+      <created>1699998379020</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699998379020</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="11" />
+    <MESSAGE value="Change something detailed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change something detailed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
