@@ -6,6 +6,7 @@ public class AddFoodController {
     final AddFoodInputBoundary addFoodUseCaseInteractor;
 
     public AddFoodController(AddFoodInputBoundary addFoodUseCaseInteractor) {
+
         this.addFoodUseCaseInteractor = addFoodUseCaseInteractor;
     }
 
