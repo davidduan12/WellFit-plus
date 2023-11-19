@@ -5,6 +5,7 @@ import interface_adapter.ViewModel;
 import java.beans.PropertyChangeSupport;
 import java.beans.PropertyChangeListener;
 
+// No View Model Avaliable
 public class AddFoodViewModel extends ViewModel {// ViewModel still works. Plz import it after finishing
 
     public static final String ADD_BUTTON_LABEL = "Add";
