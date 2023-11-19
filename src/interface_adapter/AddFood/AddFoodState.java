@@ -3,19 +3,31 @@ package interface_adapter.AddFood;
 import java.util.ArrayList;
 
 public class AddFoodState {
-    private ArrayList food = new ArrayList<>();
+    private String foodName = "";
+    private float foodWeight = 0;
+
 
     public AddFoodState(AddFoodState copy){
-        food = copy.food;
+        foodName = copy.foodName;
+        foodWeight = copy.foodWeight;
     }
 
     public AddFoodState(){}
 
-    public void setFood(ArrayList food){
-        this.food = food;
+    public String getFoodName() {
+        return foodName;
     }
 
-    public ArrayList getFood(){
-        return food;
+    public void setFoodName(String foodName) {
+        this.foodName = foodName;
     }
+
+    public float getFoodWeight() {
+        return foodWeight;
+    }
+
+    public void setFoodWeight(float foodWeight) {
+        this.foodWeight = foodWeight;
+    }
+
 }
