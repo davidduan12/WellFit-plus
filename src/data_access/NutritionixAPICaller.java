@@ -8,7 +8,7 @@ public class NutritionixAPICaller {
     private static final String API_ENDPOINT = "https://trackapi.nutritionix.com/v2/natural/exercise";
     private static final String API_KEY = "36950e27031466b64fcd4d0a977d6953";
 
-    public static void main(String[] args) {
+    public static String fetchData(String query){
         try {
             URL url = new URL(API_ENDPOINT);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -18,12 +18,12 @@ public class NutritionixAPICaller {
             connection.setRequestProperty("x-app-id", "80e22ff8");
             connection.setRequestProperty("x-app-key", API_KEY);
 
-            // 设置输入输出流为true，以便我们可以写入请求正文
+            // Set input and output streams to true
             connection.setDoOutput(true);
             connection.setDoInput(true);
 
-            // 这里只是一个示例，您可能需要以某种方式动态生成或获取此数据
-            String requestBody = "{ \"query\": \"ran 3 miles\" }";
+            // Set the request body
+            String requestBody = "{ \"query\": \"" + query + "\" }";
             connection.getOutputStream().write(requestBody.getBytes("UTF-8"));
 
             int responseCode = connection.getResponseCode();
@@ -39,14 +39,16 @@ public class NutritionixAPICaller {
                 }
                 in.close();
 
-                // 打印结果
-                System.out.println(response.toString());
+                // Return the response as a string
+                return response.toString();
             } else {
                 System.out.println("GET request not worked");
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
 
+        // Return null in case of an error
+        return null;
+    }
 }
