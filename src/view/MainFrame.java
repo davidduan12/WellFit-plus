@@ -7,14 +7,21 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
+import app.AddFoodUseCaseFactory;
+import data_access.FoodDataAccessObject;
+import interface_adapter.AddFood.AddFoodViewModel;
+import use_case.UserDataAccessInterface;
+import use_case.add_food.FoodAddDataAccessInterface;
+import view.FoodView;
+
 public class MainFrame extends JFrame {
     private JTabbedPane tabbedPane;
 
-    public MainFrame() {
-        initUI();
+    public MainFrame(AddFoodViewModel addFoodViewModel, UserDataAccessInterface userDataAccessObject, FoodAddDataAccessInterface foodDataAccessObject){
+        initUI(addFoodViewModel, userDataAccessObject, foodDataAccessObject);
     }
 
-    private void initUI() {
+    private void initUI(AddFoodViewModel addFoodViewModel, UserDataAccessInterface userDataAccessObject, FoodAddDataAccessInterface foodDataAccessObject) {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
@@ -31,8 +38,9 @@ public class MainFrame extends JFrame {
         // Put the tabs at the bottom
         tabbedPane.setTabPlacement(JTabbedPane.BOTTOM);
 
-        // Add your panels to the tabbed pane
-        tabbedPane.addTab("Food", createFoodPanel());
+        FoodView foodView = AddFoodUseCaseFactory.create(addFoodViewModel, foodDataAccessObject, userDataAccessObject);
+        // Add panels to the tabbed pane
+        tabbedPane.addTab("Food", foodView);
         tabbedPane.addTab("Exercise", createExercisePanel());
         tabbedPane.addTab("Profile", createProfilePanel());
 
@@ -59,29 +67,8 @@ public class MainFrame extends JFrame {
 
 
     private JPanel createFoodPanel() {
-        // Your Food panel code
-        JPanel foodPanel = new JPanel();
-        JComboBox<String> foodComboBox = new JComboBox<>(new String[]{"Apple", "Orange", "Banana"});
-        JButton addButton = new JButton("Add");
 
-        // Load food items from CSV into the combo box
-
-        // Add components to the panel
-        foodPanel.add(foodComboBox, BorderLayout.CENTER);
-        foodPanel.add(addButton, BorderLayout.EAST);
-
-        // Event listener for the Add button
-        addButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String selectedFood = (String) foodComboBox.getSelectedItem();
-                // Handle the addition of selected food
-                System.out.println("Food added: " + selectedFood);
-                // Further implementation...
-            }
-        });
-
-        return foodPanel;
+        return
     }
 
     private JPanel createExercisePanel() {

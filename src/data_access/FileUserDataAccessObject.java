@@ -1,4 +1,6 @@
 package data_access;
+import use_case.UserDataAccessInterface;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -9,8 +11,9 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 
-public class FileUserDataAccessObject {
+public class FileUserDataAccessObject implements UserDataAccessInterface {
 
+    //need initializer here, we shouldn't be stating filepath everytime we call a function, not CA.
     public void writeToCSV(String filePath, ArrayList<ArrayList<String>> data){
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))){
             writer.newLine();
