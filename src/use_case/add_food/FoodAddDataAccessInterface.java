@@ -5,4 +5,6 @@ public interface FoodAddDataAccessInterface {
     boolean existByName(String foodName);
 
     int getCalorie(String foodName, float amount);
+
+    String fetchDataFromNutritionix(String query);
 }
