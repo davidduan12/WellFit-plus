@@ -8,6 +8,7 @@ import java.beans.PropertyChangeListener;
 // No View Model Avaliable
 public class AddFoodViewModel extends ViewModel {// ViewModel still works. Plz import it after finishing
 
+    public static final String TITLE_LABEL = "Food Panel";
     public static final String ADD_BUTTON_LABEL = "Add";
     public static final String FOOD_LABEL = "Choose food";
     public static final String WEIGHT_LABEL = "Enter weight (g)";
