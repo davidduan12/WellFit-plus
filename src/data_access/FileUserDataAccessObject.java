@@ -31,7 +31,8 @@ public class FileUserDataAccessObject implements UserDataAccessInterface {
         }
     }
 
-    public ArrayList<ArrayList<String>> readToCSV(){
+    @Override
+    public ArrayList<ArrayList<String>> readToCSV(String filePath) {
         ArrayList<ArrayList<String>> records = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filepath))) {
             String line;
@@ -44,5 +45,6 @@ public class FileUserDataAccessObject implements UserDataAccessInterface {
         }
         return records;
     }
+
 }
 

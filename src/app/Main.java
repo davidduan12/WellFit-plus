@@ -20,23 +20,23 @@ public class Main {
         AddExerciseViewModel addExerciseViewModel = new AddExerciseViewModel();
 
         FileUserDataAccessObject userDataAccessObject = null; // = null for now
-        try{
+       /* try{
             userDataAccessObject = new FileUserDataAccessObject("./data/sample_user.csv");
             // userDataAccessObject = new FileUserDataAccessObject("./data/sample_user.csv", new )          fix fileuserdataacccessobject
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }
+        }*/
 
-        FoodDataAccessObject foodDataAccessObject = new FoodDataAccessObject();
+        FoodDataAccessObject foodDataAccessObject = new FoodDataAccessObject("./data/sample_user.csv");
         String query = "ran 3 miles";
         String responseData = foodDataAccessObject.fetchDataFromNutritionix(query);
         System.out.println(responseData);
 
-        try{
+        /*try{
             foodDataAccessObject = new FoodDataAccessObject("./data/sample_user.csv");
         } catch (IOException e) {           //fix both
             throw new RuntimeException(e);
-        }
+        }*/
 
 
         FileUserDataAccessObject finalUserDataAccessObject = userDataAccessObject;
