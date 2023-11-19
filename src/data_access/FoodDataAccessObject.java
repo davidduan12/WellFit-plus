@@ -1,10 +1,8 @@
 package data_access;
 
-import use_case.FoodAddDataAccessInterface;
+import use_case.add_food.FoodAddDataAccessInterface;
 
 import java.io.*;
-import java.util.List;
-import java.util.ArrayList;
 
 public class FoodDataAccessObject implements FoodAddDataAccessInterface {
     private final String csvFilePath;

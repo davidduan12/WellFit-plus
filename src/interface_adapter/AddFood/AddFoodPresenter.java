@@ -11,8 +11,8 @@ public class AddFoodPresenter implements AddFoodOutputBoundary {
 
     public void prepareSuccessView(AddFoodOutputData food){
         AddFoodState addFoodState = addFoodViewModel.getState();
-        addFoodState.setFood(food.getname());
-        this.addFoodViewModel.setAddState(addFoodState);
+        addFoodState.setFood(food.getFood());
+        this.addFoodViewModel.setState(addFoodState);
         addFoodViewModel.firePropertyChanged();
     }
 

@@ -1,4 +1,4 @@
-package use_case;
+package use_case.add_food;
 import entity.Food;
 
 public interface FoodAddDataAccessInterface {

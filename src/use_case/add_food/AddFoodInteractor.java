@@ -1,41 +1,35 @@
 package use_case.add_food;
 
 import data_access.FileUserDataAccessObject;
-import interface_adapter.AddFood.AddFoodController;
-import interface_adapter.AddFood.AddFoodPresenter;
-import use_case.FoodAddDataAccessInterface;
-import data_access.FoodDataAccessObject;
-
+import use_case.add_food.AddFoodOutputBoundary;
+import use_case.UserDataAccessInterface;
 import java.util.ArrayList;
 
 public class AddFoodInteractor implements AddFoodInputBoundary{
 
-    private final FoodAddDataAccessInterface foodAddDataAccessInterface;
-    private final FileUserDataAccessObject fileUserDataAccessObject;
-    private final FoodDataAccessObject foodDataAccessObject;
+    final FoodAddDataAccessInterface foodDataAccessObject;
 
-    final AddFoodPresenter addFoodPresenter;
+    final UserDataAccessInterface fileUserDataAccessObject;
+    final AddFoodOutputBoundary addFoodOutputBoundary;
 
-    final AddFoodController addFoodController;
 
-    public AddFoodInteractor(FoodAddDataAccessInterface foodAddDataAccessInterface, FileUserDataAccessObject fileUserDataAccessObject, FoodDataAccessObject foodDataAccessObject, AddFoodOutputBoundary addFoodPresenter, AddFoodController addFoodController) {
-        this.foodAddDataAccessInterface = foodAddDataAccessInterface;
-        this.fileUserDataAccessObject = fileUserDataAccessObject;
+    public AddFoodInteractor(FoodAddDataAccessInterface foodDataAccessObject, AddFoodOutputBoundary addFoodOutputBoundary, UserDataAccessInterface fileUserDataAccessObject) {
         this.foodDataAccessObject = foodDataAccessObject;
-        this.addFoodPresenter = (AddFoodPresenter) addFoodPresenter;
-        this.addFoodController = addFoodController;
+        this.addFoodOutputBoundary = addFoodOutputBoundary;
+        this.fileUserDataAccessObject = fileUserDataAccessObject;
     }
 
+    //read from FoodDataAccessObject which calls api and return something, and write the fileuserdataaccessobject which store user info
     @Override
     public void execute(AddFoodInputData inputData) {
         //first get data from reading the csv
-        ArrayList<ArrayList<String>> records = fileUserDataAccessObject.readToCSV("/data/sample_food_data.csv");
+        ArrayList<ArrayList<String>> records = foodDataAccessObject.readToCSV("/data/sample_food_data.csv"); // wait for change in fooddataaccessobject
 
         String food = inputData.getName();
 
         AddFoodOutputData foodOutputData = new AddFoodOutputData("");
 
-        fileUserDataAccessObject.writeToCSV("/data/sample_user.csv", records);
+        .writeToCSV("/data/sample_user.csv", records); //also here
 
     }
 }
