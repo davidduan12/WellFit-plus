@@ -12,10 +12,14 @@ import java.io.FileReader;
 import java.util.ArrayList;
 
 public class FileUserDataAccessObject implements UserDataAccessInterface {
+    private String filepath;
+    public FileUserDataAccessObject(String filepath){
+        this.filepath = filepath;
+    }
 
     //need initializer here, we shouldn't be stating filepath everytime we call a function, not CA.
-    public void writeToCSV(String filePath, ArrayList<ArrayList<String>> data){
-        try(BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))){
+    public void writeToCSV(ArrayList<ArrayList<String>> data){
+        try(BufferedWriter writer = new BufferedWriter(new FileWriter(filepath))){
             writer.newLine();
             for (ArrayList<String> Arr : data){
                 for (String d : Arr){
@@ -27,9 +31,10 @@ public class FileUserDataAccessObject implements UserDataAccessInterface {
         }
     }
 
-    public ArrayList<ArrayList<String>> readToCSV(String filePath){
+    @Override
+    public ArrayList<ArrayList<String>> readToCSV(String filePath) {
         ArrayList<ArrayList<String>> records = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filepath))) {
             String line;
             while ((line = br.readLine()) != null) {
                 ArrayList<String> values = new ArrayList<>(Arrays.asList(line.split(",")));
@@ -40,5 +45,6 @@ public class FileUserDataAccessObject implements UserDataAccessInterface {
         }
         return records;
     }
+
 }
 

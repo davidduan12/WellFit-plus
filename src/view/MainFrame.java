@@ -64,13 +64,6 @@ public class MainFrame extends JFrame {
     }
 
 
-
-
-    private JPanel createFoodPanel() {
-
-        return
-    }
-
     private JPanel createExercisePanel() {
         // Your Exercise panel code
         return (new JPanel());
@@ -81,10 +74,10 @@ public class MainFrame extends JFrame {
         return (new JPanel());
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             MainFrame frame = new MainFrame();
             frame.setVisible(true);
         });
-    }
+    }*/
 }

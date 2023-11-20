@@ -1,8 +1,11 @@
 package use_case.add_food;
 
 import data_access.FileUserDataAccessObject;
-import use_case.add_food.AddFoodOutputBoundary;
+import data_access.FoodDataAccessObject;
+import data_access.NutritionixAPICaller;
 import use_case.UserDataAccessInterface;
+
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class AddFoodInteractor implements AddFoodInputBoundary{
@@ -22,14 +25,11 @@ public class AddFoodInteractor implements AddFoodInputBoundary{
     //read from FoodDataAccessObject which calls api and return something, and write the fileuserdataaccessobject which store user info
     @Override
     public void execute(AddFoodInputData inputData) {
+        String query = inputData.getName();
+        String apiData = foodDataAccessObject.fetchDataFromNutritionix(query);
         //first get data from reading the csv
-        ArrayList<ArrayList<String>> records = foodDataAccessObject.readToCSV("/data/sample_food_data.csv"); // wait for change in fooddataaccessobject
-
-        String food = inputData.getName();
-
-        AddFoodOutputData foodOutputData = new AddFoodOutputData("");
-
-        .writeToCSV("/data/sample_user.csv", records); //also here
+        ArrayList<ArrayList<String>> records = fileUserDataAccessObject.readToCSV("/data/sample_user.csv");
+        fileUserDataAccessObject.writeToCSV(records);
 
     }
 }

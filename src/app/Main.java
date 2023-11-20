@@ -20,26 +20,34 @@ public class Main {
         AddExerciseViewModel addExerciseViewModel = new AddExerciseViewModel();
 
         FileUserDataAccessObject userDataAccessObject = null; // = null for now
-        try{
+       /* try{
+            userDataAccessObject = new FileUserDataAccessObject("./data/sample_user.csv");
             // userDataAccessObject = new FileUserDataAccessObject("./data/sample_user.csv", new )          fix fileuserdataacccessobject
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }
+        }*/
 
-        FoodDataAccessObject foodDataAccessObject;
+        FoodDataAccessObject foodDataAccessObject = new FoodDataAccessObject("./data/sample_user.csv");
+        String query = "ran 3 miles";
+        String responseData = foodDataAccessObject.fetchDataFromNutritionix(query);
+        System.out.println(responseData);
 
-        try{
+        /*try{
             foodDataAccessObject = new FoodDataAccessObject("./data/sample_user.csv");
         } catch (IOException e) {           //fix both
             throw new RuntimeException(e);
-        }
+        }*/
 
 
+        FileUserDataAccessObject finalUserDataAccessObject = userDataAccessObject;
+        FoodDataAccessObject finalFoodDataAccessObject = foodDataAccessObject;
         SwingUtilities.invokeLater(() -> {
             //Main window
-            JFrame application = new MainFrame(addFoodViewModel, userDataAccessObject, foodDataAccessObject);
+            JFrame application = new MainFrame(addFoodViewModel, finalUserDataAccessObject, finalFoodDataAccessObject);
             application.setVisible(true);
         });
+
+
 
     }
 
