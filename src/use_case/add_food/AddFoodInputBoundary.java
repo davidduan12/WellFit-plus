@@ -2,6 +2,6 @@ package use_case.add_food;
 
 public interface AddFoodInputBoundary{
 
-        public void execute(InputData inputData);
+        public void execute(AddFoodInputData inputData);
 
 }

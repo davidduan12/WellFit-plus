@@ -1,23 +1,20 @@
-package interface_adapter.AddFood;
+package interface_adapter.AddExercise;
 
 import interface_adapter.ViewModel;
 
-import java.beans.PropertyChangeSupport;
 import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 
-// No View Model Avaliable
-public class AddFoodViewModel extends ViewModel {// ViewModel still works. Plz import it after finishing
-
-    public static final String TITLE_LABEL = "Food Panel";
+public class AddExerciseViewModel extends ViewModel {
     public static final String ADD_BUTTON_LABEL = "Add";
-    public static final String FOOD_LABEL = "Choose food";
+    public static final String FOOD_LABEL = "Enter food";
     public static final String WEIGHT_LABEL = "Enter weight (g)";
 
-    private AddFoodState state = new AddFoodState();
+    private AddExerciseState state = new AddExerciseState();
 
-    public AddFoodViewModel(){super("add food");}
+    public AddExerciseViewModel(){super("add exercise");}
 
-    public void setState(AddFoodState state){
+    public void setState(AddExerciseState state){
         this.state = state;
     }
     private final PropertyChangeSupport support = new PropertyChangeSupport(this);
@@ -29,8 +26,7 @@ public class AddFoodViewModel extends ViewModel {// ViewModel still works. Plz i
         support.addPropertyChangeListener(listener);
     }
 
-    public AddFoodState getState(){
+    public AddExerciseState getState(){
         return state;
     }
-
 }

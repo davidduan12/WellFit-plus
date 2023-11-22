@@ -1,59 +1,51 @@
 package use_case.add_food;
 
 import data_access.FileUserDataAccessObject;
-import interface_adapter.AddFood.AddFoodController;
-import interface_adapter.AddFood.AddFoodPresenter;
-import use_case.FoodAddDataAccessInterface;
 import data_access.FoodDataAccessObject;
+import data_access.NutritionixAPICaller;
+import use_case.UserDataAccessInterface;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class AddFoodInteractor implements AddFoodInputBoundary{
 
-    private final FoodAddDataAccessInterface foodAddDataAccessInterface;
-    private final FileUserDataAccessObject fileUserDataAccessObject;
-    private final FoodDataAccessObject foodDataAccessObject;
+    final FoodAddDataAccessInterface foodDataAccessObject;
 
-    final AddFoodPresenter addFoodPresenter;
+    final UserDataAccessInterface fileUserDataAccessObject;
+    final AddFoodOutputBoundary addFoodOutputBoundary;
 
-    final AddFoodController addFoodController;
 
-    public AddFoodInteractor(FoodAddDataAccessInterface foodAddDataAccessInterface, FileUserDataAccessObject fileUserDataAccessObject, FoodDataAccessObject foodDataAccessObject, AddFoodOutputBoundary addFoodPresenter, AddFoodController addFoodController) {
-        this.foodAddDataAccessInterface = foodAddDataAccessInterface;
-        this.fileUserDataAccessObject = fileUserDataAccessObject;
+    public AddFoodInteractor(FoodAddDataAccessInterface foodDataAccessObject, AddFoodOutputBoundary addFoodOutputBoundary, UserDataAccessInterface fileUserDataAccessObject) {
         this.foodDataAccessObject = foodDataAccessObject;
-        this.addFoodPresenter = (AddFoodPresenter) addFoodPresenter;
-        this.addFoodController = addFoodController;
+        this.addFoodOutputBoundary = addFoodOutputBoundary;
+        this.fileUserDataAccessObject = fileUserDataAccessObject;
     }
 
+    //read from FoodDataAccessObject which calls api and return something, and write the fileuserdataaccessobject which store user info
     @Override
-    public void execute(InputData inputData) {
+    public void execute(AddFoodInputData inputData) {
+        String query = inputData.getName();
+        String apiData = foodDataAccessObject.fetchDataFromNutritionix(query);
         //first get data from reading the csv
-        fileUserDataAccessObject.readToCSV("/data/sample_user.csv");
-
-        String foodName = inputData.getFoodName();
-        String foodCalorie = inputData.getFoodCalories();
-
-        OutputData foodOutputData = new OutputData();
-        //use food access object to add food
-        //first check if they exist
-        if (foodDataAccessObject.existByName(foodName)){
-            addFoodPresenter.prepareFailView("Food Already Exist");
-        }
-        else {
-            ArrayList<String> foodSpecifications = new ArrayList<>();
-            foodSpecifications.add(foodName);
-            foodSpecifications.add(foodCalorie);
-            //then write to csv
-            fileUserDataAccessObject.writeToCSV("/data/sample_user.csv",foodSpecifications);
-
-//        f = new JFrame();
-//        JOptionPane.showMessageDialog(f, "Success");
-            addFoodPresenter.prepareSuccessView(foodOutputData);
-
-        }
-
-
+        ArrayList<ArrayList<String>> records = fileUserDataAccessObject.readToCSV("/data/sample_user.csv");
+        fileUserDataAccessObject.writeToCSV(records);
 
     }
 }
+
+
+// if (foodDataAccessObject.existByName(food)){
+//         addFoodPresenter.prepareFailView("Food Already Exist");
+//         }
+//         else {
+//         ArrayList<String> foodSpecifications = new ArrayList<>();
+//        foodSpecifications.add(food);
+//        //then write to csv
+//        fileUserDataAccessObject.writeToCSV("/data/sample_user.csv",foodSpecifications);
+//
+////        f = new JFrame();
+////        JOptionPane.showMessageDialog(f, "Success");
+//        addFoodPresenter.prepareSuccessView(foodOutputData);
+//
+//        }
