@@ -4,6 +4,6 @@ public interface AddFoodOutputBoundary {
 
     public void prepareSuccessView(AddFoodOutputData outputData);
 
-    public void prepareFailView(AddFoodOutputData outputData);
+    public void prepareFailView();
 
 }

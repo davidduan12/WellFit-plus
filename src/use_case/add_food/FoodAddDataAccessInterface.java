@@ -6,5 +6,7 @@ public interface FoodAddDataAccessInterface {
 
     int getCalorie(String foodName, float amount);
 
-    String fetchDataFromNutritionix(String query);
+    double apiExercise(String query);
+
+    double apiNutrient(String query);
 }

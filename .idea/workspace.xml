@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38636146-e9df-43f6-9bff-9959960ec596" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/add_food/AddFoodOutputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+    <list default="true" id="38636146-e9df-43f6-9bff-9959960ec596" name="Changes" comment="Fix small errors">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/eduworks_json_ld.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/eduworks_json_ld1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/json_20140107.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Javakiller.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Javakiller.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_access/FoodDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/FoodDataAccessObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_access/NutritionixAPICaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/NutritionixAPICaller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/add_food/AddFoodOutputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/FoodAddDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/add_food/FoodAddDataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/FoodView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/FoodView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,18 +63,23 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "iodata",
+    "git-widget-placeholder": "DAO",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/home/david/Documents/207/week8git",
+    "last_opened_file_path": "/home/david/IdeaProjects/Javakiller",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "build.tools",
@@ -125,11 +138,28 @@
       <workItem from="1699854128791" duration="354000" />
       <workItem from="1699911310752" duration="123000" />
       <workItem from="1699911439730" duration="1723000" />
+      <workItem from="1700766787449" duration="571000" />
+      <workItem from="1700767463053" duration="1976000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix small errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix small errors" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
