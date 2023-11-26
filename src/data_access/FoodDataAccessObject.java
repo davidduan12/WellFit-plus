@@ -46,9 +46,12 @@ public class FoodDataAccessObject implements FoodAddDataAccessInterface {
         return 0;
     }
 
-    public String fetchDataFromNutritionix(String query) {
+    public double apiExercise(String query) {
         // Call NutritionixAPICaller
-        return NutritionixAPICaller.fetchData(query);
+        return NutritionixAPICaller.fetchExercise(query);
     }
-
+    public double apiNutrient(String query) {
+        // Call NutritionixAPICaller
+        return NutritionixAPICaller.fetchNutrient(query);
+    }
 }

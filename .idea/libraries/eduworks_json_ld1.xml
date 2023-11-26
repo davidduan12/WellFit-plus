@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="eduworks.json.ld1" type="repository">
+    <properties maven-id="com.eduworks:org.json-ld:3.1.8" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/org.json-ld-3.1.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ec.base-3.1.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/html-5.0.bv6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/shared-3.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/client-runtime-3.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jquery-1.11.3.bv1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jquery-1.11.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
