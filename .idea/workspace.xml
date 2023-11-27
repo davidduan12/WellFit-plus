@@ -85,7 +85,7 @@
     "settings.editor.selected.configurable": "build.tools",
     "vue.rearranger.settings.migration": "true"
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.Main" />
@@ -120,7 +120,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="38636146-e9df-43f6-9bff-9959960ec596" name="Changes" comment="" />
+      <changelist id="1e6251ba-b7d8-419f-a571-ad5f6f633649" name="Changes" comment="Fix small errors" />
       <created>1698700978522</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -136,6 +136,7 @@
       <workItem from="1699573160978" duration="12862000" />
       <workItem from="1699676593956" duration="1993000" />
       <workItem from="1699854128791" duration="354000" />
+
       <workItem from="1699911310752" duration="123000" />
       <workItem from="1699911439730" duration="1723000" />
       <workItem from="1700766787449" duration="571000" />
@@ -158,6 +159,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+
+    <MESSAGE value="11" />
+    <MESSAGE value="Change something detailed" />
     <MESSAGE value="Fix small errors" />
     <option name="LAST_COMMIT_MESSAGE" value="Fix small errors" />
   </component>

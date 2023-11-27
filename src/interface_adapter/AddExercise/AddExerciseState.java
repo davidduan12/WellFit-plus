@@ -6,6 +6,7 @@ public class AddExerciseState {
 
     private String exerciseName = "";
     private float exerciseLength = 0;
+    private String exerciseError = null;
 
 
     public AddExerciseState(AddExerciseState copy) {
@@ -30,5 +31,9 @@ public class AddExerciseState {
 
     public void setExerciseLength(float exerciseLength) {
         this.exerciseLength = exerciseLength;
+    }
+
+    public void setExerciseError(String exerciseError) {
+        this.exerciseError = exerciseError;
     }
 }
