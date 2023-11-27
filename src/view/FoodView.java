@@ -42,18 +42,20 @@ public class FoodView extends JPanel implements ActionListener, PropertyChangeLi
         buttons.add(addFood);
         addFood.addActionListener(
                 // This creates an anonymous subclass of ActionListener and instantiates it.
-                new ActionListener() {
-                    public void actionPerformed(ActionEvent evt) {
-                        if (evt.getSource().equals(addFood)) {
-                            AddFoodState currentState = addFoodViewModel.getState();
-                            addFoodController.execute(
-                                    currentState.getFood(),
-                                    currentState.getFoodWeight()
+            new ActionListener() {
+                public void actionPerformed(ActionEvent evt) {
+                    if (evt.getSource().equals(addFood)) {
+                        AddFoodState currentState = addFoodViewModel.getState();
+                        addFoodController.execute(
+                                currentState.getFood(),
+                                currentState.getFoodWeight()
                             );
                         }
                     }
+
                 }
         );
+
 
         foodInputField.addKeyListener(
                 new KeyListener() {
@@ -120,7 +122,10 @@ public class FoodView extends JPanel implements ActionListener, PropertyChangeLi
     }
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
-
+            if (evt.getSource() == addFoodViewModel){
+                foodInputField.setText("");
+                foodWeightInputField.setText("");
+            }
         }
 
 
