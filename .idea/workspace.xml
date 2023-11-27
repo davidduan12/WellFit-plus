@@ -5,20 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38636146-e9df-43f6-9bff-9959960ec596" name="Changes" comment="Fix small errors">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/eduworks_json_ld.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/eduworks_json_ld1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/json_20140107.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/EditProfile/EditProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/EditProfile/EditProfilePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/EditProfile/EditProfileState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/EditProfile/EditProfileViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfileInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfileInputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfileInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfileOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfileOutputdata.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfiledataAccessInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/ProfileView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Javakiller.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Javakiller.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_access/FoodDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/FoodDataAccessObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_access/NutritionixAPICaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/NutritionixAPICaller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/add_food/AddFoodOutputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/FoodAddDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/add_food/FoodAddDataAccessInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/FoodView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/FoodView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/LabelFTextPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +35,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Class" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -71,7 +79,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "DAO",
+    "git-widget-placeholder": "profile",
     "jdk.selected.JAVA_MODULE": "17",
     "last_opened_file_path": "/home/david/IdeaProjects/Javakiller",
     "node.js.detected.package.eslint": "true",
@@ -86,6 +94,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="view" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.Main" />

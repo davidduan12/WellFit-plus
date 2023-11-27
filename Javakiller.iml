@@ -10,5 +10,6 @@
     <orderEntry type="library" name="eduworks.json.ld" level="project" />
     <orderEntry type="library" name="eduworks.json.ld1" level="project" />
     <orderEntry type="library" name="json-20140107" level="project" />
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
   </component>
 </module>
