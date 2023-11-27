@@ -17,11 +17,6 @@ public class AddFoodPresenter implements AddFoodOutputBoundary {
     }
 
     @Override
-    public void prepareFailView() {
-        // I think it should be String error in the parameter instead of Output Data.
-        // Should check it in AddFood OutputBoundary.
-    }
-
     public void prepareFailView(String error){
         AddFoodState addFoodState = addFoodViewModel.getState();
         addFoodState.setFoodError(error);

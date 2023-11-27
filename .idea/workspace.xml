@@ -4,178 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38636146-e9df-43f6-9bff-9959960ec596" name="Changes" comment="Fix small errors">
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/EditProfile/EditProfileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/EditProfile/EditProfilePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/EditProfile/EditProfileState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/EditProfile/EditProfileViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfileInputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfileInputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfileInteractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfileOutputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfileOutputdata.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfiledataAccessInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/ProfileView.java" afterDir="false" />
+    <list default="true" id="c28a3c17-0558-4bee-8370-4f5726e5d5b9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/data_access/InMemoryUserDataAccessObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/UserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/UserFactoryInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/AddExercise/AddExerciseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/AddExercise/AddExercisePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/SignUp/UserCreationFailed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/add_exercise/AddExerciseInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/add_exercise/AddExerciseInputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/add_exercise/AddExerciseInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/add_exercise/AddExerciseOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/add_exercise/AddExerciseOutputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/add_exercise/ExerciseAddDataAccessInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupDataAccessInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupInputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupOutputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/use_case/signup/SignupInteractorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Javakiller.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Javakiller.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/FoodView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/FoodView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/LabelFTextPanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddExercise/AddExerciseState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/AddExercise/AddExerciseState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/add_food/AddFoodOutputBoundary.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Kotlin Class" />
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;davidduan12&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="97897bbf-623b-47f0-896a-9180db82ec6d" />
-        <option name="url" value="git@github.com:davidduan12/WellFit-plus.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="2XV4aSJ8vu8q4x26PtQOSQp0DIP" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Downloaded.Files.Path.Enabled": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "profile",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/home/david/IdeaProjects/Javakiller",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "build.tools",
-    "vue.rearranger.settings.migration": "true"
+    "git-widget-placeholder": "Merging profile"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="view" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="app.Main" />
-      <module name="Javakiller" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="38636146-e9df-43f6-9bff-9959960ec596" name="Changes" comment="" />
-      <created>1698700978522</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1698700978522</updated>
-      <workItem from="1698700979581" duration="3304000" />
-      <workItem from="1698704294700" duration="653000" />
-      <workItem from="1698704955230" duration="250000" />
-      <workItem from="1698705211974" duration="1877000" />
-      <workItem from="1698862882489" duration="3654000" />
-      <workItem from="1698977729314" duration="233000" />
-      <workItem from="1699209898976" duration="97000" />
-      <workItem from="1699503739117" duration="3820000" />
-      <workItem from="1699573160978" duration="12862000" />
-      <workItem from="1699676593956" duration="1993000" />
-      <workItem from="1699854128791" duration="354000" />
-      <workItem from="1699911310752" duration="123000" />
-      <workItem from="1699911439730" duration="1723000" />
-      <workItem from="1700766787449" duration="571000" />
-      <workItem from="1700767463053" duration="1976000" />
-    </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix small errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix small errors" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
