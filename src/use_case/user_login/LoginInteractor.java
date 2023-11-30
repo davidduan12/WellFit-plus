@@ -13,21 +13,22 @@ public class LoginInteractor implements LoginInputBondary {
     }
 
     public void login(String username, String password) {
-        if (dataAccess.validateCredentials(username, password)) {
+        // Attempt to validate the user credentials
+        boolean result = dataAccess.validateUserCredentials(username, password);
+        LoginOutputData outputData;
+
+        if (result) {
+            // If credentials are valid, create success output data
             User user = dataAccess.getUserByUsername(username);
-            outputBoundary.onLoginSuccess(user);
+            String successMessage = "Login successful";
+            outputData = new LoginOutputData(true, successMessage, user.getUsername());
+            outputBoundary.presentLoginSuccess(outputData);
         } else {
-            outputBoundary.onLoginFailure("Invalid credentials");
+            // If credentials are invalid, create failure output data
+            String failureMessage = "Login failed. Invalid username or password.";
+            outputData = new LoginOutputData(false, failureMessage, username);
+            outputBoundary.presentLoginFailure(outputData);
         }
     }
 
-    @Override
-    public void login(String username, String password, int age, double weight, double height, String sex, double bmi) {
-        if (dataAccess.validateCredentials(username, password)) {
-            User user = dataAccess.getUserByUsername(username);
-            outputBoundary.onLoginSuccess(user);
-        } else {
-            outputBoundary.onLoginFailure("Invalid credentials");
-        }
-    }
 }

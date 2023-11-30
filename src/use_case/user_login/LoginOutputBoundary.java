@@ -1,9 +1,8 @@
 package use_case.user_login;
 
-import entity.User;
+import use_case.user_login.LoginOutputData;
 
 public interface LoginOutputBoundary {
-    void onLoginSuccess(User user);
-
-    void onLoginFailure(String invalid_credentials);
+    void presentLoginSuccess(LoginOutputData outputData);
+    void presentLoginFailure(LoginOutputData outputData);
 }

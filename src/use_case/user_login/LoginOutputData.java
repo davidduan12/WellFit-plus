@@ -1,15 +1,24 @@
 package use_case.user_login;
 
-import entity.User;
-
 public class LoginOutputData {
-    private final User user;
-
-    public LoginOutputData(User user){
-        this.user = user;
+    private final boolean isSuccess;
+    private final String message;
+    private final String username;
+    public LoginOutputData(boolean isSuccess, String message, String username) {
+        this.isSuccess = isSuccess;
+        this.message = message;
+        this.username = username;
     }
 
-    public User getUser() {
-        return user;
+    public boolean isSuccess() {
+        return isSuccess;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public String getUsername() {
+        return username;
     }
 }

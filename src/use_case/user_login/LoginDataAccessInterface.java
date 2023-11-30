@@ -12,4 +12,6 @@ public interface LoginDataAccessInterface {
     void createUserSession(User user);
     void saveUser(User user);
     void updateUserLoginState(User user);
+
+    boolean validateUserCredentials(String username, String password);
 }
