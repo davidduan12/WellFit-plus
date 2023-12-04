@@ -31,4 +31,7 @@ public class LoginViewModel {
             void showLoginError(String message);
         }
     }
+    public LoginState getState(){
+        return state;
+    }
 }
