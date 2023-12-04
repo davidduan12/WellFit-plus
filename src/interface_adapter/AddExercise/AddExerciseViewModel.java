@@ -6,9 +6,10 @@ import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
 public class AddExerciseViewModel extends ViewModel {
+    public static final String TITLE_LABEL = "Exercise Panel";
     public static final String ADD_BUTTON_LABEL = "Add";
-    public static final String FOOD_LABEL = "Enter food";
-    public static final String WEIGHT_LABEL = "Enter weight (g)";
+    public static final String EXERCISE_LABEL = "Enter exercise";
+    public static final String LENGTH_LABEL = "Enter duration (s)";
 
     private AddExerciseState state = new AddExerciseState();
 
