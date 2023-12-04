@@ -2,10 +2,10 @@ package use_case.add_exercise;
 
 public class AddExerciseInputData {
     final private String sports;
-    final private float calorie;
-    public AddExerciseInputData(String sports, float calorie){
+    final private double duration;
+    public AddExerciseInputData(String sports, double duration){
         this.sports = sports;
-        this.calorie = calorie;
+        this.duration = duration;
     }
 
     String getName(){
