@@ -29,7 +29,7 @@ public class MainFrame extends JFrame {
         }
 
         setTitle("Health Tracker Application");
-        setSize(600, 800);
+        setSize(400, 400);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);

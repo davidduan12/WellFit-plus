@@ -1,6 +1,8 @@
 package data_access;
 import entity.User;
 import use_case.UserDataAccessInterface;
+import use_case.edit_profile.EditProfileOutputBoundary;
+import use_case.edit_profile.EditProfiledataAccessInterface;
 
 import java.io.*;
 import java.util.*;

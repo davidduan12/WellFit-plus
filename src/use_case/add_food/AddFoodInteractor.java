@@ -25,7 +25,7 @@ public class AddFoodInteractor implements AddFoodInputBoundary{
     //read from FoodDataAccessObject which calls api and return something, and write the fileuserdataaccessobject which store user info
     @Override
     public void execute(AddFoodInputData inputData) {
-        String query = inputData.getWeight() + " of " + inputData.getName();
+        String query = inputData.getWeight() + "gram of " + inputData.getName();
         double calorieData = foodDataAccessObject.apiNutrient(query);
         //first get data from reading the csv
         if (calorieData == -1){
@@ -35,6 +35,7 @@ public class AddFoodInteractor implements AddFoodInputBoundary{
 //            ArrayList<ArrayList<String>> records = fileUserDataAccessObject.readToCSV("/data/sample_user.csv");
 //            fileUserDataAccessObject.writeToCSV(records);
             AddFoodOutputData out = new AddFoodOutputData(inputData.getName());
+            System.out.println(calorieData);
             addFoodOutputBoundary.prepareSuccessView(out);
         }
 

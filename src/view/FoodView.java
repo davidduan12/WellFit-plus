@@ -105,6 +105,7 @@ public class FoodView extends JPanel implements ActionListener, PropertyChangeLi
                     }
                 }
         );
+//        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         this.add(title);
