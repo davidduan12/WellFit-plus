@@ -26,6 +26,7 @@ public class MainPanel extends JPanel {
 //        setSize(600, 800);
 //        setLocationRelativeTo(null);
 //        setDefaultCloseOperation(EXIT_ON_CLOSE);
+
         setVisible(true);
         tabbedPane = new JTabbedPane();
 

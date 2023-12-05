@@ -1,5 +1,7 @@
 package data_access;
 import use_case.UserDataAccessInterface;
+import use_case.edit_profile.EditProfileOutputBoundary;
+import use_case.edit_profile.EditProfiledataAccessInterface;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
