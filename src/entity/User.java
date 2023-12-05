@@ -13,6 +13,10 @@ public class User {
 
     private double bmi;
 
+    private float totalCaloriesIntake = 0;
+
+    private float totalCaloriesExpenditure = 0;
+
     public User(String username, String password, double weight, double height) {
         this.username = username;
         this.password = password;
@@ -54,4 +58,19 @@ public class User {
     }
 
 
+    public float getTotalCaloriesIntake() {
+        return totalCaloriesIntake;
+    }
+
+    public void setTotalCaloriesIntake(float totalCaloriesIntake) {
+        this.totalCaloriesIntake = totalCaloriesIntake;
+    }
+
+    public float getTotalCaloriesExpenditure() {
+        return totalCaloriesExpenditure;
+    }
+
+    public void setTotalCaloriesExpenditure(float totalCaloriesExpenditure) {
+        this.totalCaloriesExpenditure = totalCaloriesExpenditure;
+    }
 }
