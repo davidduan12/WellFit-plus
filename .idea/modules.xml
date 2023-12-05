@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Javakiller.iml" filepath="$PROJECT_DIR$/Javakiller.iml" />
-      <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WellFit-plus.iml" filepath="$PROJECT_DIR$/WellFit-plus.iml" />
     </modules>
   </component>
 </project>

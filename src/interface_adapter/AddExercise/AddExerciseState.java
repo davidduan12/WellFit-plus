@@ -2,8 +2,6 @@ package interface_adapter.AddExercise;
 
 
 public class AddExerciseState {
-
-
     private String exerciseName = "";
     private float exerciseLength = 0;
     private String exerciseError = null;

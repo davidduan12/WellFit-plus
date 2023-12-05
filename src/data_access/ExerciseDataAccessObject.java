@@ -1,6 +1,6 @@
 package data_access;
 
-import use_case.ExerciseAddDataAccessInterface;
+import use_case.add_exercise.ExerciseAddDataAccessInterface;
 
 import java.io.*;
 

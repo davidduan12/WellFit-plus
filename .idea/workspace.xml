@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="914ea948-db68-4bb3-831a-9de77764d010" name="Changes" comment="Adding the AddExerciseUseCaseFactory.java">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-11-20_12_08_a_m__[Changes]1/shelved.patch" beforeDir="false" />
