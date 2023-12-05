@@ -1,0 +1,183 @@
+Index: src/entity/User.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package entity;\r\n\r\npublic class User {\r\n    private String username;\r\n\r\n    private String name;\r\n    private String password;\r\n    private int age;\r\n    private double weight; // in kilograms\r\n    private double height; // in meters\r\n\r\n    private String sex;\r\n\r\n    private double bmi;\r\n\r\n    public User(String username, String password, double weight, double height) {\r\n        this.username = username;\r\n        this.password = password;\r\n        this.weight = weight;\r\n        this.height = height;\r\n    }\r\n\r\n    // Getters and Setters\r\n    public String getUsername() {\r\n        return username;\r\n    }\r\n\r\n    public void setUsername(String username) {\r\n        this.username = username;\r\n    }\r\n\r\n    public String getPassword() {\r\n        return password;\r\n    }\r\n\r\n    public void setPassword(String password) {\r\n        this.password = password;\r\n    }\r\n\r\n    public double getWeight() {\r\n        return weight;\r\n    }\r\n\r\n    public void setWeight(double weight) {\r\n        this.weight = weight;\r\n    }\r\n\r\n    public double getHeight() {\r\n        return height;\r\n    }\r\n\r\n    public void setHeight(double height) {\r\n        this.height = height;\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/entity/User.java b/src/entity/User.java
+--- a/src/entity/User.java	(revision 898a90358a371ebb8fc5c90d602cb8320dfbe1b8)
++++ b/src/entity/User.java	(date 1701809702343)
+@@ -13,7 +13,7 @@
+ 
+     private double bmi;
+ 
+-    public User(String username, String password, double weight, double height) {
++    public User(String username, String password, double height, double weight) {
+         this.username = username;
+         this.password = password;
+         this.weight = weight;
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n\r\n    <list default=\"true\" id=\"3654dfd6-c55b-4f83-88b5-cbb3551d4e5d\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/app/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/app/Main.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/interface_adapter/SignUp/SignupState.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/interface_adapter/SignUp/SignupState.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/interface_adapter/UserLogin/LoginPresenter.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/interface_adapter/UserLogin/LoginPresenter.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/interface_adapter/UserLogin/LoginViewModel.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/interface_adapter/UserLogin/LoginViewModel.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n\r\n        <option value=\"JUnit5 Test Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2YxYcyiMVkYdcI3KpBcOAtZtTij\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\"><![CDATA[{\r\n  \"associatedIndex\": 8\r\n}]]></component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n\r\n    &quot;git-widget-placeholder&quot;: &quot;frontend&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"interface_adapter\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <servers />\r\n  </component>\r\n、\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 898a90358a371ebb8fc5c90d602cb8320dfbe1b8)
++++ b/.idea/workspace.xml	(date 1701809702356)
+@@ -4,13 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-
+     <list default="true" id="3654dfd6-c55b-4f83-88b5-cbb3551d4e5d" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/data/test_user.csv" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/SignUp/SignupState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/SignUp/SignupState.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/UserLogin/LoginPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/UserLogin/LoginPresenter.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/UserLogin/LoginViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/UserLogin/LoginViewModel.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/WellFit-plus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WellFit-plus.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/User.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -21,52 +19,69 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="Class" />
+-
+         <option value="JUnit5 Test Class" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
+-    <option name="RECENT_BRANCH_BY_REPOSITORY">
+-      <map>
+-        <entry key="$PROJECT_DIR$" value="main" />
+-      </map>
+-    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+   <component name="ProjectColorInfo">{
+-  &quot;associatedIndex&quot;: 7
++  &quot;associatedIndex&quot;: 8
+ }</component>
+   <component name="ProjectId" id="2YxYcyiMVkYdcI3KpBcOAtZtTij" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+-
+   </component>
+-  <component name="Git.Settings">
+-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-  </component>
+-  <component name="ProjectColorInfo"><![CDATA[{
+-  "associatedIndex": 8
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Downloaded.Files.Path.Enabled": "false",
++    "Repository.Attach.Annotations": "false",
++    "Repository.Attach.JavaDocs": "false",
++    "Repository.Attach.Sources": "false",
++    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
++    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
++    "git-widget-placeholder": "csv",
++    "node.js.selected.package.tslint": "(autodetect)"
++  }
+ }]]></component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-
+-    &quot;git-widget-placeholder&quot;: &quot;frontend&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+-  }
+-}</component>
+   <component name="RecentsManager">
++    <key name="CreateTestDialog.Recents.Supers">
++      <recent name="" />
++    </key>
+     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+       <recent name="interface_adapter" />
+     </key>
++    <key name="CreateTestDialog.RecentsKey">
++      <recent name="data_access" />
++    </key>
++  </component>
++  <component name="RunManager">
++    <configuration name="FileUserDataAccessObjectTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="data_access.FileUserDataAccessObjectTest" />
++      <module name="WellFit-plus" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="data_access.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.FileUserDataAccessObjectTest" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="TaskManager">
+     <servers />
+   </component>
+-、
+ </project>
+\ No newline at end of file
+Index: WellFit-plus.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n      <sourceFolder url=\"file://$MODULE_DIR$/test\" isTestSource=\"true\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n    <orderEntry type=\"module-library\" scope=\"TEST\">\r\n      <library name=\"JUnit5.8.1\">\r\n        <CLASSES>\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter/5.8.1/junit-jupiter-5.8.1.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.8.1/junit-jupiter-api-5.8.1.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.8.1/junit-platform-commons-1.8.1.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-params/5.8.1/junit-jupiter-params-5.8.1.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.8.1/junit-jupiter-engine-5.8.1.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.8.1/junit-platform-engine-1.8.1.jar!/\" />\r\n        </CLASSES>\r\n        <JAVADOC />\r\n        <SOURCES />\r\n      </library>\r\n    </orderEntry>\r\n    <orderEntry type=\"module-library\" scope=\"TEST\">\r\n      <library name=\"testng\">\r\n        <CLASSES>\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/testng/testng/7.1.0/testng-7.1.0.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/com/beust/jcommander/1.72/jcommander-1.72.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/com/google/inject/guice/4.1.0/guice-4.1.0-no_aop.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/javax.inject-1.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/yaml/snakeyaml/1.21/snakeyaml-1.21.jar!/\" />\r\n        </CLASSES>\r\n        <JAVADOC />\r\n        <SOURCES />\r\n      </library>\r\n    </orderEntry>\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/WellFit-plus.iml b/WellFit-plus.iml
+--- a/WellFit-plus.iml	(revision 898a90358a371ebb8fc5c90d602cb8320dfbe1b8)
++++ b/WellFit-plus.iml	(date 1701809702350)
+@@ -39,5 +39,31 @@
+         <SOURCES />
+       </library>
+     </orderEntry>
++    <orderEntry type="module-library" scope="TEST">
++      <library name="JUnit4">
++        <CLASSES>
++          <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.13.1/junit-4.13.1.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/" />
++        </CLASSES>
++        <JAVADOC />
++        <SOURCES />
++      </library>
++    </orderEntry>
++    <orderEntry type="module-library" scope="TEST">
++      <library name="JUnit5.8.1">
++        <CLASSES>
++          <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter/5.8.1/junit-jupiter-5.8.1.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.8.1/junit-jupiter-api-5.8.1.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.8.1/junit-platform-commons-1.8.1.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-params/5.8.1/junit-jupiter-params-5.8.1.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.8.1/junit-jupiter-engine-5.8.1.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.8.1/junit-platform-engine-1.8.1.jar!/" />
++        </CLASSES>
++        <JAVADOC />
++        <SOURCES />
++      </library>
++    </orderEntry>
+   </component>
+ </module>
+\ No newline at end of file
+diff --git a/data/test_user.csv b/data/test_user.csv
+new file mode 100644

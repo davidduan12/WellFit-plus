@@ -17,7 +17,7 @@ public class User {
 
     private float totalCaloriesExpenditure = 0;
 
-    public User(String username, String password, double weight, double height) {
+    public User(String username, String password, double height, double weight) {
         this.username = username;
         this.password = password;
         this.weight = weight;
