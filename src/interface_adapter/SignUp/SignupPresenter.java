@@ -3,9 +3,10 @@ package interface_adapter.SignUp;
 import interface_adapter.UserLogin.LoginState;
 import interface_adapter.UserLogin.LoginViewModel;
 import interface_adapter.ViewManagerModel;
+import use_case.signup.SignupOutputBoundary;
 import use_case.signup.SignupOutputData;
 
-public class SignupPresenter {
+public class SignupPresenter implements SignupOutputBoundary {
     private final SignupViewModel signupViewModel;
     private final LoginViewModel loginViewModel;
     private ViewManagerModel viewManagerModel;
@@ -37,6 +38,9 @@ public class SignupPresenter {
     public void prepareFailView(String error) {
         SignupState signupState = signupViewModel.getState();
         signupState.setUsernameError(error);
+        signupState.setPasswordError(error);
+        signupState.setRepeatPasswordError(error);
+
         signupViewModel.firePropertyChanged();
     }
 }

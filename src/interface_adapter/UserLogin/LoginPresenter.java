@@ -1,6 +1,5 @@
 package interface_adapter.UserLogin;
 
-import entity.User;
 import interface_adapter.ViewManagerModel;
 import use_case.user_login.LoginOutputBoundary;
 
@@ -10,7 +9,6 @@ public class LoginPresenter implements LoginOutputBoundary {
     private ViewManagerModel viewManagerModel;
 
     public LoginPresenter(ViewManagerModel viewManagerModel,
-                          LoggedInViewModel loggedInViewModel,
                           LoginViewModel loginViewModel) {
         this.viewManagerModel = viewManagerModel;
         this.loggedInViewModel = loggedInViewModel;
