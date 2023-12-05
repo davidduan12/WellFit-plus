@@ -13,15 +13,11 @@ public class User {
 
     private double bmi;
 
-    public User(String username, String password, int age, double weight, double height, String sex, String name) {
+    public User(String username, String password, double weight, double height) {
         this.username = username;
         this.password = password;
-        this.age = age;
         this.weight = weight;
         this.height = height;
-        this.sex = sex;
-        this.name = name;
-        this.bmi = bmi;
     }
 
     // Getters and Setters
@@ -41,14 +37,6 @@ public class User {
         this.password = password;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public double getWeight() {
         return weight;
     }
@@ -65,24 +53,5 @@ public class User {
         this.height = height;
     }
 
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getBMI() {return bmi;}
-
-    public void setBMI(Double bmi) { this.bmi = bmi; }
 
 }
