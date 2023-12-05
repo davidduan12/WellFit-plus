@@ -2,22 +2,16 @@ package view;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 
 import app.AddFoodUseCaseFactory;
-import data_access.FoodDataAccessObject;
 import interface_adapter.AddFood.AddFoodViewModel;
 import use_case.UserDataAccessInterface;
 import use_case.add_food.FoodAddDataAccessInterface;
-import view.FoodView;
 
-public class MainFrame extends JFrame {
+public class MainPanel extends JPanel {
     private JTabbedPane tabbedPane;
 
-    public MainFrame(AddFoodViewModel addFoodViewModel, UserDataAccessInterface userDataAccessObject, FoodAddDataAccessInterface foodDataAccessObject){
+    public MainPanel(AddFoodViewModel addFoodViewModel, UserDataAccessInterface userDataAccessObject, FoodAddDataAccessInterface foodDataAccessObject){
         initUI(addFoodViewModel, userDataAccessObject, foodDataAccessObject);
     }
 
@@ -27,11 +21,11 @@ public class MainFrame extends JFrame {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        setTitle("Health Tracker Application");
-        setSize(600, 800);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+//
+//        setTitle("Health Tracker Application");
+//        setSize(600, 800);
+//        setLocationRelativeTo(null);
+//        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
         tabbedPane = new JTabbedPane();
 
@@ -45,15 +39,15 @@ public class MainFrame extends JFrame {
         tabbedPane.addTab("Profile", createProfilePanel());
 
         // Custom tab component to increase tab size
-        addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowOpened(WindowEvent e) {
-
-                setCustomTabs(getContentPane().getWidth()/3,30);
-            }
-        });
-        getContentPane().add(tabbedPane, BorderLayout.CENTER);
-    }
+//        addWindowListener(new WindowAdapter() {
+//            @Override
+//            public void windowOpened(WindowEvent e) {
+//
+//                setCustomTabs(getContentPane().getWidth()/3,30);
+//            }
+//        });
+//        getContentPane().add(tabbedPane, BorderLayout.CENTER);
+     }
     private void setCustomTabs(int width, int height) {
 
         for (int i = 0; i < 3; i++) {

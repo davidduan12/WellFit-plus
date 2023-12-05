@@ -7,14 +7,12 @@ import interface_adapter.AddFood.AddFoodViewModel;
 import interface_adapter.SignUp.SignupViewModel;
 import interface_adapter.UserLogin.LoginViewModel;
 import interface_adapter.ViewManagerModel;
-import view.FoodView;
-import view.MainFrame;
+import view.MainPanel;
 import view.ViewManager;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
-import java.io.IOException;
 
 public class Main {
 
@@ -26,7 +24,6 @@ public class Main {
 
         FileUserDataAccessObject userDataAccessObject = null; // = null for now
 
-        CardLayout cardLayout = new CardLayout();
 
 
        /* try{
@@ -56,17 +53,30 @@ public class Main {
         FoodDataAccessObject finalFoodDataAccessObject = foodDataAccessObject;
         SwingUtilities.invokeLater(() -> {
             //Main window
-            JFrame application = new MainFrame(addFoodViewModel, finalUserDataAccessObject, finalFoodDataAccessObject);
-            application.setVisible(true);
+            JFrame application = new JFrame("Javakiller");
             application.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            CardLayout cardLayout = new CardLayout();
+
+            //Various View objects.
             JPanel views = new JPanel(cardLayout);
             application.add(views);
 
+            //Keeps track of active view
             ViewManagerModel viewManagerModel = new ViewManagerModel();
             new ViewManager(views, cardLayout, viewManagerModel);
+
+            //Data for views
             SignupViewModel signupViewModel = new SignupViewModel();
             LoginViewModel loginViewModel = new LoginViewModel();
-            LoggedInViewModel loggedInViewModel = new LoggedInViewMdel();
+            JPanel mainPanel = new MainPanel(addFoodViewModel, finalUserDataAccessObject, finalFoodDataAccessObject);
+
+            FileUserDataAccessObject userDataAccessObject;
+
+            try {
+                userDataAccessObject = new FileUserDataAccessObject("./", new Common)
+            }
+            application.pack();
+            application.setVisible(true);
         });
 
 
