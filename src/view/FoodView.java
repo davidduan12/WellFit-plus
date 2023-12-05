@@ -30,7 +30,7 @@ public class FoodView extends JPanel implements ActionListener, PropertyChangeLi
         this.addFoodViewModel = addFoodViewModel;
         this.addFoodController = addFoodController;
         addFoodViewModel.addPropertyChangeListener(this);
-        JLabel title = new JLabel(addFoodViewModel.TITLE_LABEL);
+        JLabel title = new JLabel(AddFoodViewModel.TITLE_LABEL);
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         LabelTextPanel foodInfo = new LabelTextPanel(new JLabel(addFoodViewModel.FOOD_LABEL), foodInputField);
