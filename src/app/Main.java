@@ -4,10 +4,15 @@ import data_access.FileUserDataAccessObject;
 import data_access.FoodDataAccessObject;
 import interface_adapter.AddExercise.AddExerciseViewModel;
 import interface_adapter.AddFood.AddFoodViewModel;
+import interface_adapter.SignUp.SignupViewModel;
+import interface_adapter.UserLogin.LoginViewModel;
+import interface_adapter.ViewManagerModel;
 import view.FoodView;
 import view.MainFrame;
+import view.ViewManager;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
@@ -20,6 +25,10 @@ public class Main {
         AddExerciseViewModel addExerciseViewModel = new AddExerciseViewModel();
 
         FileUserDataAccessObject userDataAccessObject = null; // = null for now
+
+        CardLayout cardLayout = new CardLayout();
+
+
        /* try{
             userDataAccessObject = new FileUserDataAccessObject("./data/sample_user.csv");
             // userDataAccessObject = new FileUserDataAccessObject("./data/sample_user.csv", new ) fix fileuserdataacccessobject
@@ -49,6 +58,15 @@ public class Main {
             //Main window
             JFrame application = new MainFrame(addFoodViewModel, finalUserDataAccessObject, finalFoodDataAccessObject);
             application.setVisible(true);
+            application.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            JPanel views = new JPanel(cardLayout);
+            application.add(views);
+
+            ViewManagerModel viewManagerModel = new ViewManagerModel();
+            new ViewManager(views, cardLayout, viewManagerModel);
+            SignupViewModel signupViewModel = new SignupViewModel();
+            LoginViewModel loginViewModel = new LoginViewModel();
+            LoggedInViewModel loggedInViewModel = new LoggedInViewMdel();
         });
 
 
