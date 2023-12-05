@@ -2,17 +2,20 @@ package app;
 
 import data_access.FileUserDataAccessObject;
 import data_access.FoodDataAccessObject;
+import entity.UserFactory;
 import interface_adapter.AddExercise.AddExerciseViewModel;
 import interface_adapter.AddFood.AddFoodViewModel;
 import interface_adapter.SignUp.SignupViewModel;
 import interface_adapter.UserLogin.LoginViewModel;
 import interface_adapter.ViewManagerModel;
 import view.MainPanel;
+import view.SignupView;
 import view.ViewManager;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
+import java.io.IOException;
 
 public class Main {
 
@@ -22,16 +25,6 @@ public class Main {
         AddFoodViewModel addFoodViewModel = new AddFoodViewModel();
         AddExerciseViewModel addExerciseViewModel = new AddExerciseViewModel();
 
-        FileUserDataAccessObject userDataAccessObject = null; // = null for now
-
-
-
-       /* try{
-            userDataAccessObject = new FileUserDataAccessObject("./data/sample_user.csv");
-            // userDataAccessObject = new FileUserDataAccessObject("./data/sample_user.csv", new ) fix fileuserdataacccessobject
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }*/
 
         FoodDataAccessObject foodDataAccessObject = new FoodDataAccessObject("./data/sample_user.csv");
 //        String query = "ran 3 miles";
@@ -73,8 +66,16 @@ public class Main {
             FileUserDataAccessObject userDataAccessObject;
 
             try {
-                userDataAccessObject = new FileUserDataAccessObject("./", new Common)
+                userDataAccessObject = new FileUserDataAccessObject("./data/user.csv");
+            } catch (IOException e){
+                throw new RuntimeException(e);
             }
+
+            SignupView signupView = SignupUseCaseFactory.create(viewManagerModel, loginViewModel, signupViewModel, userDataAccessObject);
+            views.add(signupView, signupView.viewName);
+
+            LoginView loginView = LoginUseCaseFactory.create(viewManagerModel, loginViewModel, mainPanel, userDataAccessObject);
+
             application.pack();
             application.setVisible(true);
         });

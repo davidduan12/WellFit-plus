@@ -38,7 +38,6 @@ public class MainPanel extends JPanel {
         tabbedPane.addTab("Food", foodView);
         tabbedPane.addTab("Exercise", createExercisePanel());
         tabbedPane.addTab("Profile", createProfilePanel());
-
         // Custom tab component to increase tab size
 //        addWindowListener(new WindowAdapter() {
 //            @Override
