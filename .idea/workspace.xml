@@ -5,44 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c28a3c17-0558-4bee-8370-4f5726e5d5b9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data_access/InMemoryUserDataAccessObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/UserFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/UserFactoryInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/AddExercise/AddExerciseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/AddExercise/AddExercisePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/SignUp/UserCreationFailed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/add_exercise/AddExerciseInputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/add_exercise/AddExerciseInputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/add_exercise/AddExerciseInteractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/add_exercise/AddExerciseOutputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/add_exercise/AddExerciseOutputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/add_exercise/ExerciseAddDataAccessInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupDataAccessInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupInputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupInputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupInteractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupOutputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupOutputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/use_case/signup/SignupInteractorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javakiller.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Javakiller.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddExercise/AddExerciseState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/AddExercise/AddExerciseState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/add_food/AddFoodOutputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/EditProfile/EditProfileState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/EditProfile/EditProfileState.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "git-widget-placeholder": "Merging profile"
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Z5ujn6lI3SxgVthgmtJjqcMUYY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;git-widget-placeholder&quot;: &quot;Merging profile&quot;
   }
-}]]></component>
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3654dfd6-c55b-4f83-88b5-cbb3551d4e5d" name="Changes" comment="" />
+      <created>1701724398480</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701724398480</updated>
+      <workItem from="1701724399808" duration="2400000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
