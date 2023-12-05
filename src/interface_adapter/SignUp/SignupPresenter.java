@@ -1,7 +1,7 @@
 package interface_adapter.SignUp;
 
-import interface_adapter.UserLogin.LoginState;
-import interface_adapter.UserLogin.LoginViewModel;
+import interface_adapter.login.LoginState;
+import interface_adapter.login.LoginViewModel;
 import interface_adapter.ViewManagerModel;
 import use_case.signup.SignupOutputBoundary;
 import use_case.signup.SignupOutputData;

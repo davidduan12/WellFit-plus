@@ -5,7 +5,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3654dfd6-c55b-4f83-88b5-cbb3551d4e5d" name="Changes" comment="Adding the SignUpView and change the corresponding presenter, state and view">
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/LoggedInState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/LoggedInViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/login/LoginDataAccessInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/login/LoginInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/login/LoginInputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/login/LoginOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/login/LoginOutputData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/AddExerciseUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AddExerciseUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/AddFoodUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AddFoodUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/LoginUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/LoginUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_access/ExerciseDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/ExerciseDataAccessObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_access/FoodDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/FoodDataAccessObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddExercise/AddExerciseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddExercise/AddExerciseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddExercise/AddExercisePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddExercise/AddExercisePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddExercise/AddExerciseState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddExercise/AddExerciseState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddExercise/AddExerciseViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddExercise/AddExerciseViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddFood/AddFoodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddFood/AddFoodPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddFood/AddFoodState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/AddFood/AddFoodViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddFood/AddFoodViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/EditProfile/EditProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/EditProfile/EditProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/EditProfile/EditProfilePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/EditProfile/EditProfilePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/EditProfile/EditProfileState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/EditProfile/EditProfileState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/EditProfile/EditProfileViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/EditProfile/EditProfileViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/SignUp/SignupPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/SignUp/SignupPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/UserLogin/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/UserLogin/LoginPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/login/LoginPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/UserLogin/LoginState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/login/LoginState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/UserLogin/LoginViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/login/LoginViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/add_exercise/AddExerciseInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/AddExerciseInputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/add_exercise/AddExerciseInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/AddExerciseInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/add_exercise/AddExerciseInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/AddExerciseInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/add_exercise/AddExerciseOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/AddExerciseOutputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/add_exercise/AddExerciseOutputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/AddExerciseOutputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/add_exercise/ExerciseAddDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/ExerciseAddDataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/AddFoodInputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/AddFoodInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/AddFoodInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/AddFoodOutputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/AddFoodOutputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/AddFoodOutputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/add_food/FoodAddDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/FoodAddDataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfileInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileInputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfileInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfileInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfileOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileOutputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfileOutputdata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileOutputdata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/edit_profile/EditProfiledataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfiledataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/user_login/LoginDataAccessInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/user_login/LoginInputBoundary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/user_login/LoginInputData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/user_login/LoginInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/login/LoginInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/user_login/LoginOutputBoundary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/user_login/LoginOutputData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ExerciseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ExerciseView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/FoodView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/FoodView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ProfileView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ProfileView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/use_case/add_exercise/AddExerciseInputDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/use_case/add_exercise/AddExerciseInputDataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/use_case/add_exercise/AddExerciseInteractorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/use_case/add_exercise/AddExerciseInteractorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,26 +97,14 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ViewExercise&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;frontend&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "frontend",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
-  }
-}]]></component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="interface_adapter.SignUp" />

@@ -1,6 +1,6 @@
 package data_access;
 
-import use_case.add_food.FoodAddDataAccessInterface;
+import use_case.LoggedIn.add_food.FoodAddDataAccessInterface;
 
 import java.io.*;
 

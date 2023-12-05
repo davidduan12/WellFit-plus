@@ -3,19 +3,19 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 
+import app.AddExerciseUseCaseFactory;
 import app.AddFoodUseCaseFactory;
-import interface_adapter.AddFood.AddFoodViewModel;
+import interface_adapter.LoggedIn.AddExercise.AddExerciseViewModel;
+import interface_adapter.LoggedIn.AddFood.AddFoodViewModel;
+import interface_adapter.LoggedIn.LoggedInViewModel;
 import use_case.UserDataAccessInterface;
-import use_case.add_food.FoodAddDataAccessInterface;
+import use_case.LoggedIn.add_food.FoodAddDataAccessInterface;
 
 public class MainPanel extends JPanel {
     private JTabbedPane tabbedPane;
+    public final String viewName = "logged in";
 
-    public MainPanel(AddFoodViewModel addFoodViewModel, UserDataAccessInterface userDataAccessObject, FoodAddDataAccessInterface foodDataAccessObject){
-        initUI(addFoodViewModel, userDataAccessObject, foodDataAccessObject);
-    }
-
-    private void initUI(AddFoodViewModel addFoodViewModel, UserDataAccessInterface userDataAccessObject, FoodAddDataAccessInterface foodDataAccessObject) {
+    private void MainPanel(AddFoodViewModel addFoodViewModel, AddExerciseViewModel addExerciseViewModel, UserDataAccessInterface userDataAccessObject, FoodAddDataAccessInterface foodDataAccessObject) {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
@@ -34,9 +34,11 @@ public class MainPanel extends JPanel {
         tabbedPane.setTabPlacement(JTabbedPane.BOTTOM);
 
         FoodView foodView = AddFoodUseCaseFactory.create(addFoodViewModel, foodDataAccessObject, userDataAccessObject);
+        ExerciseView exerciseView = AddExerciseUseCaseFactory.create(addExerciseViewModel, userDataAccessObject);
+        ProfileView profileView = AddProfileUseCaseFactory.create(addProfile)
         // Add panels to the tabbed pane
         tabbedPane.addTab("Food", foodView);
-        tabbedPane.addTab("Exercise", createExercisePanel());
+        tabbedPane.addTab("Exercise", exerciseView);
         tabbedPane.addTab("Profile", createProfilePanel());
         // Custom tab component to increase tab size
 //        addWindowListener(new WindowAdapter() {

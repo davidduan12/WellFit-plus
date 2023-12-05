@@ -1,15 +1,11 @@
 package data_access;
 import use_case.UserDataAccessInterface;
-import use_case.edit_profile.EditProfileOutputBoundary;
-import use_case.edit_profile.EditProfiledataAccessInterface;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.Collection;
-import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 

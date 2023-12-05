@@ -2,19 +2,18 @@ package app;
 
 import data_access.FileUserDataAccessObject;
 import data_access.FoodDataAccessObject;
-import entity.UserFactory;
-import interface_adapter.AddExercise.AddExerciseViewModel;
-import interface_adapter.AddFood.AddFoodViewModel;
+import interface_adapter.LoggedIn.AddExercise.AddExerciseViewModel;
+import interface_adapter.LoggedIn.AddFood.AddFoodViewModel;
 import interface_adapter.SignUp.SignupViewModel;
-import interface_adapter.UserLogin.LoginViewModel;
+import interface_adapter.login.LoginViewModel;
 import interface_adapter.ViewManagerModel;
+import view.LoginView;
 import view.MainPanel;
 import view.SignupView;
 import view.ViewManager;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
 import java.io.IOException;
 
 public class Main {

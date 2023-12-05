@@ -1,14 +1,13 @@
 package app;
 
-import interface_adapter.AddFood.AddFoodController;
-import interface_adapter.AddFood.AddFoodPresenter;
-import interface_adapter.AddFood.AddFoodViewModel;
+import interface_adapter.LoggedIn.AddFood.AddFoodController;
+import interface_adapter.LoggedIn.AddFood.AddFoodPresenter;
+import interface_adapter.LoggedIn.AddFood.AddFoodViewModel;
 import use_case.UserDataAccessInterface;
-import use_case.add_food.FoodAddDataAccessInterface;
-import use_case.add_food.AddFoodInputBoundary;
-import use_case.add_food.AddFoodInteractor;
-import use_case.add_food.AddFoodOutputBoundary;
-import use_case.UserDataAccessInterface;
+import use_case.LoggedIn.add_food.FoodAddDataAccessInterface;
+import use_case.LoggedIn.add_food.AddFoodInputBoundary;
+import use_case.LoggedIn.add_food.AddFoodInteractor;
+import use_case.LoggedIn.add_food.AddFoodOutputBoundary;
 import view.FoodView;
 
 import javax.swing.*;
