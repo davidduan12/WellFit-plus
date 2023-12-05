@@ -1,11 +1,12 @@
 package interface_adapter.UserLogin;
 import use_case.user_login.LoginInputBondary;
+import use_case.user_login.LoginInputBoundary;
 
 public class LoginController {
-    private final LoginInputBondary loginInteractor;
+    private final LoginInputBoundary loginInteractor;
     private final LoginPresenter loginPresenter;
 
-    public LoginController(LoginInputBondary loginInteractor, LoginPresenter loginPresenter) {
+    public LoginController(LoginInputBoundary loginInteractor, LoginPresenter loginPresenter) {
         this.loginInteractor = loginInteractor;
         this.loginPresenter = loginPresenter;
     }
