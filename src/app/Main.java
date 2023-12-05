@@ -37,13 +37,13 @@ public class Main {
         }*/
 
         FoodDataAccessObject foodDataAccessObject = new FoodDataAccessObject("./data/sample_user.csv");
-        String query = "ran 3 miles";
-        Double responseData = foodDataAccessObject.apiExercise(query);
-        System.out.println(responseData);
-
-        query = "3 eggs";
-        responseData = foodDataAccessObject.apiNutrient(query);
-        System.out.println(responseData);
+//        String query = "ran 3 miles";
+//        Double responseData = foodDataAccessObject.apiExercise(query);
+//        System.out.println(responseData);
+//
+//        query = "3 eggs";
+//        responseData = foodDataAccessObject.apiNutrient(query);
+//        System.out.println(responseData);
 
         /*try{
             foodDataAccessObject = new FoodDataAccessObject("./data/sample_user.csv");
