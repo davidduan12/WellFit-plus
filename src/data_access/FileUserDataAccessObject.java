@@ -1,6 +1,7 @@
 package data_access;
 import entity.User;
 import use_case.UserDataAccessInterface;
+import use_case.edit_profile.EditProfileInputData;
 import use_case.edit_profile.EditProfileOutputBoundary;
 import use_case.edit_profile.EditProfiledataAccessInterface;
 
@@ -13,8 +14,14 @@ public class FileUserDataAccessObject implements UserDataAccessInterface {
 
     private final Map<String, User> accounts = new HashMap<>();
 
+
+
     public FileUserDataAccessObject(String filepath){
         this.filepath = filepath;
+    }
+
+    public FileUserDataAccessObject(User user){
+
     }
 
     //need initializer here, we shouldn't be stating filepath everytime we call a function, not CA.
@@ -140,6 +147,47 @@ public class FileUserDataAccessObject implements UserDataAccessInterface {
         catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void editUserCsv(EditProfileInputData editProfileInputData, String username){
+        User thisUser;
+        thisUser = accounts.get(username);
+        thisUser.setUsername(editProfileInputData.getName());
+        thisUser.setPassword(editProfileInputData.getPassword());
+        thisUser.setHeight(editProfileInputData.getHeight());
+        thisUser.setWeight(editProfileInputData.getWeight());
+        accounts.put(editProfileInputData.getName(), thisUser);
+        if (!editProfileInputData.getName().equals(username)){
+            accounts.remove(username);
+        }
+
+        List<String> lines = new ArrayList<>();
+        String line;
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
+            reader.readLine();
+
+            while ((line = reader.readLine()) != null){
+                String[] userData = line.split(",");
+                if (userData[0].equals(username)){
+                    userData[0] = editProfileInputData.getName();
+                    userData[1] = editProfileInputData.getPassword();
+                    userData[2] = Double.toString(editProfileInputData.getHeight());
+                    userData[3] = Double.toString(editProfileInputData.getWeight());
+                }
+                lines.add(String.join(",", userData));
+            }
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(filepath))) {
+                for (String updatedLine : lines) {
+                    writer.write(updatedLine);
+                    writer.newLine();
+                }
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 }
