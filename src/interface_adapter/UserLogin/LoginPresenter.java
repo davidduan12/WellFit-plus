@@ -1,19 +1,39 @@
 package interface_adapter.UserLogin;
 
 import entity.User;
+import interface_adapter.ViewManagerModel;
 import use_case.user_login.LoginOutputBoundary;
 
 public class LoginPresenter implements LoginOutputBoundary {
-    public void presentLoginError(String username_and_password_are_required) {
+    private final LoginViewModel loginViewModel;
+    private final LoggedInViewModel loggedInViewModel;
+    private ViewManagerModel viewManagerModel;
+
+    public LoginPresenter(ViewManagerModel viewManagerModel,
+                          LoggedInViewModel loggedInViewModel,
+                          LoginViewModel loginViewModel) {
+        this.viewManagerModel = viewManagerModel;
+        this.loggedInViewModel = loggedInViewModel;
+        this.loginViewModel = loginViewModel;
     }
 
     @Override
-    public void onLoginSuccess(User user) {
+    public void prepareSuccessView(LoginOutputData response) {
+        // On success, switch to the logged in view.
 
+        LoggedInState loggedInState = loggedInViewModel.getState();
+        loggedInState.setUsername(response.getUsername());
+        this.loggedInViewModel.setState(loggedInState);
+        this.loggedInViewModel.firePropertyChanged();
+
+        this.viewManagerModel.setActiveView(loggedInViewModel.getViewName());
+        this.viewManagerModel.firePropertyChanged();
     }
 
     @Override
-    public void onLoginFailure(String invalid_credentials) {
-
+    public void prepareFailView(String error) {
+        LoginState loginState = loginViewModel.getState();
+        loginState.setUsernameError(error);
+        loginViewModel.firePropertyChanged();
     }
 }

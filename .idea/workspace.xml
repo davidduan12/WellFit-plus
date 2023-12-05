@@ -5,25 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3654dfd6-c55b-4f83-88b5-cbb3551d4e5d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/SignUp/SignupPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/SignUp/SignupState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/SignUp/SignupViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/ViewManagerModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/SignupView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/ViewManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_access/ExerciseDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/ExerciseDataAccessObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/UserFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/UserFactoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/UserFactoryInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/SignUp/SignupState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/SignUp/SignupState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/UserLogin/LoginPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/UserLogin/LoginPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interface_adapter/UserLogin/LoginViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/UserLogin/LoginViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/ExerciseAddDataAccessInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/UserLoginDataAccessInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/UserRegisterDataAccessInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/add_exercise/ExerciseAddDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/add_exercise/ExerciseAddDataAccessInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/signup/SignupInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/signup/SignupInputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/signup/SignupInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/signup/SignupInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/LabelFTextPanel.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +23,18 @@
       </list>
     </option>
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "git-widget-placeholder": "frontend",
-    "node.js.selected.package.tslint": "(autodetect)"
-  }
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
 }]]></component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;git-widget-placeholder&quot;: &quot;frontend&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="interface_adapter" />
