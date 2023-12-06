@@ -1,6 +1,5 @@
 package view;
 import javax.swing.*;
-import javax.swing.text.NumberFormatter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,13 +7,11 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import java.text.NumberFormat;
 
-import interface_adapter.AddFood.AddFoodState;
-import view.LabelTextPanel;
+import interface_adapter.LoggedIn.AddFood.AddFoodState;
 
-import interface_adapter.AddFood.AddFoodController;
-import interface_adapter.AddFood.AddFoodViewModel;
+import interface_adapter.LoggedIn.AddFood.AddFoodController;
+import interface_adapter.LoggedIn.AddFood.AddFoodViewModel;
 public class FoodView extends JPanel implements ActionListener, PropertyChangeListener {
     public final String viewName = "sign up";
     private final AddFoodViewModel addFoodViewModel;
