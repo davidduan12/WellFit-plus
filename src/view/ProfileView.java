@@ -86,11 +86,4 @@ public class ProfileView extends JPanel {
         editDialog.setVisible(true);
     }
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame();
-        frame.setContentPane(new ProfileView());
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-    }
 }

@@ -12,4 +12,8 @@ public class EditProfilePresenter implements EditProfileOutputBoundary {
 
     public void prepareSuccessView(){
     }
+
+    public void prepareFailView(){
+
+    }
 }

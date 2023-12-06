@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3654dfd6-c55b-4f83-88b5-cbb3551d4e5d" name="Changes" comment="Adding the SignUpView and change the corresponding presenter, state and view">
-      <change afterPath="$PROJECT_DIR$/src/app/EditProfileUseCaseFactory.java" afterDir="false" />
+    <list default="true" id="c470d8a0-eff4-4b5e-b2be-906a746997ef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WellFit-plus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WellFit-plus.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/LoginUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/LoginUseCaseFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/SignupUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SignupUseCaseFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/EditProfile/EditProfilePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/EditProfile/EditProfilePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/login/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/ProfileView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ProfileView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,72 +18,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JUnit5 Test Class" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
-}</component>
-  <component name="ProjectId" id="2YxYcyiMVkYdcI3KpBcOAtZtTij" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "ViewExercise",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
+    "git-widget-placeholder": "frontend",
+    "last_opened_file_path": "/home/david/Downloads/json-20231013.jar",
     "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
- };
-</component>
-  <component name="RecentsManager">
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="interface_adapter.SignUp" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="data_access" />
-    </key>
-  </component>
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
   <component name="RunManager">
-    <configuration name="FileUserDataAccessObjectTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="data_access.FileUserDataAccessObjectTest" />
-      <module name="WellFit-plus" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="data_access.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="WellFit-plus" />
       <method v="2">
@@ -98,92 +43,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.FileUserDataAccessObjectTest" />
-        <item itemvalue="Application.FileUserDataAccessObjectTest" />
-      </list>
-    </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="Adding the view of the use case of adding exercise">
-      <option name="closed" value="true" />
-      <created>1701660053729</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1701660053729</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Adding the AddExerciseUseCaseFactory.java">
-      <option name="closed" value="true" />
-      <created>1701732440829</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1701732440829</updated>
-    </task>
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="3654dfd6-c55b-4f83-88b5-cbb3551d4e5d" name="Changes" comment="Adding the LoginView and UseCaseFactory and change the corresponding presenter, state, Boundary and view" />
-      <created>1701748546665</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1701748546665</updated>
-      <workItem from="1701748551806" duration="1550000" />
-      <workItem from="1701828634304" duration="796000" />
-    </task>
-    <task id="LOCAL-00003" summary="Adding the SignUpView and change the corresponding presenter, state and view">
-      <option name="closed" value="true" />
-      <created>1701753199631</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1701753199631</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Adding the LoginView and UseCaseFactory and change the corresponding presenter, state, Boundary and view">
-      <option name="closed" value="true" />
-      <created>1701755232739</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1701755232739</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix small errors" />
-    <MESSAGE value="Adding the view of the use case of adding exercise" />
-    <MESSAGE value="Adding the AddExerciseUseCaseFactory.java" />
-    <MESSAGE value="Adding the SignUpView" />
-    <MESSAGE value="Adding the SignUpView and change the corresponding presenter, state and view" />
-    <MESSAGE value="Adding the LoginView and UseCaseFactory and change the corresponding presenter, state, Boundary and view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding the LoginView and UseCaseFactory and change the corresponding presenter, state, Boundary and view" />
   </component>
 </project>
