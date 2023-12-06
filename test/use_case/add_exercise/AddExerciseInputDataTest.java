@@ -1,8 +1,8 @@
 package use_case.add_exercise;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import use_case.LoggedIn.add_exercise.AddExerciseInputData;
 
 import static org.junit.jupiter.api.Assertions.*;
 

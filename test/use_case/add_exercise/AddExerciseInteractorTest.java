@@ -3,9 +3,10 @@ package use_case.add_exercise;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import use_case.LoggedIn.add_exercise.AddExerciseInteractor;
+import use_case.LoggedIn.add_exercise.AddExerciseOutputBoundary;
+import use_case.LoggedIn.add_exercise.ExerciseAddDataAccessInterface;
 import use_case.UserDataAccessInterface;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class AddExerciseInteractorTest {
     private AddExerciseInteractor interactor;
