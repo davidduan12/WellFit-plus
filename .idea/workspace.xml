@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3654dfd6-c55b-4f83-88b5-cbb3551d4e5d" name="Changes" comment="Adding the SignUpView and change the corresponding presenter, state and view">
-      <change beforePath="$PROJECT_DIR$/src/app/AddFoodUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AddFoodUseCaseFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_access/ExerciseDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/ExerciseDataAccessObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/LoginUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/LoginUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_access/FoodDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/FoodDataAccessObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/AddExerciseInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/AddExerciseInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/ExerciseAddDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/ExerciseAddDataAccessInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/AddFoodInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/AddFoodInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/FoodAddDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/FoodAddDataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/LoggedInViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/LoggedInViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/LoginView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ProfileView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ProfileView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

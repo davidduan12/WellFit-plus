@@ -15,7 +15,7 @@ import java.beans.PropertyChangeListener;
 
 public class LoginView extends JPanel implements ActionListener, PropertyChangeListener {
 
-    public final String viewName = "logged in";
+    public final String viewName = "log in";
     private final LoginViewModel loginViewModel;
 
     JLabel username;

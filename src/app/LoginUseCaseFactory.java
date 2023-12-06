@@ -1,6 +1,7 @@
 package app;
 
 import entity.UserFactory;
+import interface_adapter.LoggedIn.LoggedInViewModel;
 import interface_adapter.login.LoginViewModel;
 import interface_adapter.ViewManagerModel;
 import interface_adapter.login.LoginController;
@@ -23,6 +24,7 @@ public class LoginUseCaseFactory {
     public static LoginView create(
             ViewManagerModel viewManagerModel,
             LoginViewModel loginViewModel,
+            LoggedInViewModel loggedInViewModel,
             UserDataAccessInterface userDataAccessObject) {
 
         try {

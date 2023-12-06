@@ -1,5 +1,4 @@
 package interface_adapter.login;
-import use_case.login.LoginInputBondary;
 import use_case.login.LoginInputBoundary;
 
 public class LoginController {
