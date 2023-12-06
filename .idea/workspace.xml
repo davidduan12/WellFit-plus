@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3654dfd6-c55b-4f83-88b5-cbb3551d4e5d" name="Changes" comment="Adding the SignUpView and change the corresponding presenter, state and view">
+    <list default="true" id="3654dfd6-c55b-4f83-88b5-cbb3551d4e5d" name="Changes" comment="Adding the LoginView and UseCaseFactory and change the corresponding presenter, state, Boundary and view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,18 +33,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ViewExercise&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "ViewExercise",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="interface_adapter.SignUp" />
@@ -69,12 +73,13 @@
       <updated>1701732440829</updated>
     </task>
     <task active="true" id="Default" summary="Default task">
-      <changelist id="914ea948-db68-4bb3-831a-9de77764d010" name="Changes" comment="Adding the AddExerciseUseCaseFactory.java" />
+      <changelist id="3654dfd6-c55b-4f83-88b5-cbb3551d4e5d" name="Changes" comment="Adding the LoginView and UseCaseFactory and change the corresponding presenter, state, Boundary and view" />
       <created>1701748546665</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701748546665</updated>
       <workItem from="1701748551806" duration="1550000" />
+      <workItem from="1701828634304" duration="796000" />
     </task>
     <task id="LOCAL-00003" summary="Adding the SignUpView and change the corresponding presenter, state and view">
       <option name="closed" value="true" />
@@ -84,7 +89,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701753199631</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adding the LoginView and UseCaseFactory and change the corresponding presenter, state, Boundary and view">
+      <option name="closed" value="true" />
+      <created>1701755232739</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701755232739</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +132,7 @@
     <MESSAGE value="Adding the AddExerciseUseCaseFactory.java" />
     <MESSAGE value="Adding the SignUpView" />
     <MESSAGE value="Adding the SignUpView and change the corresponding presenter, state and view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding the SignUpView and change the corresponding presenter, state and view" />
+    <MESSAGE value="Adding the LoginView and UseCaseFactory and change the corresponding presenter, state, Boundary and view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding the LoginView and UseCaseFactory and change the corresponding presenter, state, Boundary and view" />
   </component>
 </project>
