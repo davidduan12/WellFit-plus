@@ -1,12 +1,11 @@
 package use_case.LoggedIn.add_food;
-import entity.Food;
 
 public interface FoodAddDataAccessInterface {
-    boolean existByName(String foodName);
+//    boolean existByName(String foodName);
 
-    int getCalorie(String foodName, float amount);
-
-    double apiExercise(String query);
+    int getCalorieFood(String foodName, float amount);
 
     double apiNutrient(String query);
+
+    //TODO: need to added read write csv here
 }

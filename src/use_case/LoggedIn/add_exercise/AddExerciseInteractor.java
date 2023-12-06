@@ -7,18 +7,16 @@ import java.util.ArrayList;
 public class AddExerciseInteractor implements AddExerciseInputBoundary{
     final ExerciseAddDataAccessInterface exerciseAddDataAccessInterface;
     final AddExerciseOutputBoundary addExerciseOutputBoundary;
-    final UserDataAccessInterface userDataAccessInterface;
-    public AddExerciseInteractor(ExerciseAddDataAccessInterface exerciseAddDataAccessInterface, AddExerciseOutputBoundary addExerciseOutputBoundary, UserDataAccessInterface userDataAccessInterface){
+    public AddExerciseInteractor(ExerciseAddDataAccessInterface exerciseAddDataAccessInterface, AddExerciseOutputBoundary addExerciseOutputBoundary){
         this.exerciseAddDataAccessInterface = exerciseAddDataAccessInterface;
-        this.addExerciseOutputBoundary = addExerciseOutputBoundary;
-        this.userDataAccessInterface = userDataAccessInterface;
-    }
+        this.addExerciseOutputBoundary = addExerciseOutputBoundary;}
 
     @Override
     public void execute(AddExerciseInputData inputData) {
-        String query = inputData.getName();
-        String apiData = exerciseAddDataAccessInterface.fetchDataFromNutritionix(query);
-        ArrayList<ArrayList<String>> records = userDataAccessInterface.readToCSV("/data/sample_user.csv");
-        userDataAccessInterface.writeToCSV(records);
+        String query = inputData.getDuration() + "minutes of " + inputData.getName();
+        Double apiData = exerciseAddDataAccessInterface.apiExercise(query);
+//        ArrayList<ArrayList<String>> records = userDataAccessInterface.readToCSV("/data/sample_user.csv");
+//        userDataAccessInterface.writeToCSV(records);
+        //TODO: Change this to appropirate function
     }
 }

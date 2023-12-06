@@ -18,10 +18,9 @@ public class AddExerciseUseCaseFactory {
 
     public static ExerciseView create(
             AddExerciseViewModel addExerciseViewModel,
-            ExerciseAddDataAccessInterface exerciseDataAccessObject,
-            UserDataAccessInterface fileUserDataAccessObject) {
+            ExerciseAddDataAccessInterface exerciseDataAccessObject) {
         try {
-            AddExerciseController addExerciseController = createAddExerciseUser(addExerciseViewModel, fileUserDataAccessObject, exerciseDataAccessObject);
+            AddExerciseController addExerciseController = createAddExerciseUser(addExerciseViewModel, exerciseDataAccessObject);
             return new ExerciseView(addExerciseViewModel, addExerciseController);
         } catch (IOException e){
             JOptionPane.showMessageDialog(null, "Could not open user data file");
@@ -32,11 +31,10 @@ public class AddExerciseUseCaseFactory {
 
     private static AddExerciseController createAddExerciseUser(
             AddExerciseViewModel addExerciseViewModel,
-            UserDataAccessInterface fileUserDataAccessObject,
             ExerciseAddDataAccessInterface exerciseDataAccessObject
     ) throws IOException {
         AddExerciseOutputBoundary addExerciseOutputBoundary = new AddExercisePresenter(addExerciseViewModel);
-        AddExerciseInputBoundary addExerciseInteractor = new AddExerciseInteractor(exerciseDataAccessObject, addExerciseOutputBoundary, fileUserDataAccessObject);
+        AddExerciseInputBoundary addExerciseInteractor = new AddExerciseInteractor(exerciseDataAccessObject, addExerciseOutputBoundary);
         return new AddExerciseController(addExerciseInteractor);
     }
 }

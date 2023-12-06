@@ -1,6 +1,8 @@
 package data_access;
 import entity.User;
 import entity.UserFactory;
+import use_case.LoggedIn.add_exercise.ExerciseAddDataAccessInterface;
+import use_case.LoggedIn.add_food.FoodAddDataAccessInterface;
 import use_case.UserDataAccessInterface;
 
 import use_case.edit_profile.EditProfileInputData;
@@ -19,7 +21,7 @@ import java.util.ArrayList;
 
 import static java.lang.Float.parseFloat;
 
-public class FileUserDataAccessObject implements UserDataAccessInterface {
+public class FileUserDataAccessObject implements UserDataAccessInterface, FoodAddDataAccessInterface, ExerciseAddDataAccessInterface {
     private String filepath;
 
     private final Map<String, User> accounts = new HashMap<>();
@@ -218,6 +220,50 @@ public class FileUserDataAccessObject implements UserDataAccessInterface {
         }
 
 
+    }
+
+    //TODO: to be changed
+    public int getCalorieFood(String foodName, float amount) {
+        // Implementation to get the calories for the specified amount of food
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFilePath))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] values = line.split(",");
+                if (values[0].equalsIgnoreCase(foodName)) {
+                    float caloriesPerUnit = Float.parseFloat(values[1]); // Assuming the second value is the calories per unit
+                    return Math.round(caloriesPerUnit * amount);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+    //TODO: change this
+    public int getCalorieExercise(String exerciseName, float amount) {
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFilePath))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] values = line.split(",");
+                if (values[0].equalsIgnoreCase(exerciseName)) {
+                    float caloriesPerUnit = Float.parseFloat(values[1]);
+                    return Math.round(caloriesPerUnit * amount);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+
+    public double apiExercise(String query) {
+        // Call NutritionixAPICaller
+        return NutritionixAPICaller.fetchExercise(query);
+    }
+    public double apiNutrient(String query) {
+        // Call NutritionixAPICaller
+        return NutritionixAPICaller.fetchNutrient(query);
     }
 
 

@@ -1,7 +1,6 @@
 package app;
 
 import data_access.FileUserDataAccessObject;
-import data_access.FoodDataAccessObject;
 import interface_adapter.LoggedIn.AddExercise.AddExerciseViewModel;
 import interface_adapter.LoggedIn.AddFood.AddFoodViewModel;
 import interface_adapter.SignUp.SignupViewModel;
@@ -9,7 +8,7 @@ import interface_adapter.login.LoginViewModel;
 import interface_adapter.ViewManagerModel;
 import view.LoginView;
 import view.MainPanel;
-import view.SignupView;
+import view.SignUpView;
 import view.ViewManager;
 
 import javax.swing.*;
@@ -20,12 +19,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-
-        AddFoodViewModel addFoodViewModel = new AddFoodViewModel();
-        AddExerciseViewModel addExerciseViewModel = new AddExerciseViewModel();
-
-
-        FoodDataAccessObject foodDataAccessObject = new FoodDataAccessObject("./data/sample_user.csv");
 //        String query = "ran 3 miles";
 //        Double responseData = foodDataAccessObject.apiExercise(query);
 //        System.out.println(responseData);

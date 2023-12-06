@@ -1,5 +1,6 @@
 package app;
 
+import data_access.FileUserDataAccessObject;
 import interface_adapter.LoggedIn.AddFood.AddFoodController;
 import interface_adapter.LoggedIn.AddFood.AddFoodPresenter;
 import interface_adapter.LoggedIn.AddFood.AddFoodViewModel;
@@ -18,10 +19,9 @@ public class AddFoodUseCaseFactory {
 
     public static FoodView create(
             AddFoodViewModel addFoodViewModel,
-            FoodAddDataAccessInterface foodDataAccessObject,
-            UserDataAccessInterface fileUserDataAccessObject) {
+            FoodAddDataAccessInterface foodDataAccessObject) {
         try {
-            AddFoodController addFoodController = createAddFoodUser(addFoodViewModel, fileUserDataAccessObject, foodDataAccessObject);
+            AddFoodController addFoodController = createAddFoodUser(addFoodViewModel, foodDataAccessObject);
             return new FoodView(addFoodViewModel, addFoodController);
         } catch (IOException e){
             JOptionPane.showMessageDialog(null, "Could not open user data file");
@@ -32,11 +32,10 @@ public class AddFoodUseCaseFactory {
 
     private static AddFoodController createAddFoodUser(
             AddFoodViewModel addFoodViewModel,
-            UserDataAccessInterface fileUserDataAccessObject,
-            FoodAddDataAccessInterface foodDataAccessObject
+            FoodAddDataAccessInterface fileUserDataAccessObject
     ) throws IOException {
         AddFoodOutputBoundary addFoodOutputBoundary = new AddFoodPresenter(addFoodViewModel);
-        AddFoodInputBoundary addFoodInteractor = new AddFoodInteractor(foodDataAccessObject, addFoodOutputBoundary, fileUserDataAccessObject);
+        AddFoodInputBoundary addFoodInteractor = new AddFoodInteractor(addFoodOutputBoundary, fileUserDataAccessObject);
         return new AddFoodController(addFoodInteractor);
 
     }

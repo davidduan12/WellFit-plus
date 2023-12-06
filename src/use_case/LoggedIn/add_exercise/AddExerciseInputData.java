@@ -11,4 +11,8 @@ public class AddExerciseInputData {
     String getName(){
         return sports;
     }
+
+    Double getDuration(){
+        return duration;
+    }
 }

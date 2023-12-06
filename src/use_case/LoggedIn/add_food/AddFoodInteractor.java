@@ -4,14 +4,12 @@ import use_case.UserDataAccessInterface;
 
 public class AddFoodInteractor implements AddFoodInputBoundary{
 
-    final FoodAddDataAccessInterface foodDataAccessObject;
 
-    final UserDataAccessInterface fileUserDataAccessObject;
+    final FoodAddDataAccessInterface fileUserDataAccessObject;
     final AddFoodOutputBoundary addFoodOutputBoundary;
 
 
-    public AddFoodInteractor(FoodAddDataAccessInterface foodDataAccessObject, AddFoodOutputBoundary addFoodOutputBoundary, UserDataAccessInterface fileUserDataAccessObject) {
-        this.foodDataAccessObject = foodDataAccessObject;
+    public AddFoodInteractor(AddFoodOutputBoundary addFoodOutputBoundary, FoodAddDataAccessInterface fileUserDataAccessObject) {
         this.addFoodOutputBoundary = addFoodOutputBoundary;
         this.fileUserDataAccessObject = fileUserDataAccessObject;
     }
@@ -20,10 +18,10 @@ public class AddFoodInteractor implements AddFoodInputBoundary{
     @Override
     public void execute(AddFoodInputData inputData) {
         String query = inputData.getWeight() + "gram of " + inputData.getName();
-        double calorieData = foodDataAccessObject.apiNutrient(query);
+        double calorieData = fileUserDataAccessObject.apiNutrient(query);
         //first get data from reading the csv
         if (calorieData == -1){
-            addFoodOutputBoundary.prepareFailView();
+            addFoodOutputBoundary.prepareFailView("error"); //TODO: error check some how
         }else{
 //            to be added
 //            ArrayList<ArrayList<String>> records = fileUserDataAccessObject.readToCSV("/data/sample_user.csv");

@@ -5,6 +5,7 @@ import java.awt.*;
 
 import app.AddExerciseUseCaseFactory;
 import app.AddFoodUseCaseFactory;
+import data_access.FileUserDataAccessObject;
 import interface_adapter.LoggedIn.AddExercise.AddExerciseViewModel;
 import interface_adapter.LoggedIn.AddFood.AddFoodViewModel;
 import interface_adapter.LoggedIn.LoggedInViewModel;
@@ -15,7 +16,7 @@ public class MainPanel extends JPanel {
     private JTabbedPane tabbedPane;
     public final String viewName = "logged in";
 
-    private void MainPanel(AddFoodViewModel addFoodViewModel, AddExerciseViewModel addExerciseViewModel, UserDataAccessInterface userDataAccessObject, FoodAddDataAccessInterface foodDataAccessObject) {
+    private void MainPanel(AddFoodViewModel addFoodViewModel, AddExerciseViewModel addExerciseViewModel, FileUserDataAccessObject userDataAccessObject) {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
@@ -33,9 +34,9 @@ public class MainPanel extends JPanel {
         // Put the tabs at the bottom
         tabbedPane.setTabPlacement(JTabbedPane.BOTTOM);
 
-        FoodView foodView = AddFoodUseCaseFactory.create(addFoodViewModel, foodDataAccessObject, userDataAccessObject);
+        FoodView foodView = AddFoodUseCaseFactory.create(addFoodViewModel, userDataAccessObject);
         ExerciseView exerciseView = AddExerciseUseCaseFactory.create(addExerciseViewModel, userDataAccessObject);
-        ProfileView profileView = AddProfileUseCaseFactory.create(addProfile)
+       // ProfileView profileView = AddProfileUseCaseFactory.create(addProfile); TODO: after finished addprofile view and usecasefactory
         // Add panels to the tabbed pane
         tabbedPane.addTab("Food", foodView);
         tabbedPane.addTab("Exercise", exerciseView);
