@@ -1,6 +1,7 @@
 package app;
 
 import entity.UserFactory;
+import interface_adapter.LoggedIn.LoggedInViewModel;
 import interface_adapter.login.LoginViewModel;
 import interface_adapter.ViewManagerModel;
 import interface_adapter.login.LoginController;
@@ -23,10 +24,11 @@ public class LoginUseCaseFactory {
     public static LoginView create(
             ViewManagerModel viewManagerModel,
             LoginViewModel loginViewModel,
-            UserDataAccessInterface userDataAccessObject) {
+            LoggedInViewModel loggedInViewModel,
+            LoginDataAccessInterface userDataAccessObject) {
 
         try {
-            LoginController loginController = createLoginUseCase(viewManagerModel, loginViewModel, userDataAccessObject);
+            LoginController loginController = createLoginUseCase(viewManagerModel, loggedInViewModel, loginViewModel, userDataAccessObject);
             return new LoginView(loginViewModel, loginController);
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Could not open user data file.");
@@ -37,16 +39,17 @@ public class LoginUseCaseFactory {
 
     private static LoginController createLoginUseCase(
             ViewManagerModel viewManagerModel,
+            LoggedInViewModel loggedInViewModel,
             LoginViewModel loginViewModel,
-            UserDataAccessInterface userDataAccessObject) throws IOException {
+            LoginDataAccessInterface userDataAccessObject) throws IOException {
 
         // Notice how we pass this method's parameters to the Presenter.
-        LoginOutputBoundary loginOutputBoundary = new LoginPresenter(viewManagerModel, loginViewModel);
+        LoginOutputBoundary loginOutputBoundary = new LoginPresenter(viewManagerModel, loggedInViewModel, loginViewModel);
 
         UserFactory userFactory = new UserFactory();
 
         LoginInputBoundary loginInteractor = new LoginInteractor(
-                (LoginDataAccessInterface) userDataAccessObject, loginOutputBoundary);
+                userDataAccessObject, loginOutputBoundary);
 
         return new LoginController(loginInteractor);
     }

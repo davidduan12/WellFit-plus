@@ -6,7 +6,7 @@ import interface_adapter.*;
 import interface_adapter.SignUp.SignupController;
 import interface_adapter.SignUp.SignupPresenter;
 import interface_adapter.SignUp.SignupViewModel;
-import interface_adapter.UserLogin.LoginViewModel;
+import interface_adapter.login.LoginViewModel;
 import use_case.signup.SignupDataAccessInterface;
 import use_case.signup.SignupInputBoundary;
 import use_case.signup.SignupInteractor;

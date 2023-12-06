@@ -12,7 +12,7 @@ public class LoggedInViewModel extends ViewModel{
 
     private String loggedInUser;
 
-    private LoggedInViewModel(){
+    public LoggedInViewModel(){
         super("logged in");
     }
 

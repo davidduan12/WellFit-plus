@@ -1,15 +1,20 @@
 package view;
 
+import interface_adapter.LoggedIn.EditProfile.EditProfileController;
+import interface_adapter.LoggedIn.EditProfile.EditProfileViewModel;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 
 public class ProfileView extends JPanel {
     private JButton editProfileButton;
     private JTextArea userInfoArea;
 
-    public ProfileView() {
+    public ProfileView(EditProfileViewModel editProfileViewModel, EditProfileController editProfileController) {
         this.setLayout(new BorderLayout());
 
         userInfoArea = new JTextArea(10, 30);
@@ -81,11 +86,4 @@ public class ProfileView extends JPanel {
         editDialog.setVisible(true);
     }
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame();
-        frame.setContentPane(new ProfileView());
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-    }
 }

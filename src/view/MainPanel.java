@@ -16,7 +16,7 @@ public class MainPanel extends JPanel {
     private JTabbedPane tabbedPane;
     public final String viewName = "logged in";
 
-    private void MainPanel(AddFoodViewModel addFoodViewModel, AddExerciseViewModel addExerciseViewModel, FileUserDataAccessObject userDataAccessObject) {
+    public MainPanel(FoodView foodView, ExerciseView exerciseView, ProfileView profileView) {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
@@ -34,13 +34,10 @@ public class MainPanel extends JPanel {
         // Put the tabs at the bottom
         tabbedPane.setTabPlacement(JTabbedPane.BOTTOM);
 
-        FoodView foodView = AddFoodUseCaseFactory.create(addFoodViewModel, userDataAccessObject);
-        ExerciseView exerciseView = AddExerciseUseCaseFactory.create(addExerciseViewModel, userDataAccessObject);
-       // ProfileView profileView = AddProfileUseCaseFactory.create(addProfile); TODO: after finished addprofile view and usecasefactory
         // Add panels to the tabbed pane
         tabbedPane.addTab("Food", foodView);
         tabbedPane.addTab("Exercise", exerciseView);
-        tabbedPane.addTab("Profile", createProfilePanel());
+        tabbedPane.addTab("Profile", profileView);
         // Custom tab component to increase tab size
 //        addWindowListener(new WindowAdapter() {
 //            @Override
@@ -61,20 +58,4 @@ public class MainPanel extends JPanel {
     }
 
 
-    private JPanel createExercisePanel() {
-        // Your Exercise panel code
-        return (new JPanel());
-    }
-
-    private JPanel createProfilePanel() {
-        // Your Profile panel code
-        return (new JPanel());
-    }
-
-    /*public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            MainFrame frame = new MainFrame();
-            frame.setVisible(true);
-        });
-    }*/
 }

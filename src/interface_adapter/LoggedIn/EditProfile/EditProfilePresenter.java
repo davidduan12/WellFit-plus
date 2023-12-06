@@ -1,6 +1,8 @@
 package interface_adapter.LoggedIn.EditProfile;
 
-public class EditProfilePresenter{
+import use_case.LoggedIn.edit_profile.EditProfileOutputBoundary;
+
+public class EditProfilePresenter implements EditProfileOutputBoundary {
 
     private final EditProfileViewModel editProfileViewModel;
 
@@ -9,5 +11,9 @@ public class EditProfilePresenter{
     }
 
     public void prepareSuccessView(){
+    }
+
+    public void prepareFailView(){
+
     }
 }
