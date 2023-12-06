@@ -1,25 +1,17 @@
 package interface_adapter.login;
 import use_case.login.LoginInputBoundary;
+import use_case.login.LoginInputData;
 
 public class LoginController {
     private final LoginInputBoundary loginInteractor;
-    private final LoginPresenter loginPresenter;
 
-    public LoginController(LoginInputBoundary loginInteractor, LoginPresenter loginPresenter) {
+    public LoginController(LoginInputBoundary loginInteractor) {
         this.loginInteractor = loginInteractor;
-        this.loginPresenter = loginPresenter;
     }
 
-    public void loginRequest(String username, String password) {
-        if (username.isEmpty() || password.isEmpty()) {
-            // Handle input validation failure
-            loginPresenter.presentLoginError("Username and password are required");
-        } else {
-            try {
-                loginInteractor.login(username, password);
-            } catch (Exception e) {
-                loginPresenter.presentLoginError(e.getMessage());
-            }
-        }
+    public void execute(String username, String password){
+        LoginInputData loginInputData= new LoginInputData(username, password);
+
+        loginInteractor.execute(loginInputData);
     }
 }

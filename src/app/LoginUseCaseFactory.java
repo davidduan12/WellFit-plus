@@ -39,16 +39,17 @@ public class LoginUseCaseFactory {
 
     private static LoginController createLoginUseCase(
             ViewManagerModel viewManagerModel,
+            LoggedInViewModel loggedInViewModel,
             LoginViewModel loginViewModel,
-            UserDataAccessInterface userDataAccessObject) throws IOException {
+            LoginDataAccessInterface userDataAccessObject) throws IOException {
 
         // Notice how we pass this method's parameters to the Presenter.
-        LoginOutputBoundary loginOutputBoundary = new LoginPresenter(viewManagerModel, loginViewModel);
+        LoginOutputBoundary loginOutputBoundary = new LoginPresenter(viewManagerModel, loggedInViewModel, loginViewModel);
 
         UserFactory userFactory = new UserFactory();
 
         LoginInputBoundary loginInteractor = new LoginInteractor(
-                (LoginDataAccessInterface) userDataAccessObject, loginOutputBoundary);
+                userDataAccessObject, loginOutputBoundary);
 
         return new LoginController(loginInteractor);
     }

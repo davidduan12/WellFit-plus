@@ -3,6 +3,7 @@ import entity.User;
 import entity.UserFactory;
 import use_case.LoggedIn.add_exercise.ExerciseAddDataAccessInterface;
 import use_case.LoggedIn.add_food.FoodAddDataAccessInterface;
+import use_case.LoggedIn.edit_profile.EditProfiledataAccessInterface;
 import use_case.UserDataAccessInterface;
 
 import use_case.edit_profile.EditProfileInputData;
@@ -21,7 +22,7 @@ import java.util.ArrayList;
 
 import static java.lang.Float.parseFloat;
 
-public class FileUserDataAccessObject implements UserDataAccessInterface, FoodAddDataAccessInterface, ExerciseAddDataAccessInterface {
+public class FileUserDataAccessObject implements UserDataAccessInterface, FoodAddDataAccessInterface, ExerciseAddDataAccessInterface, EditProfiledataAccessInterface {
     private String filepath;
 
     private final Map<String, User> accounts = new HashMap<>();

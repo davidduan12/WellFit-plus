@@ -72,7 +72,7 @@ public class Main {
 
             ExerciseView exerciseView = AddExerciseUseCaseFactory.create(addExerciseViewModel, userDataAccessObject);
 
-         ProfileView profileView = EditProfileUseCaseFactory.create(editProfileViewModel, userDataAccessObject);// TODO: add
+            ProfileView profileView = EditProfileUseCaseFactory.create(editProfileViewModel, userDataAccessObject);
 
             MainPanel mainPanel = new MainPanel(foodView, exerciseView, profileView);
             views.add(mainPanel, mainPanel.viewName);

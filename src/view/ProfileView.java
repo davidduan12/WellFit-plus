@@ -1,5 +1,8 @@
 package view;
 
+import interface_adapter.LoggedIn.EditProfile.EditProfileController;
+import interface_adapter.LoggedIn.EditProfile.EditProfileViewModel;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -11,7 +14,7 @@ public class ProfileView extends JPanel {
     private JButton editProfileButton;
     private JTextArea userInfoArea;
 
-    public ProfileView() {
+    public ProfileView(EditProfileViewModel editProfileViewModel, EditProfileController editProfileController) {
         this.setLayout(new BorderLayout());
 
         userInfoArea = new JTextArea(10, 30);
