@@ -1,11 +1,9 @@
 package app;
 
-import data_access.FileUserDataAccessObject;
 import interface_adapter.LoggedIn.AddFood.AddFoodController;
 import interface_adapter.LoggedIn.AddFood.AddFoodPresenter;
 import interface_adapter.LoggedIn.AddFood.AddFoodViewModel;
 import interface_adapter.LoggedIn.LoggedInViewModel;
-import use_case.UserDataAccessInterface;
 import use_case.LoggedIn.add_food.FoodAddDataAccessInterface;
 import use_case.LoggedIn.add_food.AddFoodInputBoundary;
 import use_case.LoggedIn.add_food.AddFoodInteractor;

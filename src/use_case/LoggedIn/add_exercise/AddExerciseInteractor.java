@@ -1,10 +1,7 @@
 package use_case.LoggedIn.add_exercise;
 
 import interface_adapter.LoggedIn.LoggedInViewModel;
-import use_case.LoggedIn.add_food.AddFoodOutputData;
-import use_case.UserDataAccessInterface;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 

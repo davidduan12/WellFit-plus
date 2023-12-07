@@ -2,8 +2,8 @@ package use_case.LoggedIn.add_food;
 
 public class AddFoodInputData {
 
-    final private String food;
-    final private double weight;
+     private String food;
+     private double weight = -1;
 
     public AddFoodInputData(String food, double weight){
         this.food = food;
