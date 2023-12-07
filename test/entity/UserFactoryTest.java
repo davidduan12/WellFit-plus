@@ -21,7 +21,7 @@ class UserFactoryTest {
         String password = "123abc.";
         String sex = "male";
 
-        User newUser = userFactory.create(username, password, 20, 50.6, 178, sex);
+        User newUser = userFactory.create(username, password, 20, 50.6);
 
         assertNotNull(newUser);
         assertEquals(username, newUser.getUsername());

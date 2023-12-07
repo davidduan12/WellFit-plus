@@ -1,18 +1,33 @@
 package data_access;
 import entity.User;
 import entity.UserFactory;
+import interface_adapter.SignUp.SignupPresenter;
+import use_case.LoggedIn.add_exercise.ExerciseAddDataAccessInterface;
+import use_case.LoggedIn.add_food.FoodAddDataAccessInterface;
+import use_case.LoggedIn.edit_profile.EditProfiledataAccessInterface;
 import use_case.UserDataAccessInterface;
-import use_case.edit_profile.EditProfileInputData;
-import use_case.edit_profile.EditProfileOutputBoundary;
-import use_case.edit_profile.EditProfiledataAccessInterface;
+
+import use_case.LoggedIn.edit_profile.EditProfileInputData;
+import use_case.LoggedIn.edit_profile.EditProfileOutputBoundary;
+import use_case.LoggedIn.edit_profile.EditProfiledataAccessInterface;
+import use_case.login.LoginDataAccessInterface;
+import use_case.signup.SignupDataAccessInterface;
 
 import java.io.*;
 import java.util.*;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Arrays;
+import java.io.FileReader;
+import java.util.ArrayList;
 
 import static java.lang.Float.parseFloat;
 
-public class FileUserDataAccessObject implements UserDataAccessInterface {
+public class FileUserDataAccessObject implements UserDataAccessInterface,
+        FoodAddDataAccessInterface, ExerciseAddDataAccessInterface, EditProfiledataAccessInterface,
+        LoginDataAccessInterface, SignupDataAccessInterface {
     private String filepath;
 
     private final Map<String, User> accounts = new HashMap<>();
@@ -89,7 +104,6 @@ public class FileUserDataAccessObject implements UserDataAccessInterface {
     public boolean existsByName(String identifier) {
         return accounts.containsKey(identifier);
     }
-
 
     //sign up
     public boolean userLogin(String targetUsername, String password) {
@@ -172,48 +186,118 @@ public class FileUserDataAccessObject implements UserDataAccessInterface {
         }
     }
 
-    public void editUserCsv(EditProfileInputData editProfileInputData, String username) {
-        User thisUser;
-        thisUser = accounts.get(username);
-        thisUser.setUsername(editProfileInputData.getName());
-        thisUser.setPassword(editProfileInputData.getPassword());
-        thisUser.setHeight(editProfileInputData.getHeight());
-        thisUser.setWeight(editProfileInputData.getWeight());
-        accounts.put(editProfileInputData.getName(), thisUser);
-        if (!editProfileInputData.getName().equals(username)) {
-            accounts.remove(username);
-        }
+    //TODO: after finish edit profile
+//    public void editUserCsv(EditProfileInputData editProfileInputData, String username) {
+//        User thisUser;
+//        thisUser = accounts.get(username);
+//        thisUser.setUsername(editProfileInputData.getName());
+//        thisUser.setPassword(editProfileInputData.getPassword());
+//        thisUser.setHeight(editProfileInputData.getHeight());
+//        thisUser.setWeight(editProfileInputData.getWeight());
+//        accounts.put(editProfileInputData.getName(), thisUser);
+//        if (!editProfileInputData.getName().equals(username)) {
+//            accounts.remove(username);
+//        }
+//
+//        List<String> lines = new ArrayList<>();
+//        String line;
+//
+//        try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
+//            reader.readLine();
+//
+//            while ((line = reader.readLine()) != null) {
+//                String[] userData = line.split(",");
+//                if (userData[0].equals(username)) {
+//                    userData[0] = editProfileInputData.getName();
+//                    userData[1] = editProfileInputData.getPassword();
+//                    userData[2] = Double.toString(editProfileInputData.getHeight());
+//                    userData[3] = Double.toString(editProfileInputData.getWeight());
+//                }
+//                lines.add(String.join(",", userData));
+//            }
+//            try (BufferedWriter writer = new BufferedWriter(new FileWriter(filepath))) {
+//                for (String updatedLine : lines) {
+//                    writer.write(updatedLine);
+//                    writer.newLine();
+//                }
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//
+//    }
 
-        List<String> lines = new ArrayList<>();
-        String line;
-
-        try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
-            reader.readLine();
-
-            while ((line = reader.readLine()) != null) {
-                String[] userData = line.split(",");
-                if (userData[0].equals(username)) {
-                    userData[0] = editProfileInputData.getName();
-                    userData[1] = editProfileInputData.getPassword();
-                    userData[2] = Double.toString(editProfileInputData.getHeight());
-                    userData[3] = Double.toString(editProfileInputData.getWeight());
-                }
-                lines.add(String.join(",", userData));
-            }
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter(filepath))) {
-                for (String updatedLine : lines) {
-                    writer.write(updatedLine);
-                    writer.newLine();
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
+    //TODO: to be changed
+    public int getCalorieFood(String foodName, float amount) {
+//        // Implementation to get the calories for the specified amount of food
+//        try (BufferedReader br = new BufferedReader(new FileReader(csvFilePath))) {
+//            String line;
+//            while ((line = br.readLine()) != null) {
+//                String[] values = line.split(",");
+//                if (values[0].equalsIgnoreCase(foodName)) {
+//                    float caloriesPerUnit = Float.parseFloat(values[1]); // Assuming the second value is the calories per unit
+//                    return Math.round(caloriesPerUnit * amount);
+//                }
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        return 0;
+        return 0;
+    }
+    //TODO: change this
+    public int getCalorieExercise(String exerciseName, float amount) {
+//        try (BufferedReader br = new BufferedReader(new FileReader(csvFilePath))) {
+//            String line;
+//            while ((line = br.readLine()) != null) {
+//                String[] values = line.split(",");
+//                if (values[0].equalsIgnoreCase(exerciseName)) {
+//                    float caloriesPerUnit = Float.parseFloat(values[1]);
+//                    return Math.round(caloriesPerUnit * amount);
+//                }
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        return 0;
+        return 0;
     }
 
 
+    public double apiExercise(String query) {
+        // Call NutritionixAPICaller
+        return NutritionixAPICaller.fetchExercise(query);
+    }
+    public double apiNutrient(String query) {
+        // Call NutritionixAPICaller
+        return NutritionixAPICaller.fetchNutrient(query);
+    }
+
+    public void editName(String newName){
+        //
+    }
+
+    public void editWeight(double newWeight){
+        //
+    }
+
+    public void editHeight(double newHeight){
+        //
+    }
+
+    public void editPassword(String newPassword){
+        //
+    }
+
+    public User get(String username){
+        //
+        return null;
+    }
+
+    public void save(User username){
+        //
+    }
 }
 
 

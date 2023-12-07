@@ -8,10 +8,10 @@ public class SignupState {
     private String repeatPassword = "";
     private String repeatPasswordError = null;
 
-    private String weight = "";
-    private String weightError = null;
-    private String height = "";
-    private String heightError = null;
+    private double weight = 0;
+    private double weightError = 0;
+    private double height = 0;
+    private double heightError = 0;
 
 
     public SignupState(SignupState copy) {
@@ -55,6 +55,24 @@ public class SignupState {
         return repeatPasswordError;
     }
 
+    public double getHeight(){return height;}
+
+    public double getHeightError(){return heightError;}
+
+    public double getWeight(){return weight;}
+
+    public double getWeightError(){return weightError;}
+
+    public void setWeight(double weight){this.weight = weight;}
+
+
+    public void setWeightError(double weightError){this.weightError = weightError;}
+
+    public void setHeight(double height){this.height = height;}
+
+    public void setHeightError(double heightError){this.heightError = heightError;}
+
+
     public void setUsername(String username) {
         this.username = username;
     }
@@ -78,6 +96,8 @@ public class SignupState {
     public void setRepeatPasswordError(String repeatPasswordError) {
         this.repeatPasswordError = repeatPasswordError;
     }
+
+
 
     @Override
     public String toString() {

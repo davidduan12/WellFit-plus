@@ -7,9 +7,9 @@ import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import interface_adapter.AddExercise.AddExerciseState;
-import interface_adapter.AddExercise.AddExerciseController;
-import interface_adapter.AddExercise.AddExerciseViewModel;
+import interface_adapter.LoggedIn.AddExercise.AddExerciseState;
+import interface_adapter.LoggedIn.AddExercise.AddExerciseController;
+import interface_adapter.LoggedIn.AddExercise.AddExerciseViewModel;
 
 public class ExerciseView extends JPanel implements ActionListener, PropertyChangeListener {
     public final String viewName = "add exercise";

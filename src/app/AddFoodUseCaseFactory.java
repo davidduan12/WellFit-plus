@@ -1,14 +1,14 @@
 package app;
 
-import interface_adapter.AddFood.AddFoodController;
-import interface_adapter.AddFood.AddFoodPresenter;
-import interface_adapter.AddFood.AddFoodViewModel;
+import data_access.FileUserDataAccessObject;
+import interface_adapter.LoggedIn.AddFood.AddFoodController;
+import interface_adapter.LoggedIn.AddFood.AddFoodPresenter;
+import interface_adapter.LoggedIn.AddFood.AddFoodViewModel;
 import use_case.UserDataAccessInterface;
-import use_case.add_food.FoodAddDataAccessInterface;
-import use_case.add_food.AddFoodInputBoundary;
-import use_case.add_food.AddFoodInteractor;
-import use_case.add_food.AddFoodOutputBoundary;
-import use_case.UserDataAccessInterface;
+import use_case.LoggedIn.add_food.FoodAddDataAccessInterface;
+import use_case.LoggedIn.add_food.AddFoodInputBoundary;
+import use_case.LoggedIn.add_food.AddFoodInteractor;
+import use_case.LoggedIn.add_food.AddFoodOutputBoundary;
 import view.FoodView;
 
 import javax.swing.*;
@@ -19,10 +19,9 @@ public class AddFoodUseCaseFactory {
 
     public static FoodView create(
             AddFoodViewModel addFoodViewModel,
-            FoodAddDataAccessInterface foodDataAccessObject,
-            UserDataAccessInterface fileUserDataAccessObject) {
+            FoodAddDataAccessInterface foodDataAccessObject) {
         try {
-            AddFoodController addFoodController = createAddFoodUser(addFoodViewModel, fileUserDataAccessObject, foodDataAccessObject);
+            AddFoodController addFoodController = createAddFoodUser(addFoodViewModel, foodDataAccessObject);
             return new FoodView(addFoodViewModel, addFoodController);
         } catch (IOException e){
             JOptionPane.showMessageDialog(null, "Could not open user data file");
@@ -33,11 +32,10 @@ public class AddFoodUseCaseFactory {
 
     private static AddFoodController createAddFoodUser(
             AddFoodViewModel addFoodViewModel,
-            UserDataAccessInterface fileUserDataAccessObject,
-            FoodAddDataAccessInterface foodDataAccessObject
+            FoodAddDataAccessInterface fileUserDataAccessObject
     ) throws IOException {
         AddFoodOutputBoundary addFoodOutputBoundary = new AddFoodPresenter(addFoodViewModel);
-        AddFoodInputBoundary addFoodInteractor = new AddFoodInteractor(foodDataAccessObject, addFoodOutputBoundary, fileUserDataAccessObject);
+        AddFoodInputBoundary addFoodInteractor = new AddFoodInteractor(addFoodOutputBoundary, fileUserDataAccessObject);
         return new AddFoodController(addFoodInteractor);
 
     }
