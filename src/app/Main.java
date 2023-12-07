@@ -62,8 +62,8 @@ public class Main {
                 throw new RuntimeException(e);
             }
 
-//            SignUpView signupView = SignupUseCaseFactory.create(viewManagerModel, loginViewModel, signupViewModel, userDataAccessObject);
-//            views.add(signupView, signupView.viewName);
+            SignUpView signupView = SignupUseCaseFactory.create(viewManagerModel, loginViewModel, signupViewModel, userDataAccessObject);
+            views.add(signupView, signupView.viewName);
 
             LoginView loginView = LoginUseCaseFactory.create(viewManagerModel, loginViewModel, loggedInViewModel, userDataAccessObject);
             views.add(loginView, loginView.viewName);
