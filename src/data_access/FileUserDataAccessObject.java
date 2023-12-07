@@ -87,8 +87,7 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
 
     //sign up
     public void userWriting(User user) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filepath))) {
-            writer.write(header);
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filepath, true))) {
             writer.newLine();
             writer.write(user.getUsername() + "," + user.getPassword() + "," + user.getHeight() + "," + user.getHeight() + "," + "" + ","+"");
             accounts.put(user.getUsername(), user);
@@ -303,6 +302,11 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
     }
 
     public void editName(String newName, String oldName){
+
+    }
+
+    @Override
+    public void editName(String newName) {
 
     }
 

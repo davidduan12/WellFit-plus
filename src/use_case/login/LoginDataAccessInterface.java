@@ -7,4 +7,8 @@ public interface LoginDataAccessInterface {
 
     User get(String username);
 
-}
+    public boolean userLogin(String targetUsername, String password);
+
+
+
+    }

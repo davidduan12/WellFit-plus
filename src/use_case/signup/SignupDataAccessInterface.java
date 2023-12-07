@@ -6,4 +6,7 @@ public interface SignupDataAccessInterface {
     boolean existsByName(String identifier);
 
     void save(User user);
+
+    public void userWriting(User user);
+
 }
