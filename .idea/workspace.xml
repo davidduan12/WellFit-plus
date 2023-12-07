@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7e3353f-dd4b-4a64-a31e-a1a28651fea6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/data/user.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/user.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_access/NutritionixAPICaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/NutritionixAPICaller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddExercise/AddExerciseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddExercise/AddExerciseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddExercise/AddExerciseState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddExercise/AddExerciseState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddExercise/AddExerciseViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddExercise/AddExerciseViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddFood/AddFoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddFood/AddFoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddFood/AddFoodState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddFood/AddFoodState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/SignUp/SignupPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/SignUp/SignupPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/SignUp/SignupViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/SignUp/SignupViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/AddExerciseInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/AddExerciseInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/ExerciseAddDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/ExerciseAddDataAccessInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/AddFoodInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/AddFoodInputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ExerciseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ExerciseView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/FoodView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/FoodView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/SignUpView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SignUpView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,14 +22,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/AddExerciseOutputBoundary.java">
-      <ranges>
-        <range start1="3" end1="3" start2="3" end2="4" changelist="f7e3353f-dd4b-4a64-a31e-a1a28651fea6" />
-        <range start1="4" end1="4" start2="5" end2="6" changelist="8514f4a7-47b7-416a-be32-6005c14477f8" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">{
