@@ -127,7 +127,7 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
         return false;
     }
 
-    public void writeExerciseCaloriesToCSV(Map<String, String> exerciseData, String username) {
+    public void writeExerciseCaloriesToCSV(Map<String, Double> exerciseData, String username) {
         List<String> lines = new ArrayList<>();
         String line;
 
@@ -169,7 +169,7 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
         }
     }
 
-    public void writeFoodCaloriesToCSV(Map<String, String> foodData, String username) {
+    public void writeFoodCaloriesToCSV(Map<String, Double> foodData, String username) {
         List<String> lines = new ArrayList<>();
         String line;
 

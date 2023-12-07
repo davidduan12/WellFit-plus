@@ -12,6 +12,8 @@ import interface_adapter.LoggedIn.AddFood.AddFoodState;
 
 import interface_adapter.LoggedIn.AddFood.AddFoodController;
 import interface_adapter.LoggedIn.AddFood.AddFoodViewModel;
+import interface_adapter.login.LoginState;
+
 public class FoodView extends JPanel implements ActionListener, PropertyChangeListener {
     public final String viewName = "sign up";
     private final AddFoodViewModel addFoodViewModel;
@@ -121,9 +123,16 @@ public class FoodView extends JPanel implements ActionListener, PropertyChangeLi
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
             if (evt.getSource() == addFoodViewModel){
-                foodInputField.setText("");
-                foodWeightInputField.setText("");
+                AddFoodState state = (AddFoodState) evt.getNewValue();
+                if (state.getFoodError() != null)
+                    JOptionPane.showMessageDialog(this, state.getFoodError());
+                    state.setFoodError(null);
+                }else{
+                     foodInputField.setText("");
+                     foodWeightInputField.setText("");
             }
+
+
         }
 
 

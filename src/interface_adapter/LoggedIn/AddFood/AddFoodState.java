@@ -4,8 +4,6 @@ public class AddFoodState {
     private String food = "";
     private float foodWeight = 0;
 
-
-
     private String foodError = null;
 
     public AddFoodState(AddFoodState copy){

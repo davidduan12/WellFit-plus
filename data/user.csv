@@ -1,2 +1,5 @@
-user name,gender ,age,weight(kg),height(cm),history
-d,1,1.0,1.0,,
+user name,gender,age,weight(kg),height(cm),history
+david1,123,50.0,50.0
+qwe,123,50.0,50.0
+1,1,50.0,50.0
+will,123,50.0,50.0,,
