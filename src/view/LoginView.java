@@ -22,10 +22,10 @@ public class LoginView extends JPanel implements ActionListener, PropertyChangeL
     private final LoginViewModel loginViewModel;
     private final LoginController loginController;
     private final ViewManagerModel viewManagerModel;
-    private final JTextField usernameInputField = new JTextField(15);
-    private final JPasswordField passwordInputField = new JPasswordField(15);
+    final JTextField usernameInputField = new JTextField(15);
+    final JPasswordField passwordInputField = new JPasswordField(15);
 
-    private final JButton login;
+    final JButton login;
     private final JButton SwitchToSignup;
     /**
      * A window with a title and a JButton.
@@ -56,6 +56,7 @@ public class LoginView extends JPanel implements ActionListener, PropertyChangeL
         usernameInputField.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
+
                 LoginState currentState = loginViewModel.getState();
                 String text = usernameInputField.getText() + e.getKeyChar();
                 currentState.setUsername(text);
