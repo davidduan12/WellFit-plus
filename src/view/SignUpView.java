@@ -3,6 +3,7 @@ package view;
 import interface_adapter.SignUp.SignupController;
 import interface_adapter.SignUp.SignupState;
 import interface_adapter.SignUp.SignupViewModel;
+import interface_adapter.ViewManagerModel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,6 +18,7 @@ public class SignUpView extends JPanel implements ActionListener, PropertyChange
     public final String viewName = "sign up";
 
     private final SignupViewModel signupViewModel;
+    private final ViewManagerModel viewManagerModel;
     private final JTextField usernameInputField = new JTextField(15);
     private final JPasswordField passwordInputField = new JPasswordField(15);
     private final JPasswordField repeatPasswordInputField = new JPasswordField(15);
@@ -25,32 +27,29 @@ public class SignUpView extends JPanel implements ActionListener, PropertyChange
     private final SignupController signupController;
 
     private final JButton signUp;
-    private final JButton cancel;
-    private final JButton weightButton;
-    private final JButton heightButton;
+    private final JButton SwitchToLogin;
 
-    public SignUpView(SignupController controller, SignupViewModel signupViewModel) {
+    public SignUpView(SignupController controller, SignupViewModel signupViewModel, ViewManagerModel viewManagerModel) {
         this.signupController = controller;
         this.signupViewModel = signupViewModel;
+        this.viewManagerModel = viewManagerModel;
 
         JLabel title = new JLabel(SignupViewModel.TITLE_LABEL);
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         LabelTextPanel usernameInfo = new LabelTextPanel(new JLabel(SignupViewModel.USERNAME_LABEL), usernameInputField);
         LabelTextPanel passwordInfo = new LabelTextPanel(new JLabel(SignupViewModel.PASSWORD_LABEL), passwordInputField);
+        LabelTextPanel weightInfo = new LabelTextPanel(new JLabel(SignupViewModel.WEIGHT_LABEL), weightInputField);
+        LabelTextPanel heightInfo = new LabelTextPanel(new JLabel(SignupViewModel.HEIGHT_LABEL), heightInputField);
+
         LabelTextPanel repeatPasswordInfo = new LabelTextPanel(new JLabel(SignupViewModel.REPEAT_PASSWORD_LABEL), repeatPasswordInputField);
 
         JPanel buttons = new JPanel();
         signUp = new JButton(SignupViewModel.SIGNUP_BUTTON_LABEL);
+        SwitchToLogin = new JButton(SignupViewModel.LOGIN_LABEL);
         buttons.add(signUp);
-        cancel = new JButton(SignupViewModel.CANCEL_BUTTON_LABEL);
-        buttons.add(cancel);
+        buttons.add(SwitchToLogin);
 
-        weightButton = new JButton("Enter Weight");
-        buttons.add(weightButton);
-
-        heightButton = new JButton("Enter Height");
-        buttons.add(heightButton);
 
         signUp.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -68,29 +67,47 @@ public class SignUpView extends JPanel implements ActionListener, PropertyChange
             }
         });
 
-        cancel.addActionListener(this);
-
-        weightButton.addActionListener(new ActionListener() {
+        SwitchToLogin.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                String weight = JOptionPane.showInputDialog("Enter Weight (in kg):");
-                if (weight != null) {
-                    SignupState currentState = signupViewModel.getState();
-                    currentState.setWeight(Double.parseDouble(weight));
-                    weightInputField.setText(weight);
-                    signupViewModel.setState(currentState);
+                if (evt.getSource().equals(SwitchToLogin)) {
+                    viewManagerModel.setActiveView("log in");
+                    viewManagerModel.firePropertyChanged();
                 }
             }
         });
 
-        heightButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                String height = JOptionPane.showInputDialog("Enter Height (in cm):");
-                if (height != null) {
-                    SignupState currentState = signupViewModel.getState();
-                    currentState.setHeight(Double.parseDouble(height));
-                    heightInputField.setText(height);
-                    signupViewModel.setState(currentState);
-                }
+
+        weightInputField.addKeyListener(new KeyListener() {
+            public void keyTyped(KeyEvent e) {
+                SignupState currentState = signupViewModel.getState();
+                String text = weightInputField.getText() + e.getKeyChar();
+                currentState.setWeight(Integer.parseInt(text));
+                signupViewModel.setState(currentState);
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+            }
+        });
+
+        heightInputField.addKeyListener(new KeyListener() {
+            public void keyTyped(KeyEvent e) {
+                SignupState currentState = signupViewModel.getState();
+                String text = heightInputField.getText() + e.getKeyChar();
+                currentState.setHeight(Integer.parseInt(text));
+                signupViewModel.setState(currentState);
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
             }
         });
 
@@ -152,6 +169,8 @@ public class SignUpView extends JPanel implements ActionListener, PropertyChange
         this.add(usernameInfo);
         this.add(passwordInfo);
         this.add(repeatPasswordInfo);
+        this.add(weightInfo);
+        this.add(heightInfo);
         this.add(buttons);
     }
 
