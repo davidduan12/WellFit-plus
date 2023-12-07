@@ -10,7 +10,7 @@ public class NutritionixAPICaller {
     private static final String API_ENDPOINT_NUTRIENT = "https://trackapi.nutritionix.com/v2/natural/nutrients";
     private static final String API_KEY = "36950e27031466b64fcd4d0a977d6953";
 
-    public static double fetchExercise(String query){
+    public static double fetchExercise(String query, String name){
         try {
             URL url = new URL(API_ENDPOINT_EXERCISE);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -35,20 +35,25 @@ public class NutritionixAPICaller {
                 BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                 String inputLine;
                 StringBuilder response = new StringBuilder();
-
                 while ((inputLine = in.readLine()) != null) {
                     response.append(inputLine);
                 }
                 in.close();
-
                 // Return the response as a string
                 JSONObject obj = new JSONObject(response.toString());
                 JSONArray exercises = obj.getJSONArray("exercises");
                 JSONObject exercise = exercises.getJSONObject(0);
                 double calories = exercise.getDouble("nf_calories");
+                String input = exercise.getString("user_input");
+                System.out.println(input);
+                System.out.println(name);
+                if (input.equals("walking") && !name.equals("walking")){
+                    System.out.println("hi");
+                    return -1;
+                }
                 return calories;
             } else {
-                System.out.println("GET request not worked");
+                System.out.println("Request not worked");
             }
         } catch (Exception e) {
             e.printStackTrace();

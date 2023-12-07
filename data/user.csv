@@ -1,10 +1,6 @@
 user name,gender,age,weight(kg),height(cm),history
-david1,123,50.0,50.0,{banana=109.47}{apple=57.72}
+david1,123,50.0,50.0,{banana=109.47}{apple=57.72}{banana=109.47}{seafood=167.65}{orange=49.0}{muffin=750.0}{muffin=750.0}{banana=0.0},{running=228.67}{running=2286.67}{running=1406.3}{jumping=40.83}{swimming=70.0}{=0.0}{run=217.23}{run=114.33}{1203124=5026.58}{532412131=50274.0}
 qwe,123,50.0,50.0
 1,1,50.0,50.0,{Fries=312.0}{Burger=4.78}{coke=0.84}{Coke=8.4}{Burger=47.8},{Running=22.87}{Shitting=4.2}{running=1143.33}{1=4.08}{running =228.67}{run=45.73}{run=114.33}{running=22.87}{Running=114.33}{run=57.17}{run=114.33}{Running=11.43},373.81999999999994,1883.3399999999997
 will,123,50.0,50.0
-3,3,3.0,3.0
-5,5,100.0,100.0
-Will,1,100.0,100.0
-4,4,3.0,3.0
-6,6,100.0,100.0
+

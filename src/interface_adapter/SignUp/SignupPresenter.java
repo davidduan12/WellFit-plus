@@ -49,7 +49,6 @@ public class SignupPresenter implements SignupOutputBoundary {
         SignupState signupState = signupViewModel.getState();
 
         if (error.equals("User already exists.")) {
-            // TODO: Try to test the error of user already exists. I cannot trigger this error when testing by hands.
             JOptionPane.showMessageDialog(null, "Name exists. Please choose a different username.");
             signupState.setUsernameError("Name exists");
         } else if (error.equals("Passwords don't match.")) {
