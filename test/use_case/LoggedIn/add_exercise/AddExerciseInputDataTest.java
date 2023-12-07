@@ -1,26 +1,19 @@
 package use_case.LoggedIn.add_exercise;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class AddExerciseInputDataTest {
 
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
-    void getName() {
-    }
+    void testAddExerciseInputData() {
+        String expectedSport = "Running";
+        double expectedDuration = 30.0;
 
-    @Test
-    void getDuration() {
+        AddExerciseInputData exerciseData = new AddExerciseInputData(expectedSport, expectedDuration);
+
+        assertEquals(expectedSport, exerciseData.getName());
+        assertEquals(expectedDuration, exerciseData.getDuration());
     }
 }
