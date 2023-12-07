@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3654dfd6-c55b-4f83-88b5-cbb3551d4e5d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/test_user.csv" afterDir="false" />
+    <list default="true" id="c470d8a0-eff4-4b5e-b2be-906a746997ef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WellFit-plus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WellFit-plus.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/LoginUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/LoginUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/SignupUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SignupUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/EditProfile/EditProfilePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/EditProfile/EditProfilePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ProfileView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ProfileView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,12 +83,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.FileUserDataAccessObjectTest" />
-        <item itemvalue="Application.FileUserDataAccessObjectTest" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="TaskManager">
     <servers />
