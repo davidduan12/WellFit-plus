@@ -346,6 +346,46 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
         return newArr;
     }
 
+    public double getHeight(String username){
+        if (existsByName(username)) {
+            String line;
+            try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
+                reader.readLine();
+                while ((line = reader.readLine()) != null) {
+                    String[] userData = line.split(",");
+                    if (userData[0].equals(username)) {
+                        return Double.parseDouble(userData[2]);
+                        }
+
+                }
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return 0;
+    }
+
+    public double getWeight(String username){
+        if (existsByName(username)) {
+            String line;
+            try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
+                reader.readLine();
+                while ((line = reader.readLine()) != null) {
+                    String[] userData = line.split(",");
+                    if (userData[0].equals(username)) {
+                        return Double.parseDouble(userData[3]);
+                    }
+                }
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return 0;
+    }
     public String getFoodHistory(String username) {
         if (existsByName(username)) {
             String line;

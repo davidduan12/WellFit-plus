@@ -44,10 +44,10 @@ public class ProfileView extends JPanel {
     private void displayUserInfo() {
 
         String userInfo = "Username: " + profileUserDataAccessObject.getUsername() + "\n"
-                + "Height: " + profileUserDataAccessObject.getHeight() + "\n"
-                + "Weight: "+ profileUserDataAccessObject.getWeight() + "\n"
+                + "Height: " + fileUserDataAccessObject.getHeight(profileUserDataAccessObject.getUsername()) + "cm \n"
+                + "Weight: "+ fileUserDataAccessObject.getWeight(profileUserDataAccessObject.getUsername()) + "kg \n"
                 + "Food Intake History:" + fileUserDataAccessObject.getFoodHistory(profileUserDataAccessObject.getUsername()) + "\n"
-                + "Exercise  History:" + fileUserDataAccessObject.getExerciseHistory(profileUserDataAccessObject.getUsername()) + "\n"
+                + "Exercise History:" + fileUserDataAccessObject.getExerciseHistory(profileUserDataAccessObject.getUsername()) + "\n"
                 ;
         userInfoArea.setText(userInfo);
     }

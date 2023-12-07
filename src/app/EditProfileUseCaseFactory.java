@@ -28,6 +28,7 @@ public class EditProfileUseCaseFactory {
             FileUserDataAccessObject fileUserDataAccessObject;
             UserFactory userFactory = new UserFactory();
             fileUserDataAccessObject = new FileUserDataAccessObject("./data/user.csv", userFactory);
+            System.out.println(loggedInViewModel.getLoggedInUser());
             ProfileUserDataAccessObject profileUserDataAccessObject = new ProfileUserDataAccessObject(loggedInViewModel.getLoggedInUser());
             return new ProfileView(editProfileViewModel, editProfileController, fileUserDataAccessObject, profileUserDataAccessObject);
         } catch (IOException e){

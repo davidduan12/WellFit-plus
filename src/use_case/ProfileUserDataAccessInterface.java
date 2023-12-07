@@ -6,20 +6,4 @@ public interface ProfileUserDataAccessInterface {
 
      void setUsername(String username);
 
-    public String getPassword();
-
-    public void setPassword(String password);
-
-    public double getWeight();
-
-    public double getHeight();
-
-    public void setHeight(double height);
-
-
-
-
-
-
-
     }
