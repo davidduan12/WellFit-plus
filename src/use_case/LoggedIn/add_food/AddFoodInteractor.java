@@ -32,6 +32,7 @@ public class AddFoodInteractor implements AddFoodInputBoundary{
         }else{
             Map<String, Double> data = new HashMap<>();
             data.put(inputData.getName(), calorieData);
+            System.out.println(loggedInViewModel.getLoggedInUser());
             fileUserDataAccessObject.writeFoodCaloriesToCSV(data, loggedInViewModel.getLoggedInUser());
             AddFoodOutputData out = new AddFoodOutputData(inputData.getName());
             addFoodOutputBoundary.prepareSuccessView(out);
