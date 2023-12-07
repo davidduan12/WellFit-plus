@@ -2,7 +2,7 @@ package interface_adapter.LoggedIn.AddFood;
 
 public class AddFoodState {
     private String food = "";
-    private float foodWeight = 0;
+    private double foodWeight = 0;
 
     private String foodError = null;
 
@@ -21,11 +21,11 @@ public class AddFoodState {
         this.food = foodName;
     }
 
-    public float getFoodWeight() {
+    public double getFoodWeight() {
         return foodWeight;
     }
 
-    public void setFoodWeight(float foodWeight) {
+    public void setFoodWeight(double foodWeight) {
         this.foodWeight = foodWeight;
     }
 

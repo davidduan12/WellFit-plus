@@ -1,20 +1,15 @@
 package data_access;
 import entity.User;
 import entity.UserFactory;
-import interface_adapter.SignUp.SignupPresenter;
 import use_case.LoggedIn.add_exercise.ExerciseAddDataAccessInterface;
 import use_case.LoggedIn.add_food.FoodAddDataAccessInterface;
 import use_case.LoggedIn.edit_profile.EditProfiledataAccessInterface;
-import use_case.UserDataAccessInterface;
 
 import use_case.LoggedIn.edit_profile.EditProfileInputData;
-import use_case.LoggedIn.edit_profile.EditProfileOutputBoundary;
-import use_case.LoggedIn.edit_profile.EditProfiledataAccessInterface;
 import use_case.login.LoginDataAccessInterface;
 import use_case.signup.SignupDataAccessInterface;
 import use_case.signup.SignupOutputData;
 
-import java.io.*;
 import java.util.*;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -25,7 +20,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 
 
-public class FileUserDataAccessObject implements UserDataAccessInterface,
+public class FileUserDataAccessObject implements
         FoodAddDataAccessInterface, ExerciseAddDataAccessInterface, EditProfiledataAccessInterface,
         LoginDataAccessInterface, SignupDataAccessInterface {
     private String filepath;
@@ -43,6 +38,9 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
             header = reader.readLine();
             String row;
             while ((row = reader.readLine()) != null) {
+                if (row.equals("")){
+                    continue;
+                }
                 String[] col = row.split(",");
                 String username = col[0];
                 String password = col[1];
@@ -71,7 +69,6 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
         }
     }
 
-    @Override
     public ArrayList<ArrayList<String>> readToCSV(String filePath) {
         ArrayList<ArrayList<String>> records = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filepath))) {
@@ -310,9 +307,10 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
     }
 
 
-    public double apiExercise(String query) {
+
+    public double apiExercise(String query, String name) {
         // Call NutritionixAPICaller
-        return NutritionixAPICaller.fetchExercise(query);
+        return NutritionixAPICaller.fetchExercise(query, name);
     }
 
     public double apiNutrient(String query) {

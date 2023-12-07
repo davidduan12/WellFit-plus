@@ -11,6 +11,7 @@ import use_case.UserDataAccessInterface;
  * Interactor class for the 'add exercise' use case.
  * It communicates with output boundaries, view models, and data access interfaces.
  */
+
 class AddExerciseInteractorTest {
     private AddExerciseInteractor interactor;
     private ExerciseAddDataAccessInterface exerciseAddDataAccessInterface;

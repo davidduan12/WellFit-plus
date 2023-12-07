@@ -1,10 +1,7 @@
 package use_case.LoggedIn.add_exercise;
 
 import interface_adapter.LoggedIn.LoggedInViewModel;
-import use_case.LoggedIn.add_food.AddFoodOutputData;
-import use_case.UserDataAccessInterface;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,7 +17,7 @@ public class AddExerciseInteractor implements AddExerciseInputBoundary {
     }
     public void execute(AddExerciseInputData inputData){
         String query = inputData.getDuration() + "minutes of " + inputData.getName();
-        double calorieData = userDataAccessInterface.apiExercise(query);
+        double calorieData = userDataAccessInterface.apiExercise(query, inputData.getName());
         //first get data from reading the csv
         if (calorieData == -1){
             addExerciseOutputBoundary.prepareFailView("Invalid Input");

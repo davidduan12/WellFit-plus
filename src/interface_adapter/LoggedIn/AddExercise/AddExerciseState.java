@@ -3,7 +3,7 @@ package interface_adapter.LoggedIn.AddExercise;
 
 public class AddExerciseState {
     private String exerciseName = "";
-    private float exerciseLength = 0;
+    private double exerciseLength = 0;
     private String exerciseError = null;
 
 
@@ -23,13 +23,16 @@ public class AddExerciseState {
         this.exerciseName = exerciseName;
     }
 
-    public float getExerciseLength() {
+    public double getExerciseLength() {
         return exerciseLength;
     }
 
-    public void setExerciseLength(float exerciseLength) {
+    public void setExerciseLength(double exerciseLength) {
         this.exerciseLength = exerciseLength;
     }
+
+    public String getExerciseError(){return exerciseError;}
+
 
     public void setExerciseError(String exerciseError) {
         this.exerciseError = exerciseError;

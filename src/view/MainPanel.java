@@ -9,17 +9,8 @@ import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import app.AddExerciseUseCaseFactory;
-import app.AddFoodUseCaseFactory;
-import data_access.FileUserDataAccessObject;
-import entity.Food;
-import interface_adapter.LoggedIn.AddExercise.AddExerciseViewModel;
-import interface_adapter.LoggedIn.AddFood.AddFoodViewModel;
 import interface_adapter.LoggedIn.LoggedInViewModel;
 import interface_adapter.ViewManagerModel;
-import interface_adapter.login.LoginState;
-import use_case.UserDataAccessInterface;
-import use_case.LoggedIn.add_food.FoodAddDataAccessInterface;
 
 public class MainPanel extends JPanel implements ActionListener, PropertyChangeListener {
     private JTabbedPane tabbedPane;
