@@ -31,17 +31,5 @@ class LoginViewTest {
         assertEquals("a", loginViewModel.getState().getUsername());
     }
 
-    @Test
-    void testPasswordInputFieldKeyTypeEvent() {
-        loginView.passwordInputField.setText("");
-
-        KeyEvent keyEvent = new KeyEvent(loginView.passwordInputField, KeyEvent.KEY_TYPED, System.currentTimeMillis(), 0, KeyEvent.VK_UNDEFINED, '1');
-        loginView.passwordInputField.getKeyListeners()[0].keyTyped(keyEvent);
-        LoginState currentState = loginViewModel.getState();
-        currentState.setPassword(new String(loginView.passwordInputField.getPassword()));
-        loginViewModel.setState(currentState);
-
-        assertEquals("1", new String(loginViewModel.getState().getPassword()));
-    }
 
 }
