@@ -17,7 +17,7 @@ public class AddExerciseInteractor implements AddExerciseInputBoundary {
     }
     public void execute(AddExerciseInputData inputData){
         String query = inputData.getDuration() + "minutes of " + inputData.getName();
-        double calorieData = userDataAccessInterface.apiExercise(query);
+        double calorieData = userDataAccessInterface.apiExercise(query, inputData.getName());
         //first get data from reading the csv
         if (calorieData == -1){
             addExerciseOutputBoundary.prepareFailView("Invalid Input");

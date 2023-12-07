@@ -3,7 +3,7 @@ package use_case.LoggedIn.add_food;
 public class AddFoodInputData {
 
      private String food;
-     private double weight = -1;
+     private double weight;
 
     public AddFoodInputData(String food, double weight){
         this.food = food;

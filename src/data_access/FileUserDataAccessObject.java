@@ -37,6 +37,9 @@ public class FileUserDataAccessObject implements
             header = reader.readLine();
             String row;
             while ((row = reader.readLine()) != null) {
+                if (row.equals("")){
+                    continue;
+                }
                 String[] col = row.split(",");
                 String username = col[0];
                 String password = col[1];
@@ -285,9 +288,9 @@ public class FileUserDataAccessObject implements
 
 
 
-    public double apiExercise(String query) {
+    public double apiExercise(String query, String name) {
         // Call NutritionixAPICaller
-        return NutritionixAPICaller.fetchExercise(query);
+        return NutritionixAPICaller.fetchExercise(query, name);
     }
     public double apiNutrient(String query) {
         // Call NutritionixAPICaller

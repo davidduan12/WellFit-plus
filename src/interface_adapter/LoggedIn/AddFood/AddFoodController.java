@@ -10,7 +10,7 @@ public class AddFoodController {
         this.addFoodUseCaseInteractor = addFoodUseCaseInteractor;
     }
 
-    public void execute(String name, float calorie){
+    public void execute(String name, double calorie){
         AddFoodInputData inputData = new AddFoodInputData(name, calorie);
         addFoodUseCaseInteractor.execute(inputData);
     }

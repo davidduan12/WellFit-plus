@@ -129,6 +129,9 @@ public class FoodView extends JPanel implements ActionListener, PropertyChangeLi
                     state.setFoodError(null);
                 } else {
                     JOptionPane.showMessageDialog(this, "Added successfully");
+                    state.setFoodError(null);
+                    state.setFood("");
+                    state.setFoodWeight(0.0);
                 }
             }
                  foodInputField.setText("");
