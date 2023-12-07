@@ -12,10 +12,10 @@ class UserTest {
     String password = "123abcGG.";
     String sex = "Female";
 
-    @BeforeEach
-    void setUp() {
-        user = new User(username, password, 20, 50.6, 178, sex);
-    }
+//    @BeforeEach
+//    void setUp() {
+//        user = new User(username, password, 20, 50.6, 178, sex);
+//    }
 
     @AfterEach
     void tearDown() {

@@ -34,11 +34,13 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
 
     private UserFactory userFactory;
 
+    private String header;
+
     public FileUserDataAccessObject(String filepath, UserFactory userFactory) throws IOException {
         this.filepath = filepath;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
-            String header = reader.readLine();
+            header = reader.readLine();
             String row;
             while ((row = reader.readLine()) != null) {
                 String[] col = row.split(",");
@@ -86,8 +88,9 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
     //sign up
     public void userWriting(User user) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filepath))) {
+            writer.write(header);
             writer.newLine();
-            writer.write(user.getUsername() + "," + user.getPassword() + "," + user.getHeight() + "," + user.getHeight() + "," + ",");
+            writer.write(user.getUsername() + "," + user.getPassword() + "," + user.getHeight() + "," + user.getHeight() + "," + "" + ","+"");
             accounts.put(user.getUsername(), user);
         } catch (IOException e) {
             e.printStackTrace();
@@ -135,16 +138,27 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
             while ((line = reader.readLine()) != null) {
                 String[] userData = line.split(",");
                 if (userData[0].equals(username)) {
-                    userData[5] = userData[5] + exerciseData.toString();
-                    String[] ex = userData[5].split(",");
-                    String tce = ex[1].replace("}", "");
-                    float totalCalorieExpenditure = parseFloat(tce);
+                    if (userData.length < 6){
+                        if (userData.length < 5){
+                            userData = addElement(userData, "");
+                        }
+                        userData = addElement(userData, "");
+                    }
+
+                    userData[5] = userData[5] + exerciseData.toString().replace(',',';');
+                    String[] ex = userData[5].split(";");
+                    float totalCalorieExpenditure = this.calculateTotal(ex);
                     User user = accounts.get(username);
-                    user.setTotalCaloriesExpenditure(user.getTotalCaloriesExpenditure() + totalCalorieExpenditure);
+                    user.setTotalCaloriesExpenditure(totalCalorieExpenditure);
                 }
+//                System.out.println(String.join(",", userData));
                 lines.add(String.join(",", userData));
             }
+//            System.out.println(lines);
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(filepath))) {
+                writer.write(header);
+                writer.newLine();
+
                 for (String updatedLine : lines) {
                     writer.write(updatedLine);
                     writer.newLine();
@@ -166,16 +180,22 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
             while ((line = reader.readLine()) != null) {
                 String[] userData = line.split(",");
                 if (userData[0].equals(username)) {
-                    userData[4] = userData[4] + foodData.toString();
+                    //if initial food data is empty
+                    if (userData.length < 5){
+                        userData = addElement(userData, "");
+                    }
+                    //so it doesn't interfere with csv comma
+                    userData[4] = userData[4] + foodData.toString().replace(',',';');
+                    String[] food = userData[4].split(";");
+                    float totalCalorieIntake = this.calculateTotal(food);
+                    User user = accounts.get(username);
+                    user.setTotalCaloriesExpenditure(totalCalorieIntake);
                 }
-                String[] food = userData[4].split(",");
-                String tci = food[1].replace("}", "");
-                float totalCalorieIntake = parseFloat(tci);
-                User user = accounts.get(username);
-                user.setTotalCaloriesExpenditure(user.getTotalCaloriesIntake() + totalCalorieIntake);
                 lines.add(String.join(",", userData));
             }
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(filepath))) {
+                writer.write(header);
+                writer.newLine();
                 for (String updatedLine : lines) {
                     writer.write(updatedLine);
                     writer.newLine();
@@ -184,6 +204,16 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+
+    public float calculateTotal(String[] arr){
+        float calTotal = 0;
+        calTotal += Float.parseFloat(arr[0].substring(arr[0].indexOf("=")+1));
+        for (int i =1; i < arr.length;i ++){
+            calTotal += Float.parseFloat(arr[i].substring(arr[i].indexOf("=")+1, arr[i].indexOf("}")));
+        }
+        return calTotal;
     }
 
     public void editUserCsv(EditProfileInputData editProfileInputData, String username) {
@@ -272,8 +302,8 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
         return NutritionixAPICaller.fetchNutrient(query);
     }
 
-    public void editName(String newName){
-        //
+    public void editName(String newName, String oldName){
+
     }
 
     public void editWeight(double newWeight){
@@ -289,12 +319,24 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
     }
 
     public User get(String username){
-        //
+        if (existsByName(username)){
+            return accounts.get(username);
+        }
         return null;
     }
 
-    public void save(User username){
-        //
+    public void save(User user){
+        accounts.put(user.getUsername(), user);
+    }
+
+    public static String[] addElement(String[] arr, String addElement){
+        String[] newArr = new String[arr.length +1];
+        int i;
+        for(i = 0; i < arr.length; i++){
+            newArr[i] = arr[i];
+        }
+        newArr[arr.length] = addElement;
+        return newArr;
     }
 }
 
