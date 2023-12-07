@@ -6,6 +6,8 @@ import interface_adapter.ViewManagerModel;
 import use_case.signup.SignupOutputBoundary;
 import use_case.signup.SignupOutputData;
 
+import javax.swing.*;
+
 public class SignupPresenter implements SignupOutputBoundary {
     private final SignupViewModel signupViewModel;
     private final LoginViewModel loginViewModel;
@@ -35,11 +37,31 @@ public class SignupPresenter implements SignupOutputBoundary {
     }
 
     @Override
+//    public void prepareFailView(String error) {
+//        SignupState signupState = signupViewModel.getState();
+//        signupState.setUsernameError(error);
+//        signupState.setPasswordError(error);
+//        signupState.setRepeatPasswordError(error);
+//
+//        signupViewModel.firePropertyChanged();
+//    }
     public void prepareFailView(String error) {
         SignupState signupState = signupViewModel.getState();
-        signupState.setUsernameError(error);
-        signupState.setPasswordError(error);
-        signupState.setRepeatPasswordError(error);
+
+        if (error.equals("User already exists.")) {
+            // TODO: Try to test the error of user already exists. I cannot trigger this error when testing by hands.
+            JOptionPane.showMessageDialog(null, "Name exists. Please choose a different username.");
+            signupState.setUsernameError("Name exists");
+        } else if (error.equals("Passwords don't match.")) {
+            JOptionPane.showMessageDialog(null, "Passwords don't match. Please check your password entries.");
+            signupState.setPasswordError("Passwords don't match.");
+            signupState.setRepeatPasswordError("Passwords don't match.");
+        } else {
+            JOptionPane.showMessageDialog(null, error);
+            signupState.setUsernameError(error);
+            signupState.setPasswordError(error);
+            signupState.setRepeatPasswordError(error);
+        }
 
         signupViewModel.firePropertyChanged();
     }
