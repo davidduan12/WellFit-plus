@@ -3,11 +3,12 @@ package app;
 import interface_adapter.LoggedIn.AddExercise.AddExerciseController;
 import interface_adapter.LoggedIn.AddExercise.AddExercisePresenter;
 import interface_adapter.LoggedIn.AddExercise.AddExerciseViewModel;
-import use_case.UserDataAccessInterface;
+import interface_adapter.LoggedIn.LoggedInViewModel;
 import use_case.LoggedIn.add_exercise.ExerciseAddDataAccessInterface;
 import use_case.LoggedIn.add_exercise.AddExerciseInputBoundary;
 import use_case.LoggedIn.add_exercise.AddExerciseInteractor;
 import use_case.LoggedIn.add_exercise.AddExerciseOutputBoundary;
+import use_case.UserDataAccessInterface;
 import view.ExerciseView;
 
 import javax.swing.*;
@@ -18,9 +19,10 @@ public class AddExerciseUseCaseFactory {
 
     public static ExerciseView create(
             AddExerciseViewModel addExerciseViewModel,
+            LoggedInViewModel loggedInViewModel,
             ExerciseAddDataAccessInterface exerciseDataAccessObject) {
         try {
-            AddExerciseController addExerciseController = createAddExerciseUser(addExerciseViewModel, exerciseDataAccessObject);
+            AddExerciseController addExerciseController = createAddExerciseUser(addExerciseViewModel, loggedInViewModel, exerciseDataAccessObject);
             return new ExerciseView(addExerciseViewModel, addExerciseController);
         } catch (IOException e){
             JOptionPane.showMessageDialog(null, "Could not open user data file");
@@ -31,10 +33,11 @@ public class AddExerciseUseCaseFactory {
 
     private static AddExerciseController createAddExerciseUser(
             AddExerciseViewModel addExerciseViewModel,
-            ExerciseAddDataAccessInterface exerciseDataAccessObject
+            LoggedInViewModel loggedInViewModel,
+            ExerciseAddDataAccessInterface exerciseAddDataAccessInterface
     ) throws IOException {
         AddExerciseOutputBoundary addExerciseOutputBoundary = new AddExercisePresenter(addExerciseViewModel);
-        AddExerciseInputBoundary addExerciseInteractor = new AddExerciseInteractor(exerciseDataAccessObject, addExerciseOutputBoundary);
+        AddExerciseInputBoundary addExerciseInteractor = new AddExerciseInteractor(loggedInViewModel, addExerciseOutputBoundary, exerciseAddDataAccessInterface);
         return new AddExerciseController(addExerciseInteractor);
     }
 }

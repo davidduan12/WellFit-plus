@@ -1,12 +1,16 @@
 package use_case.LoggedIn.edit_profile;
 
+import interface_adapter.LoggedIn.LoggedInViewModel;
+
 public class EditProfileInteractor implements EditProfileInputBoundary {
 
     final EditProfiledataAccessInterface userDataAccessInterface;
+    final LoggedInViewModel loggedInViewModel;
     final EditProfileOutputBoundary editProfileOutputBoundary;
 
-    public EditProfileInteractor(EditProfiledataAccessInterface u, EditProfileOutputBoundary b){
+    public EditProfileInteractor(EditProfiledataAccessInterface u, EditProfileOutputBoundary b, LoggedInViewModel l){
         userDataAccessInterface = u;
+        loggedInViewModel = l;
         editProfileOutputBoundary = b;
     }
 

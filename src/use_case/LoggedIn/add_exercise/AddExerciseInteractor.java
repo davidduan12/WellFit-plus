@@ -1,22 +1,37 @@
 package use_case.LoggedIn.add_exercise;
 
+import interface_adapter.LoggedIn.LoggedInViewModel;
+import use_case.LoggedIn.add_food.AddFoodOutputData;
 import use_case.UserDataAccessInterface;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
-public class AddExerciseInteractor implements AddExerciseInputBoundary{
-    final ExerciseAddDataAccessInterface exerciseAddDataAccessInterface;
+public class AddExerciseInteractor implements AddExerciseInputBoundary {
     final AddExerciseOutputBoundary addExerciseOutputBoundary;
-    public AddExerciseInteractor(ExerciseAddDataAccessInterface exerciseAddDataAccessInterface, AddExerciseOutputBoundary addExerciseOutputBoundary){
-        this.exerciseAddDataAccessInterface = exerciseAddDataAccessInterface;
-        this.addExerciseOutputBoundary = addExerciseOutputBoundary;}
+    final LoggedInViewModel loggedInViewModel;
+    final ExerciseAddDataAccessInterface userDataAccessInterface;
 
-    @Override
-    public void execute(AddExerciseInputData inputData) {
+    public AddExerciseInteractor(LoggedInViewModel loggedInViewModel, AddExerciseOutputBoundary addExerciseOutputBoundary, ExerciseAddDataAccessInterface userDataAccessInterface) {
+        this.loggedInViewModel = loggedInViewModel;
+        this.addExerciseOutputBoundary = addExerciseOutputBoundary;
+        this.userDataAccessInterface = userDataAccessInterface;
+    }
+    public void execute(AddExerciseInputData inputData){
         String query = inputData.getDuration() + "minutes of " + inputData.getName();
-        Double apiData = exerciseAddDataAccessInterface.apiExercise(query);
-//        ArrayList<ArrayList<String>> records = userDataAccessInterface.readToCSV("/data/sample_user.csv");
-//        userDataAccessInterface.writeToCSV(records);
-        //TODO: Change this to appropirate function
+        double calorieData = userDataAccessInterface.apiExercise(query);
+        //first get data from reading the csv
+        if (calorieData == -1){
+            addExerciseOutputBoundary.prepareFailView("Invalid Input");
+        }else{
+            Map<String, Double> data = new HashMap<>();
+            data.put(inputData.getName(), calorieData);
+            userDataAccessInterface.writeExerciseCaloriesToCSV(data, loggedInViewModel.getLoggedInUser());
+            AddExerciseOutputData out = new AddExerciseOutputData(inputData.getName());
+            addExerciseOutputBoundary.prepareSuccessView(out);
+        }
     }
 }
+
+

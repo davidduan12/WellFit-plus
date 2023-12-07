@@ -62,19 +62,20 @@ public class Main {
                 throw new RuntimeException(e);
             }
 
-//            SignUpView signupView = SignupUseCaseFactory.create(viewManagerModel, loginViewModel, signupViewModel, userDataAccessObject);
-//            views.add(signupView, signupView.viewName);
+            SignUpView signupView = SignupUseCaseFactory.create(viewManagerModel, loginViewModel, signupViewModel, userDataAccessObject);
+            views.add(signupView, signupView.viewName);
 
             LoginView loginView = LoginUseCaseFactory.create(viewManagerModel, loginViewModel, loggedInViewModel, userDataAccessObject);
             views.add(loginView, loginView.viewName);
 
-            FoodView foodView = AddFoodUseCaseFactory.create(addFoodViewModel, userDataAccessObject);
+            FoodView foodView = AddFoodUseCaseFactory.create(addFoodViewModel,loggedInViewModel, userDataAccessObject);
 
-            ExerciseView exerciseView = AddExerciseUseCaseFactory.create(addExerciseViewModel, userDataAccessObject);
+            ExerciseView exerciseView = AddExerciseUseCaseFactory.create(addExerciseViewModel, loggedInViewModel, userDataAccessObject);
 
-            ProfileView profileView = EditProfileUseCaseFactory.create(editProfileViewModel, userDataAccessObject);
+            ProfileView profileView = EditProfileUseCaseFactory.create(editProfileViewModel, loggedInViewModel, userDataAccessObject);
 
-            MainPanel mainPanel = new MainPanel(foodView, exerciseView, profileView);
+            MainPanel mainPanel = new MainPanel(loggedInViewModel, viewManagerModel, foodView, exerciseView, profileView);
+
             views.add(mainPanel, mainPanel.viewName);
             application.pack();
             application.setVisible(true);
