@@ -49,11 +49,12 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
                 double height = Double.parseDouble(col[2]);
                 double weight = Double.parseDouble(col[3]);
                 User user = new User(username, password, height, weight);
-                accounts.put(username, user);
+                if (!existsByName(username)) {
+                    accounts.put(username, user);
+                }
             }
         }
     }
-
 
 
     //need initializer here, we shouldn't be stating filepath everytime we call a function, not CA.
@@ -89,7 +90,7 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
     public void userWriting(User user) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filepath, true))) {
             writer.newLine();
-            writer.write(user.getUsername() + "," + user.getPassword() + "," + user.getHeight() + "," + user.getHeight() + "," + "" + ","+"");
+            writer.write(user.getUsername() + "," + user.getPassword() + "," + user.getHeight() + "," + user.getHeight() + "," + "" + "," + "");
             accounts.put(user.getUsername(), user);
         } catch (IOException e) {
             e.printStackTrace();
@@ -137,14 +138,14 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
             while ((line = reader.readLine()) != null) {
                 String[] userData = line.split(",");
                 if (userData[0].equals(username)) {
-                    if (userData.length < 6){
-                        if (userData.length < 5){
+                    if (userData.length < 6) {
+                        if (userData.length < 5) {
                             userData = addElement(userData, "");
                         }
                         userData = addElement(userData, "");
                     }
 
-                    userData[5] = userData[5] + exerciseData.toString().replace(',',';');
+                    userData[5] = userData[5] + exerciseData.toString().replace(',', ';');
                     String[] ex = userData[5].split(";");
                     float totalCalorieExpenditure = this.calculateTotal(ex);
                     User user = accounts.get(username);
@@ -180,11 +181,11 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
                 String[] userData = line.split(",");
                 if (userData[0].equals(username)) {
                     //if initial food data is empty
-                    if (userData.length < 5){
+                    if (userData.length < 5) {
                         userData = addElement(userData, "");
                     }
                     //so it doesn't interfere with csv comma
-                    userData[4] = userData[4] + foodData.toString().replace(',',';');
+                    userData[4] = userData[4] + foodData.toString().replace(',', ';');
                     String[] food = userData[4].split(";");
                     float totalCalorieIntake = this.calculateTotal(food);
                     User user = accounts.get(username);
@@ -206,11 +207,11 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
     }
 
 
-    public float calculateTotal(String[] arr){
+    public float calculateTotal(String[] arr) {
         float calTotal = 0;
-        calTotal += Float.parseFloat(arr[0].substring(arr[0].indexOf("=")+1));
-        for (int i =1; i < arr.length;i ++){
-            calTotal += Float.parseFloat(arr[i].substring(arr[i].indexOf("=")+1, arr[i].indexOf("}")));
+        calTotal += Float.parseFloat(arr[0].substring(arr[0].indexOf("=") + 1));
+        for (int i = 1; i < arr.length; i++) {
+            calTotal += Float.parseFloat(arr[i].substring(arr[i].indexOf("=") + 1, arr[i].indexOf("}")));
         }
         return calTotal;
     }
@@ -291,17 +292,17 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
     }
 
 
-
     public double apiExercise(String query) {
         // Call NutritionixAPICaller
         return NutritionixAPICaller.fetchExercise(query);
     }
+
     public double apiNutrient(String query) {
         // Call NutritionixAPICaller
         return NutritionixAPICaller.fetchNutrient(query);
     }
 
-    public void editName(String newName, String oldName){
+    public void editName(String newName, String oldName) {
 
     }
 
@@ -310,39 +311,92 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
 
     }
 
-    public void editWeight(double newWeight){
+    public void editWeight(double newWeight) {
         //
     }
 
-    public void editHeight(double newHeight){
+    public void editHeight(double newHeight) {
         //
     }
 
-    public void editPassword(String newPassword){
+    public void editPassword(String newPassword) {
         //
     }
 
-    public User get(String username){
-        if (existsByName(username)){
+    public User get(String username) {
+        if (existsByName(username)) {
             return accounts.get(username);
         }
         return null;
     }
 
-    public void save(User user){
+    public void save(User user) {
         accounts.put(user.getUsername(), user);
     }
 
-    public static String[] addElement(String[] arr, String addElement){
-        String[] newArr = new String[arr.length +1];
+    public static String[] addElement(String[] arr, String addElement) {
+        String[] newArr = new String[arr.length + 1];
         int i;
-        for(i = 0; i < arr.length; i++){
+        for (i = 0; i < arr.length; i++) {
             newArr[i] = arr[i];
         }
         newArr[arr.length] = addElement;
         return newArr;
     }
+
+    public String getFoodHistory(String username) {
+        if (existsByName(username)) {
+            String line;
+            try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
+                reader.readLine();
+                while ((line = reader.readLine()) != null) {
+                    String[] userData = line.split(",");
+                    if (userData[0].equals(username)) {
+                        if (userData.length < 5){
+                            return "You have no food history yet";
+                        }
+                        else {
+                           return userData[4];
+                        }
+                    }
+                }
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return "You have no food history yet";
+    }
+
+    public String getExerciseHistory(String username) {
+        if (existsByName(username)) {
+            String line;
+            try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
+                reader.readLine();
+                while ((line = reader.readLine()) != null) {
+                    String[] userData = line.split(",");
+                    if (userData[0].equals(username)) {
+                        if (userData.length < 6){
+                            return "You have no exercise history yet";
+                        }
+                        else {
+                            return userData[5];
+                        }
+                    }
+                }
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return "You have no excercise history yet";
+    }
+
 }
+
+
 
 
 

@@ -1,5 +1,6 @@
 package interface_adapter.LoggedIn;
 
+import entity.User;
 import interface_adapter.ViewModel;
 
 import java.beans.PropertyChangeListener;
@@ -12,6 +13,7 @@ public class LoggedInViewModel extends ViewModel {
 
     private String loggedInUser;
 
+    private User user;
     public LoggedInViewModel(){
         super("logged in");
     }
@@ -36,6 +38,7 @@ public class LoggedInViewModel extends ViewModel {
     public String getLoggedInUser(){
         return loggedInUser;
     }
+
     public void setLoggedInUser(String loggedInUser){
         this.loggedInUser = loggedInUser;
     }

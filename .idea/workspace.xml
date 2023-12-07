@@ -5,22 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7e3353f-dd4b-4a64-a31e-a1a28651fea6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/data_access/ProfileUserDataAccessObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/ProfileUserDataAccessInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_user.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/test_user.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/user.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/user.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/AddExerciseUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AddExerciseUseCaseFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/AddFoodUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AddFoodUseCaseFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/EditProfileUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/EditProfileUseCaseFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_access/DAOtest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/DAOtest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddFood/AddFoodState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/AddFood/AddFoodState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/AddExerciseInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/AddExerciseInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/ExerciseAddDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/ExerciseAddDataAccessInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/AddFoodInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/AddFoodInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/FoodAddDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/FoodAddDataAccessInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/signup/SignupDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/signup/SignupDataAccessInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/FoodView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/FoodView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ProfileView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ProfileView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -37,14 +31,27 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "frontend",
+    "git-widget-placeholder": "csv",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.DAOtest">
+    <configuration name="DAOtest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="data_access.DAOtest" />
+      <module name="WellFit-plus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data_access.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.Main" />
       <module name="WellFit-plus" />
@@ -60,6 +67,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DAOtest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>

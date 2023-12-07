@@ -1,5 +1,7 @@
 package view;
 
+import data_access.FileUserDataAccessObject;
+import data_access.ProfileUserDataAccessObject;
 import interface_adapter.LoggedIn.EditProfile.EditProfileController;
 import interface_adapter.LoggedIn.EditProfile.EditProfileViewModel;
 
@@ -7,14 +9,18 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 
 public class ProfileView extends JPanel {
     private JButton editProfileButton;
     private JTextArea userInfoArea;
 
-    public ProfileView(EditProfileViewModel editProfileViewModel, EditProfileController editProfileController) {
+    final FileUserDataAccessObject fileUserDataAccessObject;
+
+    final ProfileUserDataAccessObject profileUserDataAccessObject;
+
+    public ProfileView(EditProfileViewModel editProfileViewModel, EditProfileController editProfileController, FileUserDataAccessObject fileUserDataAccessObject, ProfileUserDataAccessObject profileUserDataAccessObject) {
+        this.fileUserDataAccessObject = fileUserDataAccessObject;
+        this.profileUserDataAccessObject = profileUserDataAccessObject;
         this.setLayout(new BorderLayout());
         userInfoArea = new JTextArea(10, 30);
         userInfoArea.setEditable(false);
@@ -36,11 +42,13 @@ public class ProfileView extends JPanel {
     }
 
     private void displayUserInfo() {
-        String userInfo = "Username: user123\n"
-                + "Height: 175 cm\n"
-                + "Weight: 70 kg\n"
-                + "Password: password123\n"
-                + "History: [Some user history]";
+
+        String userInfo = "Username: " + profileUserDataAccessObject.getUsername() + "\n"
+                + "Height: " + profileUserDataAccessObject.getHeight() + "\n"
+                + "Weight: "+ profileUserDataAccessObject.getWeight() + "\n"
+                + "Food Intake History:" + fileUserDataAccessObject.getFoodHistory(profileUserDataAccessObject.getUsername()) + "\n"
+                + "Exercise  History:" + fileUserDataAccessObject.getExerciseHistory(profileUserDataAccessObject.getUsername()) + "\n"
+                ;
         userInfoArea.setText(userInfo);
     }
 
