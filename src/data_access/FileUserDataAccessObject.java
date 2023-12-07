@@ -186,83 +186,81 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
         }
     }
 
-    //TODO: after finish edit profile
-//    public void editUserCsv(EditProfileInputData editProfileInputData, String username) {
-//        User thisUser;
-//        thisUser = accounts.get(username);
-//        thisUser.setUsername(editProfileInputData.getName());
-//        thisUser.setPassword(editProfileInputData.getPassword());
-//        thisUser.setHeight(editProfileInputData.getHeight());
-//        thisUser.setWeight(editProfileInputData.getWeight());
-//        accounts.put(editProfileInputData.getName(), thisUser);
-//        if (!editProfileInputData.getName().equals(username)) {
-//            accounts.remove(username);
-//        }
-//
-//        List<String> lines = new ArrayList<>();
-//        String line;
-//
-//        try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
-//            reader.readLine();
-//
-//            while ((line = reader.readLine()) != null) {
-//                String[] userData = line.split(",");
-//                if (userData[0].equals(username)) {
-//                    userData[0] = editProfileInputData.getName();
-//                    userData[1] = editProfileInputData.getPassword();
-//                    userData[2] = Double.toString(editProfileInputData.getHeight());
-//                    userData[3] = Double.toString(editProfileInputData.getWeight());
-//                }
-//                lines.add(String.join(",", userData));
-//            }
-//            try (BufferedWriter writer = new BufferedWriter(new FileWriter(filepath))) {
-//                for (String updatedLine : lines) {
-//                    writer.write(updatedLine);
-//                    writer.newLine();
-//                }
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//
-//    }
+    public void editUserCsv(EditProfileInputData editProfileInputData, String username) {
+        User thisUser;
+        thisUser = accounts.get(username);
+        thisUser.setUsername(editProfileInputData.getName());
+        thisUser.setPassword(editProfileInputData.getPassword());
+        thisUser.setHeight(editProfileInputData.getHeight());
+        thisUser.setWeight(editProfileInputData.getWeight());
+        accounts.put(editProfileInputData.getName(), thisUser);
+        if (!editProfileInputData.getName().equals(username)) {
+            accounts.remove(username);
+        }
 
-    //TODO: to be changed
+        List<String> lines = new ArrayList<>();
+        String line;
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
+            reader.readLine();
+
+            while ((line = reader.readLine()) != null) {
+                String[] userData = line.split(",");
+                if (userData[0].equals(username)) {
+                    userData[0] = editProfileInputData.getName();
+                    userData[1] = editProfileInputData.getPassword();
+                    userData[2] = Double.toString(editProfileInputData.getHeight());
+                    userData[3] = Double.toString(editProfileInputData.getWeight());
+                }
+                lines.add(String.join(",", userData));
+            }
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(filepath))) {
+                for (String updatedLine : lines) {
+                    writer.write(updatedLine);
+                    writer.newLine();
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+
     public int getCalorieFood(String foodName, float amount) {
-//        // Implementation to get the calories for the specified amount of food
-//        try (BufferedReader br = new BufferedReader(new FileReader(csvFilePath))) {
-//            String line;
-//            while ((line = br.readLine()) != null) {
-//                String[] values = line.split(",");
-//                if (values[0].equalsIgnoreCase(foodName)) {
-//                    float caloriesPerUnit = Float.parseFloat(values[1]); // Assuming the second value is the calories per unit
-//                    return Math.round(caloriesPerUnit * amount);
-//                }
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return 0;
+        // Implementation to get the calories for the specified amount of food
+        try (BufferedReader br = new BufferedReader(new FileReader(filepath))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] values = line.split(",");
+                if (values[0].equalsIgnoreCase(foodName)) {
+                    float caloriesPerUnit = Float.parseFloat(values[1]); // Assuming the second value is the calories per unit
+                    return Math.round(caloriesPerUnit * amount);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return 0;
     }
-    //TODO: change this
+
     public int getCalorieExercise(String exerciseName, float amount) {
-//        try (BufferedReader br = new BufferedReader(new FileReader(csvFilePath))) {
-//            String line;
-//            while ((line = br.readLine()) != null) {
-//                String[] values = line.split(",");
-//                if (values[0].equalsIgnoreCase(exerciseName)) {
-//                    float caloriesPerUnit = Float.parseFloat(values[1]);
-//                    return Math.round(caloriesPerUnit * amount);
-//                }
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return 0;
+        try (BufferedReader br = new BufferedReader(new FileReader(filepath))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] values = line.split(",");
+                if (values[0].equalsIgnoreCase(exerciseName)) {
+                    float caloriesPerUnit = Float.parseFloat(values[1]);
+                    return Math.round(caloriesPerUnit * amount);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return 0;
     }
+
 
 
     public double apiExercise(String query) {

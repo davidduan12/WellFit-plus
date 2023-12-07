@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c470d8a0-eff4-4b5e-b2be-906a746997ef" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-12-05_3_55_p_m___Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-12-05_3_57_p_m___Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/AddExerciseUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AddExerciseUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/AddExerciseInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/AddExerciseInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/AddExerciseOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_exercise/AddExerciseOutputBoundary.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,10 +22,16 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
+<<<<<<< HEAD
   "customColor": "",
   "associatedIndex": -1
 }]]></component>
   <component name="ProjectId" id="2ZBGEp37p2LDM7xx3SlCi4aXL6T" />
+=======
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2ZBhCZsAW66VZkqULFP8XaZAuqG" />
+>>>>>>> 6cd5e1eb283e4689ca19b7bf9a9434ed198860f8
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -36,8 +42,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+<<<<<<< HEAD
     "git-widget-placeholder": "frontend",
+=======
+    "git-widget-placeholder": "main",
+>>>>>>> 6cd5e1eb283e4689ca19b7bf9a9434ed198860f8
     "last_opened_file_path": "/home/david/Downloads/json-20231013.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
@@ -49,11 +61,19 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c470d8a0-eff4-4b5e-b2be-906a746997ef" name="Changes" comment="" />
+<<<<<<< HEAD
       <created>1701887950524</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701887950524</updated>
       <workItem from="1701887953231" duration="25000" />
+=======
+      <created>1701901253118</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701901253118</updated>
+      <workItem from="1701901255558" duration="818000" />
+>>>>>>> 6cd5e1eb283e4689ca19b7bf9a9434ed198860f8
     </task>
     <servers />
   </component>
