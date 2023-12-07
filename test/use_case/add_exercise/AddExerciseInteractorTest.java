@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import use_case.LoggedIn.add_exercise.AddExerciseInteractor;
 import use_case.LoggedIn.add_exercise.AddExerciseOutputBoundary;
 import use_case.LoggedIn.add_exercise.ExerciseAddDataAccessInterface;
-import use_case.UserDataAccessInterface;
 
 class AddExerciseInteractorTest {
     private AddExerciseInteractor interactor;

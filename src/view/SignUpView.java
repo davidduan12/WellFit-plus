@@ -72,6 +72,12 @@ public class SignUpView extends JPanel implements ActionListener, PropertyChange
                 if (evt.getSource().equals(SwitchToLogin)) {
                     viewManagerModel.setActiveView("log in");
                     viewManagerModel.firePropertyChanged();
+                    SignupState currentState = signupViewModel.getState();
+                    currentState.setWeight(0.0);
+                    currentState.setHeight(0.0);
+                    currentState.setRepeatPassword("");
+                    currentState.setUsername("");
+                    currentState.setPassword("");
                 }
             }
         });

@@ -19,15 +19,14 @@ class FileUserDataAccessObjectTest {
             fileUserDataAccessObject.userWriting(user);
             System.out.println(fileUserDataAccessObject.userLogin("tmd", "Ihateschool"));
             System.out.println(fileUserDataAccessObject.userLogin("tmd", "Iloveschool"));
-            Map<String, String> ex = new HashMap<>();
-            ex.put("running", "100");
-            ex.put("punching", "100");
-            Map<String, String> fd = new HashMap<>();
-            fd.put("munch", "120");
-            fd.put("lunch", "200");
+            Map<String, Double> ex = new HashMap<>();
+            ex.put("running", 100.24);
+            ex.put("punching", 100.0);
+            Map<String, Double> fd = new HashMap<>();
+            fd.put("munch", 120.5);
+            fd.put("lunch", 200.2);
             fileUserDataAccessObject.writeFoodCaloriesToCSV(fd, "tmd");
             fileUserDataAccessObject.writeExerciseCaloriesToCSV(ex, "tmd");
-
 ////        fileUserDataAccessObject.writeFoodCaloriesToCSV(fd, "tmd");
 //        System.out.println(fdarr[0]);
 //        System.out.println(fdarr[1]);

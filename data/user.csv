@@ -1,5 +1,7 @@
 user name,gender,age,weight(kg),height(cm),history
-david1,123,50.0,50.0,{banana=109.47}{apple=57.72}
+david1,123,50.0,50.0,{banana=109.47}{apple=57.72}{banana=109.47}{seafood=167.65}{orange=49.0}{muffin=750.0}{muffin=750.0}{banana=0.0},{running=228.67}{running=2286.67}{running=1406.3}{jumping=40.83}{swimming=70.0}{=0.0}{run=217.23}{run=114.33}{1203124=5026.58}{532412131=50274.0}
 qwe,123,50.0,50.0
 1,1,50.0,50.0
 will,123,50.0,50.0
+
+ken,0987,60.0,60.0,,

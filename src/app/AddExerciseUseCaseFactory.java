@@ -8,7 +8,6 @@ import use_case.LoggedIn.add_exercise.ExerciseAddDataAccessInterface;
 import use_case.LoggedIn.add_exercise.AddExerciseInputBoundary;
 import use_case.LoggedIn.add_exercise.AddExerciseInteractor;
 import use_case.LoggedIn.add_exercise.AddExerciseOutputBoundary;
-import use_case.UserDataAccessInterface;
 import view.ExerciseView;
 
 import javax.swing.*;
