@@ -24,7 +24,6 @@ class SignupOutputDataTest {
 
     @Test
     void getUsername() {
-        // 测试 getUsername() 方法是否返回正确的用户名
         assertEquals(expectedUsername, outputData.getUsername());
     }
 

@@ -24,8 +24,8 @@ public class SignUpView extends JPanel implements ActionListener, PropertyChange
     private final JTextField heightInputField = new JTextField(15);
     private final SignupController signupController;
 
-    private final JButton signUp;
-    private final JButton cancel;
+    final JButton signUp;
+    final JButton cancel;
     private final JButton weightButton;
     private final JButton heightButton;
 

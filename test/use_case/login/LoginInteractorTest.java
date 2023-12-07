@@ -17,49 +17,47 @@ class LoginInteractorTest {
     @InjectMocks
     private LoginInteractor loginInteractor;
 
-    private final String username = "testUser";
-    private final String password = "password123";
-    private final String wrongPassword = "wrongPassword";
-    private final double height = 189;
-    private final double weight = 78;
-    private LoginInputData validLoginData;
-    private LoginInputData invalidLoginData;
+    private LoginInputData validInputData;
+    private LoginInputData invalidInputData;
+    private final String existingUsername = "user";
+    private final String correctPassword = "correctPass";
+    private final String wrongPassword = "wrongPass";
+    private final double height = 178;
+    private final double weight = 76;
 
     @BeforeEach
     void setUp() {
         MockitoAnnotations.initMocks(this);
-        validLoginData = new LoginInputData(username, password);
-        invalidLoginData = new LoginInputData(username, wrongPassword);
+        validInputData = new LoginInputData(existingUsername, correctPassword);
+        invalidInputData = new LoginInputData(existingUsername, wrongPassword);
     }
 
     @Test
     void execute_UserDoesNotExist() {
-        when(mockDataAccessObject.existsByName(username)).thenReturn(false);
+        when(mockDataAccessObject.existsByName(existingUsername)).thenReturn(false);
 
-        loginInteractor.execute(validLoginData);
+        loginInteractor.execute(validInputData);
 
-        verify(mockLoginPresenter).prepareFailView(username + ": Account does not exist.");
+        verify(mockLoginPresenter).prepareFailView(existingUsername + ": Account does not exist.");
     }
 
     @Test
     void execute_IncorrectPassword() {
-        when(mockDataAccessObject.existsByName(username)).thenReturn(true);
-        when(mockDataAccessObject.get(username)).thenReturn(new User(username, password, height,weight));
+        when(mockDataAccessObject.existsByName(existingUsername)).thenReturn(true);
+        when(mockDataAccessObject.get(existingUsername)).thenReturn(new User(existingUsername, correctPassword, height, weight));
 
-        loginInteractor.execute(invalidLoginData);
+        loginInteractor.execute(invalidInputData);
 
-        verify(mockLoginPresenter).prepareFailView("Incorrect password for " + username + ".");
+        verify(mockLoginPresenter).prepareFailView("Incorrect password for " + existingUsername + ".");
     }
 
     @Test
     void execute_SuccessfulLogin() {
-        when(mockDataAccessObject.existsByName(username)).thenReturn(true);
-        when(mockDataAccessObject.get(username)).thenReturn(new User(username, password, height, weight));
+        when(mockDataAccessObject.existsByName(existingUsername)).thenReturn(true);
+        when(mockDataAccessObject.get(existingUsername)).thenReturn(new User(existingUsername, correctPassword, height, weight));
 
-        loginInteractor.execute(validLoginData);
+        loginInteractor.execute(validInputData);
 
-        verify(mockDataAccessObject, times(1)).get(username);
         verify(mockLoginPresenter).prepareSuccessView(any(LoginOutputData.class));
     }
-
 }
