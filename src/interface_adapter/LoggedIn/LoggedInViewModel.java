@@ -5,7 +5,7 @@ import interface_adapter.ViewModel;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
-public class LoggedInViewModel extends ViewModel{
+public class LoggedInViewModel extends ViewModel {
     public final String TITLE_LABEL = "Logged In View";
 
     private LoggedInState state = new LoggedInState();
