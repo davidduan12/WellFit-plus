@@ -2,6 +2,8 @@ package data_access;
 
 import entity.User;
 import entity.UserFactory;
+import use_case.LoggedIn.edit_profile.EditProfileInputData;
+import use_case.LoggedIn.edit_profile.EditProfileOutputdata;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -19,15 +21,14 @@ public class DAOtest {
         FileUserDataAccessObject fileUserDataAccessObject = new FileUserDataAccessObject("./data/test_user.csv", userFactory);
         User user = new User("tmd", "Ihateschool", 199, 99);
         fileUserDataAccessObject.userWriting(user);
-        System.out.println(fileUserDataAccessObject.userLogin("tmd", "Ihateschool"));
-        System.out.println(fileUserDataAccessObject.userLogin("tmd", "Iloveschool"));
-        Map<String, Double> ex = new HashMap<>();
-        ex.put("running", 100.2);
-
+        EditProfileInputData editProfileInputData = new EditProfileInputData("TT", "12", 200, 2);
+        fileUserDataAccessObject.editUserCsv(editProfileInputData, "tmd");
+//        Map<String, Double> ex = new HashMap<>();
+//        ex.put("running", 100.2);
         Map<String, String> fd = new HashMap<>();
 
 //        fileUserDataAccessObject.writeFoodCaloriesToCSV(fd, "tmd");
-        fileUserDataAccessObject.writeExerciseCaloriesToCSV(ex, "tmd");
+//        fileUserDataAccessObject.writeExerciseCaloriesToCSV(ex, "tmd");
 
 ////        fileUserDataAccessObject.writeFoodCaloriesToCSV(fd, "tmd");
 //        System.out.println(fdarr[0]);

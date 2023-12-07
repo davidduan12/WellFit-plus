@@ -75,15 +75,15 @@ public class ProfileView extends JPanel {
         editDialog.setSize(300, 200);
 
         JPanel panel = new JPanel(new GridLayout(0, 2));
-        panel.add(new JLabel("Username:"));
+        panel.add(new JLabel("Username: "));
         JTextField usernameField = new JTextField();
         panel.add(usernameField);
 
-        panel.add(new JLabel("Weight:"));
+        panel.add(new JLabel("Weight(kg): "));
         JTextField weightField = new JTextField();
         panel.add(weightField);
 
-        panel.add(new JLabel("Height:"));
+        panel.add(new JLabel("Height(cm):"));
         JTextField heightField = new JTextField();
         panel.add(heightField);
 

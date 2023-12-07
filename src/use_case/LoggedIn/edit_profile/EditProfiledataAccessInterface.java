@@ -25,4 +25,8 @@ public interface EditProfiledataAccessInterface {
      * @param newPassword The new password
      */
     void editPassword(String newPassword);
+
+    void editUserCsv(EditProfileInputData editProfileInputData, String username);
+
+    boolean existsByName(String identifier);
 }
