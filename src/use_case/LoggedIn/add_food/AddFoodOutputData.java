@@ -1,5 +1,7 @@
 package use_case.LoggedIn.add_food;
-
+/**
+ * Data class representing output data for adding food.
+ */
 public class AddFoodOutputData {
 
 
