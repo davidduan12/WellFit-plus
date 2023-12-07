@@ -13,9 +13,9 @@ public class User {
 
     private double bmi;
 
-    private float totalCaloriesIntake = 0;
+    private double totalCaloriesIntake = 0;
 
-    private float totalCaloriesExpenditure = 0;
+    private double totalCaloriesExpenditure = 0;
 
     public User(String username, String password, double height, double weight) {
         this.username = username;
@@ -58,19 +58,19 @@ public class User {
     }
 
 
-    public float getTotalCaloriesIntake() {
+    public double getTotalCaloriesIntake() {
         return totalCaloriesIntake;
     }
 
-    public void setTotalCaloriesIntake(float totalCaloriesIntake) {
+    public void setTotalCaloriesIntake(double totalCaloriesIntake) {
         this.totalCaloriesIntake = totalCaloriesIntake;
     }
 
-    public float getTotalCaloriesExpenditure() {
+    public double getTotalCaloriesExpenditure() {
         return totalCaloriesExpenditure;
     }
 
-    public void setTotalCaloriesExpenditure(float totalCaloriesExpenditure) {
+    public void setTotalCaloriesExpenditure(double totalCaloriesExpenditure) {
         this.totalCaloriesExpenditure = totalCaloriesExpenditure;
     }
 }

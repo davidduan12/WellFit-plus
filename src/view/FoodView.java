@@ -122,15 +122,19 @@ public class FoodView extends JPanel implements ActionListener, PropertyChangeLi
     }
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
-            if (evt.getSource() == addFoodViewModel){
+            if (evt.getSource() == addFoodViewModel) {
                 AddFoodState state = (AddFoodState) evt.getNewValue();
-                if (state.getFoodError() != null)
+                System.out.println(state.getFoodError());
+                if (state.getFoodError() != null) {
                     JOptionPane.showMessageDialog(this, state.getFoodError());
                     state.setFoodError(null);
-                }else{
-                     foodInputField.setText("");
-                     foodWeightInputField.setText("");
+                } else {
+                    System.out.println(12);
+                    JOptionPane.showMessageDialog(this, "Added successfully");
+                }
             }
+                 foodInputField.setText("");
+                 foodWeightInputField.setText("");
 
 
         }
