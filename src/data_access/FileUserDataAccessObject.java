@@ -12,6 +12,7 @@ import use_case.LoggedIn.edit_profile.EditProfileOutputBoundary;
 import use_case.LoggedIn.edit_profile.EditProfiledataAccessInterface;
 import use_case.login.LoginDataAccessInterface;
 import use_case.signup.SignupDataAccessInterface;
+import use_case.signup.SignupOutputData;
 
 import java.io.*;
 import java.util.*;
@@ -145,10 +146,17 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
                     }
 
                     userData[5] = userData[5] + exerciseData.toString().replace(',', ';');
-                    String[] ex = userData[5].split(";");
+                    String[] ex = userData[5].split("}");
                     double totalCalorieExpenditure = this.calculateTotal(ex);
                     User user = accounts.get(username);
                     user.setTotalCaloriesExpenditure(totalCalorieExpenditure);
+                    if (userData.length < 8) {
+                        if (userData.length < 7) {
+                            userData = addElement(userData, "");
+                        }
+                        userData = addElement(userData, "");
+                    }
+                    userData[7] = ""+totalCalorieExpenditure;
                 }
 //                System.out.println(String.join(",", userData));
                 lines.add(String.join(",", userData));
@@ -187,10 +195,15 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
                     //so it doesn't             System.out.println(arr[i]);interfere with csv comma
                     userData[4] = userData[4] + foodData.toString().replace(',',';');
 
-                    String[] food = userData[4].split(";");
+                    String[] food = userData[4].split("}");
                     double totalCalorieIntake = this.calculateTotal(food);
                     User user = accounts.get(username);
-                    user.setTotalCaloriesExpenditure(totalCalorieIntake);
+                    user.setTotalCaloriesIntake(totalCalorieIntake);
+
+                    if (userData.length < 7) {
+                        userData = addElement(userData, "");
+                    }
+                    userData[6] = "" + totalCalorieIntake;
                 }
                 lines.add(String.join(",", userData));
             }
@@ -211,10 +224,13 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
 
     public double calculateTotal(String[] arr){
         double calTotal = 0;
-        calTotal += Double.parseDouble(arr[0].substring(arr[0].indexOf("=")+1, arr[0].indexOf("}")));
-        for (int i =1; i < arr.length;i++){
-            calTotal += Double.parseDouble(arr[i].substring(arr[i].indexOf("=")+1, arr[i].indexOf("}")));
+
+        for (int i =0; i < arr.length;i++){
+                System.out.println(arr[i]+ " non last");
+                calTotal += Double.parseDouble(arr[i].substring(arr[i].indexOf("=")+1));
+
         }
+        System.out.println(calTotal);
         return calTotal;
     }
 
@@ -434,6 +450,51 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
             }
         }
         return "You have no excercise history yet";
+    }
+
+    public double getTotalIntake(String username){
+        if (existsByName(username)) {
+            String line;
+            try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
+                reader.readLine();
+                while ((line = reader.readLine()) != null) {
+                    String[] userData = line.split(",");
+                    if (userData[0].equals(username)) {
+                        if (userData.length < 7){
+                            return 0;
+                        }
+                        return Math.round(Double.parseDouble(userData[6]));
+                    }
+                }
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return 0;
+    }
+    public double getTotalExpenditure(String username){
+        if (existsByName(username)) {
+            String line;
+            try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
+                reader.readLine();
+                while ((line = reader.readLine()) != null) {
+                    String[] userData = line.split(",");
+                    if (userData[0].equals(username)) {
+                        if (userData.length < 8){
+                            return 0;
+                        }
+                        return Math.round(Double.parseDouble(userData[7]));
+                    }
+                }
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return 0;
     }
 
 }

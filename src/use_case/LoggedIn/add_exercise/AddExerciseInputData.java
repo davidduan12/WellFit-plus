@@ -1,5 +1,8 @@
 package use_case.LoggedIn.add_exercise;
 
+/**
+ * Data class representing input data for adding an exercise.
+ */
 public class AddExerciseInputData {
     final private String sports;
     final private double duration;

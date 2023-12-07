@@ -49,7 +49,7 @@ public class Main {
             //Data for views
             SignupViewModel signupViewModel = new SignupViewModel();
             LoginViewModel loginViewModel = new LoginViewModel();
-            LoggedInViewModel loggedInViewModelloggedInViewModel = new LoggedInViewModel();
+            LoggedInViewModel loggedInViewModel = new LoggedInViewModel();
             AddFoodViewModel addFoodViewModel = new AddFoodViewModel();
             AddExerciseViewModel addExerciseViewModel = new AddExerciseViewModel();
             EditProfileViewModel editProfileViewModel = new EditProfileViewModel();

@@ -7,7 +7,10 @@ import use_case.LoggedIn.add_exercise.AddExerciseInteractor;
 import use_case.LoggedIn.add_exercise.AddExerciseOutputBoundary;
 import use_case.LoggedIn.add_exercise.ExerciseAddDataAccessInterface;
 import use_case.UserDataAccessInterface;
-
+/**
+ * Interactor class for the 'add exercise' use case.
+ * It communicates with output boundaries, view models, and data access interfaces.
+ */
 class AddExerciseInteractorTest {
     private AddExerciseInteractor interactor;
     private ExerciseAddDataAccessInterface exerciseAddDataAccessInterface;

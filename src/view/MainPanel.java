@@ -1,6 +1,8 @@
 package view;
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -57,6 +59,20 @@ public class MainPanel extends JPanel implements ActionListener, PropertyChangeL
 //        });
 //        getContentPane().add(tabbedPane, BorderLayout.CENTER);
         this.add(tabbedPane);
+
+        // Add the ChangeListener
+        tabbedPane.addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                JTabbedPane sourceTabbedPane = (JTabbedPane) e.getSource();
+                int index = sourceTabbedPane.getSelectedIndex();
+                System.out.println("Tab changed to: " + sourceTabbedPane.getTitleAt(index));
+                // Add any additional actions you want to perform on tab change here
+                if (index == 2){
+                    profileView.displayUserInfo(loggedInViewModel.getLoggedInUser());
+                }
+            }
+        });
      }
     private void setCustomTabs(int width, int height) {
 
