@@ -50,6 +50,7 @@ public class ProfileView extends JPanel {
                 + "Exercise History: " + fileUserDataAccessObject.getExerciseHistory(profileUserDataAccessObject.getUsername()) + "\n"
                 + "Total Food Intake: " + fileUserDataAccessObject.getTotalIntake(profileUserDataAccessObject.getUsername()) + " Kcals\n"
                 + "Total Exercise Worked: " + fileUserDataAccessObject.getTotalExpenditure(profileUserDataAccessObject.getUsername()) + " Kcals\n"
+                + "Body Mass Index (bmi): "
                 ;
         userInfoArea.setText(userInfo);
     }
@@ -62,6 +63,7 @@ public class ProfileView extends JPanel {
                 + "Exercise History: " + fileUserDataAccessObject.getExerciseHistory(username) + "\n"
                 + "Total Food Intake: " + fileUserDataAccessObject.getTotalIntake(username) + " Kcals\n"
                 + "Total Exercise Worked: " + fileUserDataAccessObject.getTotalExpenditure(username) + " Kcals\n"
+                + "Body Mass Index (bmi): " + fileUserDataAccessObject.getBmi(username)
                 ;
         userInfoArea.setText(userInfo);
     }

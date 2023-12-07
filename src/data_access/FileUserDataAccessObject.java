@@ -48,6 +48,7 @@ public class FileUserDataAccessObject implements
                 double height = Double.parseDouble(col[2]);
                 double weight = Double.parseDouble(col[3]);
                 User user = new User(username, password, height, weight);
+                user.setBmi();
                 if (!existsByName(username)) {
                     accounts.put(username, user);
                 }
@@ -273,6 +274,10 @@ public class FileUserDataAccessObject implements
 
     }
 
+    public double getBmi(String username){
+        User user = accounts.get(username);
+        return user.getBmi();
+    }
 
     public double getCalorieFood(String foodName, double amount) {
         // Implementation to get the calories for the specified amount of food
