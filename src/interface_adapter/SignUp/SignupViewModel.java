@@ -11,8 +11,8 @@ public class SignupViewModel extends ViewModel {
     public static final String PASSWORD_LABEL = "Choose password";
     public static final String REPEAT_PASSWORD_LABEL = "Enter password again";
 
-    public static final String WEIGHT_LABEL = "Enter Weight";
-    public static final String HEIGHT_LABEL = "Enter Height";
+    public static final String WEIGHT_LABEL = "Enter Weight (kg)";
+    public static final String HEIGHT_LABEL = "Enter Height (kg)";
 
     public static final String LOGIN_LABEL = "Switch to Login";
     public static final String SIGNUP_BUTTON_LABEL = "Sign up";

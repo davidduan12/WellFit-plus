@@ -87,9 +87,24 @@ public class ExerciseView extends JPanel implements ActionListener, PropertyChan
 
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
+//        if (evt.getSource() == addExerciseViewModel) {
+//            exerciseInputField.setText("");
+//            exerciseDurationInputField.setText("");
+//        }
         if (evt.getSource() == addExerciseViewModel) {
+            AddExerciseState state = (AddExerciseState) evt.getNewValue();
+            if (state.getExerciseError() != null) {
+                JOptionPane.showMessageDialog(this, state.getExerciseError());
+                state.setExerciseError(null);
+            } else {
+                JOptionPane.showMessageDialog(this, "Exercise added successfully");
+                state.setExerciseError(null);
+                state.setExerciseLength(0.0);
+                state.setExerciseName("");
+            }
             exerciseInputField.setText("");
             exerciseDurationInputField.setText("");
         }
+
     }
 }

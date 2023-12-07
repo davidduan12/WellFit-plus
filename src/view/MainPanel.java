@@ -1,23 +1,16 @@
 package view;
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import app.AddExerciseUseCaseFactory;
-import app.AddFoodUseCaseFactory;
-import data_access.FileUserDataAccessObject;
-import entity.Food;
-import interface_adapter.LoggedIn.AddExercise.AddExerciseViewModel;
-import interface_adapter.LoggedIn.AddFood.AddFoodViewModel;
 import interface_adapter.LoggedIn.LoggedInViewModel;
 import interface_adapter.ViewManagerModel;
-import interface_adapter.login.LoginState;
-import use_case.UserDataAccessInterface;
-import use_case.LoggedIn.add_food.FoodAddDataAccessInterface;
 
 public class MainPanel extends JPanel implements ActionListener, PropertyChangeListener {
     private JTabbedPane tabbedPane;
@@ -57,6 +50,20 @@ public class MainPanel extends JPanel implements ActionListener, PropertyChangeL
 //        });
 //        getContentPane().add(tabbedPane, BorderLayout.CENTER);
         this.add(tabbedPane);
+
+        // Add the ChangeListener
+        tabbedPane.addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                JTabbedPane sourceTabbedPane = (JTabbedPane) e.getSource();
+                int index = sourceTabbedPane.getSelectedIndex();
+                System.out.println("Tab changed to: " + sourceTabbedPane.getTitleAt(index));
+                // Add any additional actions you want to perform on tab change here
+                if (index == 2){
+                    profileView.displayUserInfo(loggedInViewModel.getLoggedInUser());
+                }
+            }
+        });
      }
     private void setCustomTabs(int width, int height) {
 

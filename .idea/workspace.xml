@@ -21,6 +21,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
@@ -30,49 +31,25 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "frontend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;git-widget-placeholder&quot;: &quot;csv&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="interface_adapter.LoggedIn.AddExercise" />
-      <recent name="use_case.LoggedIn.edit_profile" />
-      <recent name="interface_adapter.LoggedIn.AddFood" />
-      <recent name="use_case.LoggedIn.add_food" />
-      <recent name="app" />
-    </key>
-  </component>
-  <component name="RunManager" selected="TestNG.&lt;default&gt;">
-    <configuration name="AddExerciseControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="DAOtest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="data_access.DAOtest" />
       <module name="WellFit-plus" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="interface_adapter.LoggedIn.AddExercise.*" />
+          <option name="PATTERN" value="data_access.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="interface_adapter.LoggedIn.AddExercise" />
-      <option name="MAIN_CLASS_NAME" value="interface_adapter.LoggedIn.AddExercise.AddExerciseControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,6 +70,7 @@
       </method>
     </configuration>
     <configuration name="ExerciseTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+
       <module name="WellFit-plus" />
       <extension name="coverage">
         <pattern>
@@ -133,6 +111,8 @@
         <item itemvalue="JUnit.AddExerciseControllerTest" />
         <item itemvalue="JUnit.ExerciseTest (1)" />
         <item itemvalue="JUnit.ExerciseTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.DAOtest" />
       </list>
     </recent_temporary>
   </component>

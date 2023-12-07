@@ -6,7 +6,6 @@ import interface_adapter.login.LoginViewModel;
 import interface_adapter.ViewManagerModel;
 import interface_adapter.login.LoginController;
 import interface_adapter.login.LoginPresenter;
-import use_case.UserDataAccessInterface;
 import use_case.login.LoginDataAccessInterface;
 import use_case.login.LoginInputBoundary;
 import use_case.login.LoginInteractor;
