@@ -27,7 +27,7 @@ public class SignupInteractor implements SignupInputBoundary {
             User user = userFactory.create(signupInputData.getUsername(), signupInputData.getPassword(), signupInputData.getWeight(), signupInputData.getHeight());
 //            double bmi = user.getWeight() / ((user.getHeight() * 100) * (user.getHeight() * 100));
 //            user.setBMI(bmi);
-            userDataAccessObject.save(user);
+            userDataAccessObject.userWriting(user);
             SignupOutputData signupOutputData = new SignupOutputData(user.getUsername(), false);
             userPresenter.prepareSuccessView(signupOutputData);
         }

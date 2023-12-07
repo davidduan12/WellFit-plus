@@ -74,7 +74,8 @@ public class Main {
 
             ProfileView profileView = EditProfileUseCaseFactory.create(editProfileViewModel, userDataAccessObject);
 
-            MainPanel mainPanel = new MainPanel(foodView, exerciseView, profileView);
+            MainPanel mainPanel = new MainPanel(loggedInViewModel, viewManagerModel, foodView, exerciseView, profileView);
+
             views.add(mainPanel, mainPanel.viewName);
             application.pack();
             application.setVisible(true);

@@ -95,13 +95,13 @@ public class LoginView extends JPanel implements ActionListener, PropertyChangeL
                             currentState.getUsername(),
                             currentState.getPassword()
                     );
+                    System.out.println(viewManagerModel.getActiveView());
                 }
             }
         });
 
         SwitchToSignup.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                System.out.println(1231);
                 if (evt.getSource().equals(SwitchToSignup)) {
                     viewManagerModel.setActiveView("sign up");
                     viewManagerModel.firePropertyChanged();
@@ -127,6 +127,9 @@ public class LoginView extends JPanel implements ActionListener, PropertyChangeL
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
         LoginState state = (LoginState) evt.getNewValue();
-        JOptionPane.showConfirmDialog(this, state.getUsername());
+        if (state.getError() != null){
+            JOptionPane.showMessageDialog(this, state.getError());
+            state.setError(null);
+        }
     }
 }

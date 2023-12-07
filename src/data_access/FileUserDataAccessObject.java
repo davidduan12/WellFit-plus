@@ -306,6 +306,11 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
 
     }
 
+    @Override
+    public void editName(String newName) {
+
+    }
+
     public void editWeight(double newWeight){
         //
     }
