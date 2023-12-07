@@ -1,6 +1,7 @@
 package use_case.LoggedIn.edit_profile;
 
 import interface_adapter.LoggedIn.LoggedInViewModel;
+import use_case.LoggedIn.add_food.AddFoodOutputData;
 
 public class EditProfileInteractor implements EditProfileInputBoundary {
     /**
@@ -18,11 +19,20 @@ public class EditProfileInteractor implements EditProfileInputBoundary {
 
     @Override
     public void execute(EditProfileInputData inputData){
-        userDataAccessInterface.editName(inputData.getName());
-        userDataAccessInterface.editPassword(inputData.getPassword());
-        userDataAccessInterface.editHeight(inputData.getHeight());
-        userDataAccessInterface.editWeight(inputData.getWeight());
-        editProfileOutputBoundary.prepareSuccessView();
+//        userDataAccessInterface.editName(inputData.getName());
+//        userDataAccessInterface.editPassword(inputData.getPassword());
+//        userDataAccessInterface.editHeight(inputData.getHeight());
+//        userDataAccessInterface.editWeight(inputData.getWeight());
+        if (userDataAccessInterface.existsByName(inputData.getName())){
+            editProfileOutputBoundary.prepareFailView("Username exist, please pick another one");
+        }
+        else {
+            userDataAccessInterface.editUserCsv(inputData, loggedInViewModel.getLoggedInUser());
+            EditProfileOutputdata out = new EditProfileOutputdata(inputData.getName(), inputData.getPassword(), inputData.getHeight(), inputData.getWeight(), false);
+            editProfileOutputBoundary.prepareSuccessView(out);
+        }
+
+
     }
 
 }

@@ -6,18 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="f7e3353f-dd4b-4a64-a31e-a1a28651fea6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/user.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/user.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_user.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/test_user.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_access/DAOtest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/DAOtest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/EditProfile/EditProfilePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/EditProfile/EditProfilePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/EditProfile/EditProfileState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/EditProfile/EditProfileState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/EditProfile/EditProfileViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/LoggedIn/EditProfile/EditProfileViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileOutputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileOutputdata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileOutputdata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfiledataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfiledataAccessInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/ProfileView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ProfileView.java" afterDir="false" />
     </list>
     <list id="467f39f8-6722-4658-b772-51deac4b70e9" name="Changes by alwyn" comment="">
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/AddFoodOutputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/add_food/AddFoodOutputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileInputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfileOutputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfiledataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/LoggedIn/edit_profile/EditProfiledataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/signup/SignupDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/signup/SignupDataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/signup/SignupInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/signup/SignupInputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/signup/SignupInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/signup/SignupInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/signup/SignupInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/signup/SignupInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/signup/SignupOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/signup/SignupOutputBoundary.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
