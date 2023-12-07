@@ -6,17 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="f7e3353f-dd4b-4a64-a31e-a1a28651fea6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/LoginUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/LoginUseCaseFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/SignupUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SignupUseCaseFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/SignUp/SignupViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/SignUp/SignupViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/login/LoginViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/login/LoginViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/login/LoginPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/login/LoginPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/login/LoginState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/login/LoginState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/login/LoginInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/login/LoginInteractor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/SignUpView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SignUpView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent"><![CDATA[{
@@ -28,6 +33,26 @@
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.Main" />
+      <module name="WellFit-plus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <servers />
   </component>
