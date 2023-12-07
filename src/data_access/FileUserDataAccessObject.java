@@ -23,7 +23,6 @@ import java.util.Arrays;
 import java.io.FileReader;
 import java.util.ArrayList;
 
-import static java.lang.Float.parseFloat;
 
 public class FileUserDataAccessObject implements UserDataAccessInterface,
         FoodAddDataAccessInterface, ExerciseAddDataAccessInterface, EditProfiledataAccessInterface,
@@ -147,7 +146,7 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
 
                     userData[5] = userData[5] + exerciseData.toString().replace(',', ';');
                     String[] ex = userData[5].split(";");
-                    float totalCalorieExpenditure = this.calculateTotal(ex);
+                    double totalCalorieExpenditure = this.calculateTotal(ex);
                     User user = accounts.get(username);
                     user.setTotalCaloriesExpenditure(totalCalorieExpenditure);
                 }
@@ -184,10 +183,12 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
                     if (userData.length < 5) {
                         userData = addElement(userData, "");
                     }
-                    //so it doesn't interfere with csv comma
-                    userData[4] = userData[4] + foodData.toString().replace(',', ';');
+
+                    //so it doesn't             System.out.println(arr[i]);interfere with csv comma
+                    userData[4] = userData[4] + foodData.toString().replace(',',';');
+
                     String[] food = userData[4].split(";");
-                    float totalCalorieIntake = this.calculateTotal(food);
+                    double totalCalorieIntake = this.calculateTotal(food);
                     User user = accounts.get(username);
                     user.setTotalCaloriesExpenditure(totalCalorieIntake);
                 }
@@ -207,11 +208,12 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
     }
 
 
-    public float calculateTotal(String[] arr) {
-        float calTotal = 0;
-        calTotal += Float.parseFloat(arr[0].substring(arr[0].indexOf("=") + 1));
-        for (int i = 1; i < arr.length; i++) {
-            calTotal += Float.parseFloat(arr[i].substring(arr[i].indexOf("=") + 1, arr[i].indexOf("}")));
+
+    public double calculateTotal(String[] arr){
+        double calTotal = 0;
+        calTotal += Double.parseDouble(arr[0].substring(arr[0].indexOf("=")+1, arr[0].indexOf("}")));
+        for (int i =1; i < arr.length;i++){
+            calTotal += Double.parseDouble(arr[i].substring(arr[i].indexOf("=")+1, arr[i].indexOf("}")));
         }
         return calTotal;
     }
@@ -258,14 +260,14 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
     }
 
 
-    public int getCalorieFood(String foodName, float amount) {
+    public double getCalorieFood(String foodName, double amount) {
         // Implementation to get the calories for the specified amount of food
         try (BufferedReader br = new BufferedReader(new FileReader(filepath))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",");
                 if (values[0].equalsIgnoreCase(foodName)) {
-                    float caloriesPerUnit = Float.parseFloat(values[1]); // Assuming the second value is the calories per unit
+                    double caloriesPerUnit = Double.parseDouble(values[1]); // Assuming the second value is the calories per unit
                     return Math.round(caloriesPerUnit * amount);
                 }
             }
@@ -275,13 +277,13 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
         return 0;
     }
 
-    public int getCalorieExercise(String exerciseName, float amount) {
+    public double getCalorieExercise(String exerciseName, double amount) {
         try (BufferedReader br = new BufferedReader(new FileReader(filepath))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",");
                 if (values[0].equalsIgnoreCase(exerciseName)) {
-                    float caloriesPerUnit = Float.parseFloat(values[1]);
+                    double caloriesPerUnit = Double.parseDouble(values[1]);
                     return Math.round(caloriesPerUnit * amount);
                 }
             }

@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7e3353f-dd4b-4a64-a31e-a1a28651fea6" name="Changes" comment="">
+
       <change afterPath="$PROJECT_DIR$/src/data_access/ProfileUserDataAccessObject.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/use_case/ProfileUserDataAccessInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -14,6 +15,8 @@
       <change beforePath="$PROJECT_DIR$/src/data_access/DAOtest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/DAOtest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/FileUserDataAccessObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/ProfileView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ProfileView.java" afterDir="false" />
+
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
