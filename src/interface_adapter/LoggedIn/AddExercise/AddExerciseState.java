@@ -31,6 +31,9 @@ public class AddExerciseState {
         this.exerciseLength = exerciseLength;
     }
 
+    public String getExerciseError(){return exerciseError;}
+
+
     public void setExerciseError(String exerciseError) {
         this.exerciseError = exerciseError;
     }
