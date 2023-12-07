@@ -16,7 +16,6 @@ public class ProfileView extends JPanel {
 
     public ProfileView(EditProfileViewModel editProfileViewModel, EditProfileController editProfileController) {
         this.setLayout(new BorderLayout());
-
         userInfoArea = new JTextArea(10, 30);
         userInfoArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(userInfoArea);
