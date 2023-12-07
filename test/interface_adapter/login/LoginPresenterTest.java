@@ -55,7 +55,7 @@ class LoginPresenterTest {
 
         loginPresenter.prepareFailView(errorMessage);
 
-        verify(mockLoginState, times(1)).setUsernameError(errorMessage);
+        verify(mockLoginState, times(1)).setError(errorMessage);
         verify(mockLoginViewModel, times(1)).setState(mockLoginState);
         verify(mockLoginViewModel, times(1)).firePropertyChanged();
     }

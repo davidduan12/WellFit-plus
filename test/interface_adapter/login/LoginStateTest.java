@@ -11,14 +11,14 @@ class LoginStateTest {
         LoginState state = new LoginState();
         state.setUsername("user");
         state.setPassword("pass");
-        state.setUsernameError("userError");
-        state.setPasswordError("passError");
+        state.setError("userError");
+        state.setError("passError");
 
         assertAll("Testing all getters and setters",
                 () -> assertEquals("user", state.getUsername()),
                 () -> assertEquals("pass", state.getPassword()),
-                () -> assertEquals("userError", state.getUsernameError()),
-                () -> assertEquals("passError", state.getPasswordError())
+                () -> assertEquals("userError", state.getError()),
+                () -> assertEquals("passError", state.getError())
         );
     }
 
@@ -27,16 +27,16 @@ class LoginStateTest {
         LoginState original = new LoginState();
         original.setUsername("user");
         original.setPassword("pass");
-        original.setUsernameError("userError");
-        original.setPasswordError("passError");
+        original.setError("userError");
+        original.setError("passError");
 
         LoginState copy = new LoginState(original);
 
         assertAll("Testing copy constructor",
                 () -> assertEquals(original.getUsername(), copy.getUsername()),
                 () -> assertEquals(original.getPassword(), copy.getPassword()),
-                () -> assertEquals(original.getUsernameError(), copy.getUsernameError()),
-                () -> assertEquals(original.getPasswordError(), copy.getPasswordError())
+                () -> assertEquals(original.getError(), copy.getError()),
+                () -> assertEquals(original.getError(), copy.getError())
         );
     }
 }
