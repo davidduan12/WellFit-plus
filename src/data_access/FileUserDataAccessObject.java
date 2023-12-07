@@ -182,7 +182,7 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
                     if (userData.length < 5){
                         userData = addElement(userData, "");
                     }
-                    //so it doesn't interfere with csv comma
+                    //so it doesn't             System.out.println(arr[i]);interfere with csv comma
                     userData[4] = userData[4] + foodData.toString().replace(',',';');
                     String[] food = userData[4].split(";");
                     double totalCalorieIntake = this.calculateTotal(food);
@@ -207,7 +207,7 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
 
     public double calculateTotal(String[] arr){
         double calTotal = 0;
-        calTotal += Double.parseDouble(arr[0].substring(arr[0].indexOf("=")+1));
+        calTotal += Double.parseDouble(arr[0].substring(arr[0].indexOf("=")+1, arr[0].indexOf("}")));
         for (int i =1; i < arr.length;i++){
             calTotal += Double.parseDouble(arr[i].substring(arr[i].indexOf("=")+1, arr[i].indexOf("}")));
         }
