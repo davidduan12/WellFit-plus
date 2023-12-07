@@ -46,10 +46,10 @@ public class ProfileView extends JPanel {
         String userInfo = "Username: " + profileUserDataAccessObject.getUsername() + "\n"
                 + "Height: " + fileUserDataAccessObject.getHeight(profileUserDataAccessObject.getUsername()) + "cm \n"
                 + "Weight: "+ fileUserDataAccessObject.getWeight(profileUserDataAccessObject.getUsername()) + "kg \n"
-                + "Food Intake History:" + fileUserDataAccessObject.getFoodHistory(profileUserDataAccessObject.getUsername()) + "\n"
-                + "Exercise History:" + fileUserDataAccessObject.getExerciseHistory(profileUserDataAccessObject.getUsername()) + "\n"
-                + "Total Food Intake:" + fileUserDataAccessObject.getTotalIntake(profileUserDataAccessObject.getUsername()) + " Kcals\n"
-                + "Exercise History:" + fileUserDataAccessObject.getTotalExpenditure(profileUserDataAccessObject.getUsername()) + " Kcals\n"
+                + "Food Intake History: " + fileUserDataAccessObject.getFoodHistory(profileUserDataAccessObject.getUsername()) + "\n"
+                + "Exercise History: " + fileUserDataAccessObject.getExerciseHistory(profileUserDataAccessObject.getUsername()) + "\n"
+                + "Total Food Intake: " + fileUserDataAccessObject.getTotalIntake(profileUserDataAccessObject.getUsername()) + " Kcals\n"
+                + "Total Exercise Worked: " + fileUserDataAccessObject.getTotalExpenditure(profileUserDataAccessObject.getUsername()) + " Kcals\n"
                 ;
         userInfoArea.setText(userInfo);
     }
@@ -58,10 +58,10 @@ public class ProfileView extends JPanel {
         String userInfo = "Username: " + username + "\n"
                 + "Height: " + fileUserDataAccessObject.getHeight(username) + " cm \n"
                 + "Weight: "+ fileUserDataAccessObject.getWeight(username) + " kg \n"
-                + "Food Intake History:" + fileUserDataAccessObject.getFoodHistory(username) + "\n"
-                + "Exercise History:" + fileUserDataAccessObject.getExerciseHistory(username) + "\n"
-                + "Total Food Intake:" + fileUserDataAccessObject.getTotalIntake(username) + " Kcals\n"
-                + "Exercise History:" + fileUserDataAccessObject.getTotalExpenditure(username) + " Kcals\n"
+                + "Food Intake History: " + fileUserDataAccessObject.getFoodHistory(username) + "\n"
+                + "Exercise History: " + fileUserDataAccessObject.getExerciseHistory(username) + "\n"
+                + "Total Food Intake: " + fileUserDataAccessObject.getTotalIntake(username) + " Kcals\n"
+                + "Total Exercise Worked: " + fileUserDataAccessObject.getTotalExpenditure(username) + " Kcals\n"
                 ;
         userInfoArea.setText(userInfo);
     }

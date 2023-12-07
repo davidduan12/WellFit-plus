@@ -414,7 +414,7 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
                             return "You have no food history yet";
                         }
                         else {
-                           return userData[4];
+                           return formatTostring(userData[4]);
                         }
                     }
                 }
@@ -439,7 +439,7 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
                             return "You have no exercise history yet";
                         }
                         else {
-                            return userData[5];
+                            return formatTostring(userData[5]);
                         }
                     }
                 }
@@ -495,6 +495,17 @@ public class FileUserDataAccessObject implements UserDataAccessInterface,
             }
         }
         return 0;
+    }
+    public String formatTostring(String str){
+        String[] data = str.split("}");
+        String result = "";
+        for (String d : data){
+            result = result + d.substring(d.indexOf("{")+1,d.indexOf("=")) ;
+
+            result = result + ": " +d.substring(d.indexOf("=")+1) + " Kcals; ";
+
+        }
+       return result;
     }
 
 }
