@@ -8,7 +8,7 @@ public class AddExerciseInputData {
         this.duration = duration;
     }
 
-    String getName(){
+    public String getName(){
         return sports;
     }
 
