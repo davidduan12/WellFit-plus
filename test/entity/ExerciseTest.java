@@ -1,48 +1,37 @@
 package entity;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-class ExerciseTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class ExerciseTest {
+
     private Exercise exercise;
 
     @BeforeEach
-    void setUp() {
-        exercise = new Exercise("Running", 30);
-    }
-
-    @AfterEach
-    void tearDown() {
-        exercise = null;
+    public void setUp() {
+        // Initialize an Exercise object with sample data for testing
+        exercise = new Exercise("Running", 500.0f);
     }
 
     @Test
-    void getDuration() {
-        assertEquals(30, exercise.getDuration());
-    }
-
-    @Test
-    void setDuration() {
-        exercise.setDuration(45);
-        assertEquals(45, exercise.getDuration());
-    }
-
-
-    @Test
-    void getName() {
+    public void testGetName() {
+        // Verify that the getName() method returns the expected exercise name
         assertEquals("Running", exercise.getName());
     }
 
     @Test
-    void getCaloriesBurnedPerHour() {
-        Exercise running = new Exercise("Running", 30);
+    public void testGetCaloriesBurnedPerHour() {
 
-        float expectedCaloriesBurned = 600;
+        assertEquals(500.0f, exercise.getCaloriesBurnedPerHour(), 0.001);
+    }
 
-        float actualCaloriesBurned = running.getCaloriesBurnedPerHour();
+    @Test
+    public void testGetSetDuration() {
+        assertEquals(0.0f, exercise.getDuration(), 0.001);
 
-        assertEquals(expectedCaloriesBurned, actualCaloriesBurned);
+        exercise.setDuration(30.0f);
+        assertEquals(30.0f, exercise.getDuration(), 0.001);
     }
 }

@@ -10,11 +10,11 @@ public class AddFoodInputData {
         this.weight = weight;
     }
 
-    String getName(){
+    public String getName(){
         return food;
     }
 
-    double getWeight(){
+    public double getWeight(){
         return weight;
     }
 }

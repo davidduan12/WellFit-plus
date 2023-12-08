@@ -12,10 +12,12 @@ class UserTest {
     String password = "123abcGG.";
     String sex = "Female";
 
-//    @BeforeEach
-//    void setUp() {
-//        user = new User(username, password, 20, 50.6, 178, sex);
-//    }
+
+    @BeforeEach
+    void setUp() {
+        user = new User(username, password, 178, 50.6);
+    }
+
 
     @AfterEach
     void tearDown() {
@@ -47,16 +49,6 @@ class UserTest {
         assertEquals(newPassword, user.getPassword());
     }
 
-    @Test
-    void getAge() {
-        assertEquals(20, user.getAge());
-    }
-
-    @Test
-    void setAge() {
-        user.setAge(54);
-        assertEquals(54, user.getAge());
-    }
 
     @Test
     void getWeight() {
@@ -78,29 +70,5 @@ class UserTest {
     void setHeight() {
         user.setHeight(179.9);
         assertEquals(179.9, user.getHeight());
-    }
-
-    @Test
-    void getSex() {
-        assertEquals(sex, user.getSex());
-    }
-
-    @Test
-    void setSex() {
-        String newSex = "Male";
-        user.setSex();
-        assertEquals(newSex,user.getSex());
-    }
-
-    @Test
-    void getBMI() {
-        assertEquals(0.0, user.getBMI());
-    }
-
-    @Test
-    void setBMI() {
-        double newBmi = 22.5;
-        user.setBMI(newBmi);
-        assertEquals(newBmi, user.getBMI());
     }
 }
