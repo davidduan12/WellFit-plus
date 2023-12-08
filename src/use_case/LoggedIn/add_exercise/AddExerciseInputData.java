@@ -11,11 +11,11 @@ public class AddExerciseInputData {
         this.duration = duration;
     }
 
-    String getName(){
+    public String getName(){
         return sports;
     }
 
-    Double getDuration(){
+    public Double getDuration(){
         return duration;
     }
 }
