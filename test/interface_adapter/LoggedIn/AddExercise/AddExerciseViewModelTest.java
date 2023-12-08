@@ -1,24 +1,46 @@
 package interface_adapter.LoggedIn.AddExercise;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.beans.PropertyChangeListener;
 
-class AddExerciseViewModelTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.*;
 
-    @Test
-    void setState() {
+public class AddExerciseViewModelTest {
+    private AddExerciseViewModel addExerciseViewModel;
+
+    @BeforeEach
+    public void setUp() {
+        addExerciseViewModel = new AddExerciseViewModel();
     }
 
     @Test
-    void firePropertyChanged() {
+    public void testDefaultValues() {
+        assertEquals(AddExerciseState.class, addExerciseViewModel.getState().getClass());
     }
 
     @Test
-    void addPropertyChangeListener() {
+    public void testSetState() {
+        AddExerciseState newState = new AddExerciseState();
+        addExerciseViewModel.setState(newState);
+        assertEquals(newState, addExerciseViewModel.getState());
     }
 
     @Test
-    void getState() {
+    public void testFirePropertyChanged() {
+        PropertyChangeListener listener = mock(PropertyChangeListener.class);
+        addExerciseViewModel.addPropertyChangeListener(listener);
+
+        AddExerciseState newState = new AddExerciseState();
+        addExerciseViewModel.firePropertyChanged();
+
+        verify(listener, times(1)).propertyChange(any());
+
+        addExerciseViewModel.setState(newState);
+        addExerciseViewModel.firePropertyChanged();
+
+        verify(listener, times(2)).propertyChange(any());
     }
 }
