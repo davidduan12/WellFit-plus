@@ -23,9 +23,6 @@ public class SignupPresenter implements SignupOutputBoundary {
 
     @Override
     public void prepareSuccessView(SignupOutputData response) {
-        // On success, switch to the login view.
-//        LocalDateTime responseTime = LocalDateTime.parse(response.getCreationTime());
-//        response.setCreationTime(responseTime.format(DateTimeFormatter.ofPattern("hh:mm:ss")));
 
         LoginState loginState = loginViewModel.getState();
         loginState.setUsername(response.getUsername());
@@ -37,14 +34,7 @@ public class SignupPresenter implements SignupOutputBoundary {
     }
 
     @Override
-//    public void prepareFailView(String error) {
-//        SignupState signupState = signupViewModel.getState();
-//        signupState.setUsernameError(error);
-//        signupState.setPasswordError(error);
-//        signupState.setRepeatPasswordError(error);
-//
-//        signupViewModel.firePropertyChanged();
-//    }
+
     public void prepareFailView(String error) {
         SignupState signupState = signupViewModel.getState();
 

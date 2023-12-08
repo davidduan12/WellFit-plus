@@ -19,19 +19,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        String query = "ran 3 miles";
-//        Double responseData = foodDataAccessObject.apiExercise(query);
-//        System.out.println(responseData);
-//
-//        query = "3 eggs";
-//        responseData = foodDataAccessObject.apiNutrient(query);
-//        System.out.println(responseData);
-
-        /*try{
-            foodDataAccessObject = new FoodDataAccessObject("./data/sample_user.csv");
-        } catch (IOException e) {           //fix both
-            throw new RuntimeException(e);
-        }*/
 
             //Main window
             JFrame application = new JFrame("Javakiller");
