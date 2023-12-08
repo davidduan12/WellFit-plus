@@ -16,7 +16,12 @@ public class SignupInteractor implements SignupInputBoundary {
         this.userPresenter = userPresenter;
         this.userFactory = userFactory;
     }
-
+    /**
+     * Executes the signup process with the provided input data.
+     * validation checks, if successful, user creation and data modification
+     *
+     * @param signupInputData The input data for signup.
+     */
     @Override
     public void execute(SignupInputData signupInputData) {
         if (userDataAccessObject.existsByName(signupInputData.getUsername())) {

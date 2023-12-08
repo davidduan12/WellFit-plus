@@ -73,4 +73,13 @@ public class User {
     public void setTotalCaloriesExpenditure(double totalCaloriesExpenditure) {
         this.totalCaloriesExpenditure = totalCaloriesExpenditure;
     }
+
+    public void setBmi(){
+        double BMI = weight/((height/100 * height/100));
+        this.bmi = BMI;
+        System.out.println(bmi);
+    }
+    public double getBmi(){
+        return bmi;
+    }
 }

@@ -1,5 +1,7 @@
 package view;
 
+import data_access.FileUserDataAccessObject;
+import data_access.ProfileUserDataAccessObject;
 import interface_adapter.LoggedIn.EditProfile.EditProfileController;
 import interface_adapter.LoggedIn.EditProfile.EditProfileViewModel;
 
@@ -7,14 +9,18 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 
 public class ProfileView extends JPanel {
     private JButton editProfileButton;
     private JTextArea userInfoArea;
 
-    public ProfileView(EditProfileViewModel editProfileViewModel, EditProfileController editProfileController) {
+    final FileUserDataAccessObject fileUserDataAccessObject;
+
+    final ProfileUserDataAccessObject profileUserDataAccessObject;
+
+    public ProfileView(EditProfileViewModel editProfileViewModel, EditProfileController editProfileController, FileUserDataAccessObject fileUserDataAccessObject, ProfileUserDataAccessObject profileUserDataAccessObject) {
+        this.fileUserDataAccessObject = fileUserDataAccessObject;
+        this.profileUserDataAccessObject = profileUserDataAccessObject;
         this.setLayout(new BorderLayout());
         userInfoArea = new JTextArea(10, 30);
         userInfoArea.setEditable(false);
@@ -35,12 +41,30 @@ public class ProfileView extends JPanel {
         displayUserInfo();
     }
 
-    private void displayUserInfo() {
-        String userInfo = "Username: user123\n"
-                + "Height: 175 cm\n"
-                + "Weight: 70 kg\n"
-                + "Password: password123\n"
-                + "History: [Some user history]";
+    void displayUserInfo() {
+        //init
+        String userInfo = "Username: " + profileUserDataAccessObject.getUsername() + "\n"
+                + "Height: " + fileUserDataAccessObject.getHeight(profileUserDataAccessObject.getUsername()) + "cm \n"
+                + "Weight: "+ fileUserDataAccessObject.getWeight(profileUserDataAccessObject.getUsername()) + "kg \n"
+                + "Food Intake History: " + fileUserDataAccessObject.getFoodHistory(profileUserDataAccessObject.getUsername()) + "\n"
+                + "Exercise History: " + fileUserDataAccessObject.getExerciseHistory(profileUserDataAccessObject.getUsername()) + "\n"
+                + "Total Food Intake: " + fileUserDataAccessObject.getTotalIntake(profileUserDataAccessObject.getUsername()) + " Kcals\n"
+                + "Total Exercise Worked: " + fileUserDataAccessObject.getTotalExpenditure(profileUserDataAccessObject.getUsername()) + " Kcals\n"
+                + "Body Mass Index (bmi): "
+                ;
+        userInfoArea.setText(userInfo);
+    }
+
+    void displayUserInfo(String username) {
+        String userInfo = "Username: " + username + "\n"
+                + "Height: " + fileUserDataAccessObject.getHeight(username) + " cm \n"
+                + "Weight: "+ fileUserDataAccessObject.getWeight(username) + " kg \n"
+                + "Food Intake History: " + fileUserDataAccessObject.getFoodHistory(username) + "\n"
+                + "Exercise History: " + fileUserDataAccessObject.getExerciseHistory(username) + "\n"
+                + "Total Food Intake: " + fileUserDataAccessObject.getTotalIntake(username) + " Kcals\n"
+                + "Total Exercise Worked: " + fileUserDataAccessObject.getTotalExpenditure(username) + " Kcals\n"
+                + "Body Mass Index (bmi): " + fileUserDataAccessObject.getBmi(username)
+                ;
         userInfoArea.setText(userInfo);
     }
 
@@ -51,15 +75,15 @@ public class ProfileView extends JPanel {
         editDialog.setSize(300, 200);
 
         JPanel panel = new JPanel(new GridLayout(0, 2));
-        panel.add(new JLabel("Username:"));
+        panel.add(new JLabel("Username: "));
         JTextField usernameField = new JTextField();
         panel.add(usernameField);
 
-        panel.add(new JLabel("Weight:"));
+        panel.add(new JLabel("Weight(kg): "));
         JTextField weightField = new JTextField();
         panel.add(weightField);
 
-        panel.add(new JLabel("Height:"));
+        panel.add(new JLabel("Height(cm):"));
         JTextField heightField = new JTextField();
         panel.add(heightField);
 

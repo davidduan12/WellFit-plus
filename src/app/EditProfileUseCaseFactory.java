@@ -1,10 +1,12 @@
 package app;
 
+import data_access.FileUserDataAccessObject;
+import data_access.ProfileUserDataAccessObject;
+import entity.UserFactory;
 import interface_adapter.LoggedIn.EditProfile.EditProfileController;
 import interface_adapter.LoggedIn.EditProfile.EditProfilePresenter;
 import interface_adapter.LoggedIn.EditProfile.EditProfileViewModel;
 import interface_adapter.LoggedIn.LoggedInViewModel;
-import use_case.LoggedIn.edit_profile.EditProfileInputData;
 import use_case.LoggedIn.edit_profile.EditProfileInteractor;
 import use_case.LoggedIn.edit_profile.EditProfileOutputBoundary;
 import use_case.LoggedIn.edit_profile.EditProfiledataAccessInterface;
@@ -23,7 +25,12 @@ public class EditProfileUseCaseFactory {
             EditProfiledataAccessInterface editProfiledataAccessInterface){
         try{
             EditProfileController editProfileController = createEditProfileUser(editProfileViewModel, loggedInViewModel, editProfiledataAccessInterface);
-            return new ProfileView(editProfileViewModel, editProfileController);
+            FileUserDataAccessObject fileUserDataAccessObject;
+            UserFactory userFactory = new UserFactory();
+            fileUserDataAccessObject = new FileUserDataAccessObject("./data/user.csv", userFactory);
+            System.out.println(loggedInViewModel.getLoggedInUser());
+            ProfileUserDataAccessObject profileUserDataAccessObject = new ProfileUserDataAccessObject(loggedInViewModel.getLoggedInUser());
+            return new ProfileView(editProfileViewModel, editProfileController, fileUserDataAccessObject, profileUserDataAccessObject);
         } catch (IOException e){
             JOptionPane.showMessageDialog(null, "Error");
         }
