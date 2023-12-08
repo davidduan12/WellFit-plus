@@ -5,8 +5,10 @@ public class EditProfileState {
     private String Username = "";
 
     private String password = "";
-    private String weight = "";
-    private String height="";
+    private double weight = 0;
+    private double height= 0;
+
+    private String editProfileError = "";
 
     public String getUsername() {
         return Username;
@@ -24,22 +26,28 @@ public class EditProfileState {
         this.password = password;
     }
 
-    public String getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(String weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
-    public String getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public void setHeight(String height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 
 
+    public String getEditProfileError() {
+        return editProfileError;
+    }
 
+    public void setEditProfileError(String editProfileError) {
+        this.editProfileError = editProfileError;
+    }
 }

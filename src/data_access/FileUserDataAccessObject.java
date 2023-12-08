@@ -48,6 +48,7 @@ public class FileUserDataAccessObject implements
                 double height = Double.parseDouble(col[2]);
                 double weight = Double.parseDouble(col[3]);
                 User user = new User(username, password, height, weight);
+                user.setBmi();
                 if (!existsByName(username)) {
                     accounts.put(username, user);
                 }
@@ -224,11 +225,9 @@ public class FileUserDataAccessObject implements
         double calTotal = 0;
 
         for (int i =0; i < arr.length;i++){
-                System.out.println(arr[i]+ " non last");
                 calTotal += Double.parseDouble(arr[i].substring(arr[i].indexOf("=")+1));
 
         }
-        System.out.println(calTotal);
         return calTotal;
     }
 
@@ -258,9 +257,11 @@ public class FileUserDataAccessObject implements
                     userData[2] = Double.toString(editProfileInputData.getHeight());
                     userData[3] = Double.toString(editProfileInputData.getWeight());
                 }
+
                 lines.add(String.join(",", userData));
             }
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(filepath))) {
+                writer.write(header);
                 for (String updatedLine : lines) {
                     writer.write(updatedLine);
                     writer.newLine();
@@ -269,10 +270,12 @@ public class FileUserDataAccessObject implements
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 
+    public double getBmi(String username){
+        User user = accounts.get(username);
+        return user.getBmi();
+    }
 
     public double getCalorieFood(String foodName, double amount) {
         // Implementation to get the calories for the specified amount of food

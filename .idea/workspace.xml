@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7e3353f-dd4b-4a64-a31e-a1a28651fea6" name="Changes" comment="Update For Test again">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/byte_buddy_agent_1_14_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/interface_adapter/LoggedIn/AddExercise/AddExercisePresenterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/interface_adapter/LoggedIn/AddExercise/AddExerciseStateTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/interface_adapter/LoggedIn/AddExercise/AddExerciseViewModelTest.java" afterDir="false" />
+    <list default="true" id="f7e3353f-dd4b-4a64-a31e-a1a28651fea6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WellFit-plus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WellFit-plus.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/user.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/user.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/SignUp/SignupViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/SignUp/SignupViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/use_case/add_exercise/AddExerciseInteractorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/use_case/add_exercise/AddExerciseInteractorTest.java" afterDir="false" />
     </list>
+    <list id="467f39f8-6722-4658-b772-51deac4b70e9" name="Changes by alwyn" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +20,6 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -31,15 +27,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;git-widget-placeholder&quot;: &quot;csv&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "Fixed",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="DAOtest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="data_access.DAOtest" />
@@ -54,121 +50,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddExerciseViewModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.Main" />
       <module name="WellFit-plus" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="interface_adapter.LoggedIn.AddExercise.*" />
+          <option name="PATTERN" value="app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="interface_adapter.LoggedIn.AddExercise" />
-      <option name="MAIN_CLASS_NAME" value="interface_adapter.LoggedIn.AddExercise.AddExerciseViewModelTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExerciseTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-
+    <configuration default="true" type="JetRunConfigurationType">
       <module name="WellFit-plus" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="entity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="entity" />
-      <option name="MAIN_CLASS_NAME" value="entity.ExerciseTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExerciseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="WellFit-plus" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ExerciseTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="WellFit-plus" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
-      <properties />
-      <listeners />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="JUnit.AddExerciseViewModelTest" />
-        <item itemvalue="JUnit.AddExerciseControllerTest" />
-        <item itemvalue="JUnit.ExerciseTest (1)" />
-        <item itemvalue="JUnit.ExerciseTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.DAOtest" />
       </list>
     </recent_temporary>
   </component>
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="Update For Test">
-      <created>1701976115536</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1701976115536</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Update For Test">
-      <created>1701976152197</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1701976152197</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Update For Test">
-      <created>1701976160061</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1701976160061</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Update For Test again">
-      <created>1701983031970</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1701983031970</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update For Test" />
-    <MESSAGE value="Update For Test again" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update For Test again" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/WellFit_plus$All_in_WellFit_plus.ic" NAME="All in WellFit-plus Coverage Results" MODIFIED="1701982001373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/WellFit_plus$EditProfileInputDataTest.ic" NAME="EditProfileInputDataTest Coverage Results" MODIFIED="1701981813669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>use_case.LoggedIn.edit_profile.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/WellFit_plus$_default_.ic" NAME="&lt;default&gt; Coverage Results" MODIFIED="1701983927493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

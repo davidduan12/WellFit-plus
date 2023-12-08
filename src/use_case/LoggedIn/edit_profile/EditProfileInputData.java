@@ -1,5 +1,8 @@
 package use_case.LoggedIn.edit_profile;
 
+/**
+ * Data class representing input data for editing a user profile.
+ */
 public class EditProfileInputData {
 
     final private String name;
